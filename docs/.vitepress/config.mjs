@@ -26,6 +26,7 @@ export default defineConfig({
           ]},
           { text: 'ドキュメント',  collapsed: false,
           items:[
+            { text: '論文・文献リスト', link: '/notice' },
             { text: 'データ定義', link: '/notice' },
             { text: 'バイタルデータ', link: '/doc/ap' },
             { text: '長期推移', link: '/doc/std' },  
