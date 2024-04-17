@@ -14,21 +14,22 @@ export default defineConfig({
       {
         text: 'コンテンツ一覧',
         items: [
-          { text: 'JINS MEME センサー', link: '/hardware' },  
+          { text: 'JINS MEME センサー',collapsed: false,
+          items:[
+            { text: '機種について', link: '/hardware' },
+            { text: 'ご利用上の注意', link: '/hardware/notice' },            
+          ]},
           { text: 'ソフトウェア', collapsed: false,
           items:[
-            { text: 'Academic - Windows', link: '/software/ap' },
-            { text: 'Academic - MacOS', link: '/software/std' },  
-            { text: 'Academic - Android', link: '/software/std' },  
-            { text: '通常版 - iOS', link: '/software/std' },  
-            { text: '通常版 - Android', link: '/software/std' },  
-          ] },
+            { text: '通常版 Logger', link: '/software/std' }, 
+            { text: 'Academic Logger', link: '/software/ap' },
+          ]},
           { text: 'ドキュメント',  collapsed: false,
           items:[
+            { text: 'データ定義', link: '/notice' },
             { text: 'バイタルデータ', link: '/doc/ap' },
             { text: '長期推移', link: '/doc/std' },  
         ]},
-          { text: 'ご利用上の注意', link: '/notice' },
           { text: '利用規約', link: '/terms' },
         ]
       }
