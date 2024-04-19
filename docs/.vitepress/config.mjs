@@ -63,6 +63,7 @@ export default defineConfig({
               {
                 text: '分析', collapsed: false,
                 items: [
+                  { text: '演算処理詳細', link: '/doc/feature' },
                   { text: 'バイタルデータの注意点', link: '/doc/vital_data' },
                   { text: '短期のシーン分析例', link: '/doc/analysis_sample' },
                   { text: '長期の時系列分析例', link: '/doc/summarize_data' },

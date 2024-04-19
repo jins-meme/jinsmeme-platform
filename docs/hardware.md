@@ -12,7 +12,7 @@ outline: deep
 | 機種 | 転送周期 | ソフトウェアと対応OS | 取得可能データ |
 | :---: | :---: | :--- | :--- |
 | 通常版 | 20Hz<br/>60秒1回 | <ul><li>[通常版 Logger<br/> (iOS / Android)](/software/es/logger_app)</li><li>SDK (iOS / Android / Nodejs)<br/>※問い合わせ対応、20Hz・60秒間隔データのみ</li></ul> | - 20Hzデータ<br/>- 15秒間隔データ<br/>- 60秒間隔データ<br/>- 高速頭部運動データ<br/>- 低速頭部運動データ |
-| Academic版<br/>(ES-R) | 50/100Hz | <ul><li>Academic(ES-R)版 Logger<br/>([Windows / MacOS](/software/with-pc/) / [Android](/software/with-android))</li><li>[SDK](https://github.com/jins-meme/ES_R-Development-Kit)</li></ul>  | - Standard Mode<br/>- Full Mode<br/>- Quaternion |
+| Academic版<br/>(ES-R) | 50/100Hz | <ul><li>Academic(ES-R)版 Logger<br/>([Windows / MacOS](/software/with-pc/) / [Android](/software/with-android/))</li><li>[SDK](https://github.com/jins-meme/ES_R-Development-Kit)</li></ul>  | - Standard Mode<br/>- Full Mode<br/>- Quaternion |
 
 ## 取得可能なデータ
 
