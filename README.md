@@ -1,6 +1,9 @@
 # JINS MEME Platform Web
 
-初めて見た人が分かりやすいようにしておく
-データフロー
-ご利用上の注意とか読まないものを少し奥に詰め込む
-  
+## TODO 
+
+- メガネ画像いれないとねwwwww
+
+## 開発
+
+npm run docs:dev
