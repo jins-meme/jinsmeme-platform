@@ -63,9 +63,9 @@ export default defineConfig({
               {
                 text: '分析', collapsed: false,
                 items: [
-                  { text: 'バイタルデータ', link: '/doc/vital_data' },
-                  { text: '短期推移', link: '/doc/analysis_sample' },
-                  { text: '長期推移', link: '/doc/summarize_data' },
+                  { text: 'バイタルデータの注意点', link: '/doc/vital_data' },
+                  { text: '短期のシーン分析例', link: '/doc/analysis_sample' },
+                  { text: '長期の時系列分析例', link: '/doc/summarize_data' },
                   { text: 'モーショントラッキング', link: '/doc/motion-tracking-howto' },
                 ]
               },

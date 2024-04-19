@@ -1,14 +1,8 @@
----
-title: データ定義
-description: "JINS MEME SDK - データ定義"
-permalink: /basics/definition.html
----
-
-{% include base_path %}
+# 通常版Logger データ定義
 
 ## モーション指標の軸定義
 
-<img src="{{ base_path }}/images/6axis_sensors-fig.png" alt="axes definitions" class="fig">
+![](/images/axisdef.png)
 
 角度に関してはセンサーの特性上ドリフト（値が一定速度で変化すること）、ハンプ（値に小さい段差が発生すること）が起こります。
 

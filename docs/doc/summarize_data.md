@@ -1,12 +1,6 @@
----
-title: 長期の時系列分析例
-description: "比較的長期間の時系列データを分析する方法を解説します"
-permalink: /basics/summarize_data.html
----
+# 長期の時系列分析例
 
-{% include base_path %}
-
-この章では、JINS MEMEの60秒間隔データから短期（日・週）の区間代表値を抽出し、長期間（月・年）の時系列分析をする方法を説明します。
+このページでは、JINS MEME通常版の60秒間隔データから短期（日・週）の区間代表値を抽出し、長期間（月・年）の時系列分析をする方法を説明します。
 
 ## 長期時系列分析を実施するにあたっての注意点
 
@@ -41,7 +35,7 @@ permalink: /basics/summarize_data.html
 
 60秒間隔データにユーザーごとの個別IDを付与したデータフレーム(data_df)を想定します。
 
-<img src="{{ base_path }}/images/an01.png" alt="dataframe" class="fig" width="100%" height="100%">
+![](/images/an01.png)
 
 ### 下処理
 
@@ -80,7 +74,7 @@ for axes in g.axes:
     axes.set_yscale('log')
 ```
 
-<img src="{{ base_path }}/images/an02.png" alt="log plot" class="fig" width="100%" height="100%">
+![](/images/an02.png)
 
 おおよそ差は出ていますが、これでは比較が難しいので累積度数に変換してみます。
 
@@ -123,7 +117,7 @@ for axes in g.axes:
     axes.set_yscale('log')
 ```
 
-<img src="{{ base_path }}/images/an04.png" alt="cummulative plot" class="fig">
+![](/images/an04.png)
 
 こちらのほうがより安定して週比較をできそうです。ただし、代表値を傾きで取るには線形性が弱いので、Quantileで取ることにします。
 
@@ -163,7 +157,7 @@ for axes in grid.axes:
 
 下記が週毎の90％Quantileの推移を示しており、ランダムに暴れたりせずに人による差や推移が安定して取れていることが分かります。
 
-<img src="{{ base_path }}/images/an05.png" alt="week dependent" class="fig" width="100%" height="100%">
+![](/images/an05.png)
 
 ## 処理例その2...視線移動回数（左右）の週依存
 
@@ -173,7 +167,7 @@ for axes in grid.axes:
 
 60秒間隔データにユーザーごとの個別IDを付与したデータフレーム(data_df)を想定します。
 
-<img src="{{ base_path }}/images/an01.png" alt="dataframe" class="fig" width="100%" height="100%">
+![](/images/an01.png)
 
 ### 下処理
 
@@ -218,7 +212,7 @@ for axes in g.axes:
     axes.axvline(15, c='r')
 ```
 
-<img src="{{ base_path }}/images/an06.png" alt="histogram" class="fig" width="100%" height="100%">
+![](/images/an06.png)
 
 ガンマ分布のような形状を示していることがわかります。
 
@@ -261,4 +255,4 @@ for axes in grid.axes:
 
 下記が週毎のピーク位置の推移を示しており、ランダムに暴れたりせずに人による差や週推移を議論できる状態にできました。
 
-<img src="{{ base_path }}/images/an07.png" alt="week dependent" class="fig" width="100%" height="100%">
+![](/images/an07.png)

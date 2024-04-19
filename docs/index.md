@@ -19,11 +19,11 @@ features:
       src: /images/target-line-icon.svg
     title: ソフトウェア
     details: 長時間データの時系列データを保存できるソフトウェア
-    link: /software
+    link: /hardware.html#機種の種類と対応するソフトウェア
   - icon: 
       src: /images/question-mark-line-icon.svg
     title: ドキュメント
     details: アーティファクト除去の方法、集計方法など生体データ特有の処理を解説
-    link: /doc
+    link: /doc/vital_data.html
 
 
