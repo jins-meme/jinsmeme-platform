@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/jinsmeme-platform/',
   title: "JINS MEME Platform",
   description: "生体データ活用の一歩先へ",
   themeConfig: {
