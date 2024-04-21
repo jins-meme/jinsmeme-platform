@@ -1,8 +1,6 @@
 # JINS MEME Platform Web
 
 
-
-
 ## TODO 
 
 - メガネ画像いれないとね
@@ -11,4 +9,4 @@
 
 npm run docs:dev
 
-github pages用に `base: '/jinsmeme-platform/',` を設定に追加した
+github pages用に `base: '/jinsmeme-platform/',` を設定に追加したのでgithub pages以外にデプロイする時は修正する。
