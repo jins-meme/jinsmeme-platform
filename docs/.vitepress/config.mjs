@@ -91,5 +91,23 @@ export default defineConfig({
       message: 'JINS MEME&#8482; Platform',
       copyright: 'Copyright © 2024-present JINS Inc.'
     }
+  },
+  locales: {
+    root: {
+      label: '日本語',
+      lang: 'ja'
+    },
+    en: {
+      label: 'English',
+      themeConfig:{
+        nav: [
+          { text: 'JINS website', link: 'https://www.jins.com' }
+        ],
+        sidebar: [
+          { text: 'App terms of service', link: '/en/doc/term_app' },
+          { text: 'SDK terms of service', link: '/en/doc/term_sdk' },
+        ]
+      }
+    }
   }
 })
