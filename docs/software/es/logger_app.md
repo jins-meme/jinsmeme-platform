@@ -4,7 +4,7 @@ outline: deep
 
 # データ取得手順<Badge type="tip" text="通常版" />
 
-ロガーアプリはJINS MEMEでのデータ取得に特化したスマートフォン向けアプリです。利用規約は[JINS MEME 利用規約](https://jinsmeme.com/term)に準じます。
+ロガーアプリはJINS MEMEでのデータ取得に特化したスマートフォン向けアプリです。JINS MEME 利用規約に準じます。
 
 ## インストール
 

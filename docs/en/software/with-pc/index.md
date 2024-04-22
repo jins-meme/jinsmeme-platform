@@ -1,36 +1,34 @@
-# Windows/MacOS用 Academic(ES-R)版ロガーをインストールする<Badge type="danger" text="アカデミック版" />
+# Installing the Academic(ES-R) Logger for Windows/MacOS<Badge type="danger" text="Academic" />
 
-## ダウンロード
-
-[こちら](https://github.com/jins-meme/ES_R-DataLogger/releases) からファイルをダウンロードしてください。 
+Please download from [here](https://github.com/jins-meme/ES_R-DataLogger/releases).
 
 ## Windows
 
-### インストール
+### Installation
 
-1. ファイルをダブルクリックで実行するとアプリが起動するので、ソフトウェアのバージョンを確認し、 Next >  ボタンをクリックします。
-    - `重要` 管理者以外のアカウントでログインしている場合は、「ユーザアカウント制御」画面が表示されます。インストールを続行する場合は、管理者に依頼してインストールを行ってください。
-1. ユーザー名、組織名、シリアル番号を入力し、 Next >  ボタンをクリックします。  
-1. ソフトウェアのインストール先を指定し、 Next >  ボタンをクリックします。  
-1. スタートメニューに登録するフォルダ名を指定し、 Next >  ボタンをクリックします。
-1. デスクトップアイコンの作成を指定し、 Next >  ボタンをクリックします。  
-1. 入力情報を確認し、間違いなければ、 Install  ボタンをクリックします。  
-1. インストール完了画面が表示されたら、 Finish  ボタンをクリックし、画面を閉じます。  
+1. Extract the zip file and double-click the file in the app folder. Check the software version and click the Next > button.
+    - `Important` If you are logged in with a non-administrator account, the [User Account Control] window appears. Request the administrator to perform the installation if you wish to continue.
+1. Enter the user name, organization name, and serial number and click the Next > button.
+1. Specify the software installation destination and click the Next > button.
+1. Specify the folder name to register on the Start menu and click the Next > button.
+1. Specify creation of desktop icon and click the Next > button.
+1. Check the input information and click the Install button.  
+1. When the Installation Completed window appears, click the Finish button and close window.  
 
-![手順](/images/windows_install.png)
+![Sequence](/images/windows_install.png)
 
-### アンインストール
+### Uninstallation
 
-アプリケーション一覧からアプリを選択し、削除します。
+Delete from the application list.
 
 ## MacOS
 
-### インストール
+### Installation
 
-1. ファイルを展開します。
-1. 実行ファイルをアプリケーションフォルダに移動します。
-1. 実行します。
+1. Extract the zip file.
+1. Move the file to a Application folder.
+1. Execute the executable file.
 
-### アンインストール
+### Uninstallation
 
-アプリケーションフォルダから削除します。
+Delete from the application folder.

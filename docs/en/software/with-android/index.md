@@ -1,20 +1,20 @@
-# Android用 Academic(ES-R)版ロガーをインストールする<Badge type="danger" text="アカデミック版" />
+# Installing the Academic(ES-R) Logger for Android<Badge type="danger" text="Academic" />
 
-JINS MEME ES_Rで取得したデータを、Android端末に保存することができます。  
+The data acquired with the JINS MEME ES_R can be saved on an Android device.<br>
 
-## ソフトウェアをダウンロードする
+## Downloading the Software
 
-[ここ](https://github.com/jins-meme/ES_R-DataLogger/releases) からファイルをダウンロードしてください。 
+Please download from [here](https://github.com/jins-meme/ES_R-DataLogger/releases).
 
-## インストールする
+## Installation
 
-Android12端末の画面を例に説明します。
+We will use the screen of an Android 12 device as an example.
 
-1. ダウンロードしたapkファイルを開きます（提供元不明のアプリのインストールが許可されていない場合は許可してください）。
-2. ダイアログが表示されるので`インストール`をタップします。
-3. インストールが完了したら`開く`をタップします。
-4. 位置情報の権限認可のダイアログが表示されるので`アプリの使用時のみ`をタップします（古いAndroidでは許可する/許可しないのみ表示されます）。
-5. デバイス内ファイルアクセスの権限認可のダイアログが表示されるので`許可`をタップします。
-6. 起動完了です。
+1. Open the downloaded apk file (if installation of apps from an unknown source is not allowed, please allow it).
+2. Tap `Install` when the dialog box appears.
+3. Tap `Open` after installation is complete.
+4. Tap `Only when using apps` when the location grant dialog is displayed (older Android's only show allow/not allow).
+5. Tap `Allow` when the dialog for authorization of file access in the device is displayed.
+6. Startup is complete.
 
 ![](/images/android_install.png)

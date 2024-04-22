@@ -1,9 +1,9 @@
-# Academic版 Logger データ定義<Badge type="danger" text="アカデミック版" />
+# Academic Logger Data definition<Badge type="danger" text="Academic" />
 
-- JINS MEME アカデミックパックで取得可能なデータ種としては、EOG電位シグナル、加速度(Acc)、角速度(Gyro)、Quaternionの4つです
-- Full / Standard / Quaternion の3つのモードによって取得できるデータ種が異なります
-- 転送周波数は 50/100Hz の2つから選びます
-- 軸定義は以下の図の向きになります
+- Four types of data can be acquired: EOG potential signal, acceleration (Acc), angular velocity (Gyro), and quaternion.
+- The data types available vary depending on the mode: Full, Standard, or Quaternion.
+- The transfer frequency can be selected from 50/100Hz.
+- Axis definitions are oriented as shown in the figure below.
 
 | Mode type | Frequency | EOG | Acc | Gyro | Quaternion |
 |:---:|:---:|:---:|:---:|:---:|:---:|
@@ -15,69 +15,69 @@
 
 ## Full Mode
 
-Fullはデータ種が一番多いモードで、最も汎用的に使いやすいモードです。[**詳細な解説**](/pdf/sample_full.pdf)をご覧ください。
+Full is the mode with the most data types and is the most versatile and easy to use. Please see **[Detail]({{ base_path }}/assets/pdf/sample_full.pdf)**.
 
-| Name | Type | 説明 | 値の範囲 |
+| Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
-| ARTIFACT | int | ソフトウェアで入力した目印 | 0/1 |
-| NUM | int | データID連番 | 0... |
-| DATE | string | 受信日時 | (ex) 2016/08/09 05:22:35.88 |
-| ACC_X | int | 加速度Xのアナログ値（最大値が設定したレンジ） | -32768...32767 |
-| ACC_Y | int | 加速度Yのアナログ値（最大値が設定したレンジ） | -32768...32767 |
-| ACC_Z | int | 加速度Zのアナログ値（最大値が設定したレンジ） | -32768...32767 |
-| GYRO_X | int | 角速度Xのアナログ値（最大値が設定したレンジ） | -32768...32767 |
-| GYRO_Y | int | 角速度Yのアナログ値（最大値が設定したレンジ） | -32768...32767 |
-| GYRO_Z | int | 角速度Zのアナログ値（最大値が設定したレンジ） | -32768...32767 |
-| EOG_L | int | 電極左の値 | -32768...32767 |
-| EOG_R | int | 電極右の値 | -32768...32767 |
-| EOG_H | int | 視線ヨコ移動 | -65535...65535 |
-| EOG_V | int | 視線タテ移動 | -32768...32767 |
+| ARTIFACT | int |  Markers entered in software | 0/1 |
+| NUM | int | Sequential number | 0... |
+| DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
+| ACC_X | int |  Analog value of acceleration X (maximum value is set range) | -32768...32767 |
+| ACC_Y | int |  Analog value of acceleration Y (maximum value is set range) | -32768...32767 |
+| ACC_Z | int |  Analog value of acceleration Z (maximum value is set range) | -32768...32767 |
+| GYRO_X | int |  Analog value of angular velocity X (maximum value is set range) | -32768...32767 |
+| GYRO_Y | int |  Analog value of angular velocity X (maximum value is set range) | -32768...32767 |
+| GYRO_Z | int |  Analog value of angular velocity X (maximum value is set range) | -32768...32767 |
+| EOG_L | int | Value of left electrode | -32768...32767 |
+| EOG_R | int | Value of right electrode | -32768...32767 |
+| EOG_H | int | Value of horizontal potential | -65535...65535 |
+| EOG_V | int | Value of vertical potential | -32768...32767 |
 
 ## Standard Mode
 
-StandardはEOGが倍速(1行に2データ)で取得できEOGを詳細に取りたい時に便利ですが、角速度のデータが残りません。[**詳細な解説**](/assets/pdf/sample_standard.pdf)をご覧ください。
+Standard mode is useful when you want to acquire detailed EOG data at twice the speed (two data per line), but it does not retain angular velocity data. Please see **[Detail]({{ base_path }}/assets/pdf/sample_standard.pdf)**.
 
-| Name | Type | 説明 | 値の範囲 |
+| Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
-| ARTIFACT | int | ソフトウェアで入力した目印 | 0/1 |
-| NUM | int | データID連番 | 0... |
-| DATE | string | 受信日時 | (ex) 2016/08/09 05:22:35.88 |
-| ACC_X | int | 加速度Xのアナログ値（最大値が設定したレンジ） | -32768...32767 |
-| ACC_Y | int | 加速度Yのアナログ値（最大値が設定したレンジ） | -32768...32767 |
-| ACC_Z | int | 加速度Zのアナログ値（最大値が設定したレンジ） | -32768...32767 |
-| EOG_L1 | int | 電極左の値1 | -32768...32767 |
-| EOG_R1 | int | 電極右の値1 | -32768...32767 |
-| EOG_L2 | int | 電極左の値1 の 1/(周波数 * 2)秒後の値 | -32768...32767 |
-| EOG_R2 | int | 電極右の値1 の 1/(周波数 * 2)秒後の値 | -32768...32767 |
-| EOG_H1 | int | 視線ヨコ移動1 | -65535...65535 |
-| EOG_V1 | int | 視線タテ移動1 | -32768...32767 |
-| EOG_H2 | int | 視線ヨコ移動1 の 1/(周波数 * 2)秒後の値 | -65535...65535 |
-| EOG_V2 | int | 視線タテ移動1 の 1/(周波数 * 2)秒後の値 | -32768...32767 |
+| ARTIFACT | int | Markers entered in software | 0/1 |
+| NUM | int | Sequential number | 0... |
+| DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
+| ACC_X | int |  Analog value of acceleration X (maximum value is set range) | -32768...32767 |
+| ACC_Y | int |  Analog value of acceleration Y (maximum value is set range) | -32768...32767 |
+| ACC_Z | int |  Analog value of acceleration Z (maximum value is set range) | -32768...32767 |
+| EOG_L1 | int | Value of left electrode 1 | -32768...32767 |
+| EOG_R1 | int | Value of right electrode 1 | -32768...32767 |
+| EOG_L2 | int | Value1 of left electrode after 1/(freqency * 2) sec | -32768...32767 |
+| EOG_R2 | int | Value1 of right electrode after 1/(freqency * 2) sec | -32768...32767 |
+| EOG_H1 | int | Value of horizontal potential 1 | -65535...65535 |
+| EOG_V1 | int | Value of vertical potential 1 | -32768...32767 |
+| EOG_H2 | int | Value1 of horizontal potential after 1/(freqency * 2) sec | -65535...65535 |
+| EOG_V2 | int | Value1 of vertical potential after 1/(freqency * 2) sec | -32768...32767 |
 
 ## Quaternion Mode
 
-Quaternionは姿勢制御などで使用するデータを取得するための特殊モードです。[**詳細な解説](/assets/pdf/sample_quaternion.pdf)をご覧ください。
+Quaternion is a special mode for acquiring data used for attitude control, etc. Please see **[Detail]({{ base_path }}/assets/pdf/sample_quaternion.pdf)**.
 
-| Name | Type | 説明 | 値の範囲 |
+| Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
-| ARTIFACT | int | ソフトウェアで入力した目印 | 0/1 |
-| NUM | int | データID連番 | 0... |
-| DATE | string | 受信日時 | (ex) 2016/08/09 05:22:35.88 |
-| QUATERNION_W | int | QUATERNION_W（最大値が設定したレンジ） | -32768...32767 |
-| QUATERNION_X | int | QUATERNION_X（最大値が設定したレンジ） | -32768...32767 |
-| QUATERNION_Y | int | QUATERNION_Y（最大値が設定したレンジ） | -32768...32767 |
-| QUATERNION_Z | int | QUATERNION_Z（最大値が設定したレンジ） | -32768...32767 |
+| ARTIFACT | int | Markers entered in software | 0/1 |
+| NUM | int | Sequential number | 0... |
+| DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
+| QUATERNION_W | int | QUATERNION_W(maximum value is set range)） | -32768...32767 |
+| QUATERNION_X | int | QUATERNION_X(maximum value is set range)） | -32768...32767 |
+| QUATERNION_Y | int | QUATERNION_Y(maximum value is set range)） | -32768...32767 |
+| QUATERNION_Z | int | QUATERNION_Z(maximum value is set range)） | -32768...32767 |
 
-## シグナル処理
+## Signal processing
 
-JINS MEME アカデミックパックでは、センサーの取得値をそのままBluetoothで出力します。
+JINS MEME Academic Pack outputs the acquired values of the sensor directly via Bluetooth.
 
 ![](/images/structure.png)
 
-## EOGデータのサンプル
+## A sample of the EOG signal
 
-まばたきや視線移動を行っている時の100Hzの眼電位シグナルのサンプル(青:Vv, 赤:Vh)を以下に示します。接触抵抗の影響により、視線移動はband pass filter がかかったようななだらかに収束する波形を示します。
+The following is a sample of the EOG signal(blue:Vv, red:Vh) at 100 Hz during blinking and eye movement. Due to the effect of contact resistance, the eye movement shows a gently converging waveform as if a band pass filter is applied.
 
 ![](/images/vvvh_signal.png)
 
-[CSVファイル（抜粋）](/data/eog_std_signal2.csv)
+[CSV file (excerpts)](/data/eog_std_signal2.csv)

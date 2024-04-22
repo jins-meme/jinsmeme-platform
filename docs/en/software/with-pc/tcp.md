@@ -1,9 +1,9 @@
-# TCP ソケット通信<Badge type="danger" text="アカデミック版" />
+# TCP Socket Communication<Badge type="danger" text="Academic" />
 
-ソケット通信によるログファイルは「計測情報を記載したヘッダ部」と「センシングデータを記載したボディ部」の2段構成となっています。ヘッダ部には「Data mode、Transmission speed、Accelerometer sensor's range、Gyroscope sensor's range、データ序列」の順に計測情報が記載されています。
+The socket communication log file consists of two parts: the header containing the measurement information and the body containing the sensing data. The header contains the measurement information "Data mode, Transmission speed, Accelerometer sensor's range, Gyroscope sensor's range, and data rank" respectively.
 
 >
-Select mode「Full」、Transmission speed「100Hz」、Measurement range of Accelerometer「±4g」、Measurement range of Gyroscope「1000dps」の場合
+ For Select mode "Full", Transmission speed "100Hz", Measurement range of Accelerometer "±4g", and Measurement range of Gyroscope "1000dps"
 
 ```
 //Data mode  : Full
@@ -15,18 +15,18 @@ Select mode「Full」、Transmission speed「100Hz」、Measurement range of Acc
 
 
 
-## ■各計測モードのデータ序列について
+## ■Data Rank in each Measurement Mode
 
 
-### ①計測モードが「Standard」の場合
+### 1) When Measurement mode is "Standard"
 
 ```
 //ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,EOG_L1,EOG_R1,EOG_L2,EOG_R2,EOG_H1,EOG_H2,EOG_V1,EOG_V2
 ```
 
 > 
-【説明】  
-アーチファクト、総カウント、計測日時、加速度センサー値（X軸）、加速度センサー値（Y軸）、加速度センサー値（Z軸）、EOGセンサー値1（左）、EOGセンサー値1（右）、EOGセンサー値2（左）、EOGセンサー値2（右）、EOGセンサー値1（水平差分）、EOGセンサー値2（水平差分）、EOGセンサー値1（垂直差分）、EOGセンサー値2（垂直差分）
+Description  
+Artifact, Total count, Measurement date/time, Acceleration sensor value (X-axis), Acceleration sensor value (Y-axis), Acceleration sensor value (Z-axis), EOG sensor value 1 (left), EOG sensor value 1 (right), EOG sensor value 2 (left), EOG sensor value 2 (right), EOG sensor value 1 (horizontal difference), EOG sensor value 2 (horizontal difference), EOG sensor value 1 (vertical difference), EOG sensor value 2 (vertical difference)
 
 ```
 // Data mode  : Standard
@@ -41,15 +41,15 @@ Select mode「Full」、Transmission speed「100Hz」、Measurement range of Acc
 ```
 
 
-### ②計測モードが「Full」の場合
+### 2) When Measurement mode is "Full"
 
 ```
 //ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,GYRO_X,GYRO_Y,GYRO_Z,EOG_L,EOG_R,EOG_H,EOG_V
 ```
 
 > 
-【説明】
-アーチファクト、総カウント、計測日時、加速度センサー値（X軸）、加速度センサー値（Y軸）、加速度センサー値（Z軸）、角速度センサー値（X軸）、角速度センサー値（Y軸）、角速度センサー値（Z軸）、EOGセンサー値（左）、EOGセンサー値（右）、EOGセンサー値（水平差分）、EOGセンサー値（垂直差分）
+Description  
+Artifact, Total count, Measurement date/time, Acceleration sensor value (X-axis), Acceleration sensor value (Y-axis), Acceleration sensor value (Z-axis), Angular velocity sensor value (X-axis), Angular velocity sensor value (Y-axis), Angular velocity sensor value (Z-axis), EOG sensor value (left), EOG sensor value (right), EOG sensor value (horizontal difference), EOG sensor value (vertical difference)
 
 ```
 // Data mode  : Full
@@ -64,7 +64,7 @@ Select mode「Full」、Transmission speed「100Hz」、Measurement range of Acc
 ```
 
 
-### ③計測モードが「Quaternion」の場合
+### 3) When measurement mode is "Quaternion"
 
 ```
 // Data mode  : Quaternion
@@ -76,8 +76,8 @@ Select mode「Full」、Transmission speed「100Hz」、Measurement range of Acc
 ```
 
 > 
-【説明】
-アーチファクト、総カウント、計測日時、クォータニオン(W)、クォータニオン(X)、クォータニオン(Y)、クォータニオン(Z)
+Description
+Artifact, Total count, Measurement date/time, Quaternion (W) Quaternion (X) Quaternion (Y) Quaternion (Z)
 
 ```
 // Data mode  : Quaternion
@@ -91,9 +91,9 @@ Select mode「Full」、Transmission speed「100Hz」、Measurement range of Acc
 ,3,2016/3/21 15:51:53.36,13922096,1065454235,132305442,-549757
 ```
 
-## Socket クライアントサンプル
+## Socket client sample
 
-以下がPythonでのデータ受信サンプルです。
+Below is a sample of data reception in Python.
 
 ```
 import socket
@@ -101,22 +101,22 @@ target_ip = "127.0.0.1" //Change here
 target_port = 60000 //Change here
 buffer_size = 4096
 
-# 1.ソケットオブジェクトの作成
+# 1.Creating a Socket Object
 tcp_client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 print("tcp_client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)")
 
-# 2.サーバに接続
+# 2.Connect to Server
 tcp_client.connect((target_ip,target_port))
 print("tcp_client.connect((target_ip,target_port))")
 
 is_end = False
 while not is_end:
-    # 3.サーバからのレスポンスを受信
+    # 3.Receive response from server
     response = tcp_client.recv(buffer_size)
     if response == b"":
         is_end = True
     print("[*]Received a response : {}".format(response))
 
-# 4.接続を終了させる
+# 4.Terminate the connection
 tcp_client.close()
 ```

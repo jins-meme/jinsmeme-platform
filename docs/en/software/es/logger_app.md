@@ -2,70 +2,71 @@
 outline: deep
 ---
 
-# データ取得手順<Badge type="tip" text="通常版" />
+# Data Acquisition Procedure<Badge type="tip" text="Standard" />
 
-ロガーアプリはJINS MEMEでのデータ取得に特化したスマートフォン向けアプリです。利用規約は[JINS MEME 利用規約](https://jinsmeme.com/term)に準じます。
+- The logger application is a smartphone application specialized for data acquisition with JINS MEME. The Application Terms of Use will apply.
 
-## インストール
+## Install
 
-**jins meme logger** で検索するか、以下のリンクからストアへ移動しインストールしてください。
+Search for **jins meme logger** or click on the link below to go to the store and install.
 
 - [App Store (iPhone/iPad)](https://apps.apple.com/jp/app/jins-meme-logger/id1537937129)
 - [Play Store (Android)](https://play.google.com/store/apps/details?id=com.jins_meme.logger4internal)
 
-## 測定に関する注意
+## Precautions for measurements
 
-- 起動初回時には位置情報(Bluetooth)の許可、モーションアクティビティ情報の取得許可(iOSのみ)を求められますので、許可してください。
-- 正常着用時以外のデータは正しく測定できませんので、正しくメガネを装着してください。
-- Androidアプリはバックグラウンド時に自動的に直近の使用していない(約5〜30分)アプリをOS側で落とす機能により計測が途切れます。長時間測定の際は画面をオンにし続ける設定にし、フォアグラウンド（アプリが表示されている状態）を保ってください。
+- When the application is launched for the first time, you will be asked to allow location information (Bluetooth) and motion activity information acquisition (iOS only).
+- Data other than when worn normally cannot be measured correctly, so please wear your glasses correctly. 
+- The Android application automatically drops the last unused application (about 5 to 30 minutes) in the background, which interrupts the measurement. When measuring for long periods of time, please keep the screen on and keep the app in the foreground.
 
-## 測定ボタンによる測定
+## Measurement & save manually
 
-1. JINS MEME を充分に充電してください
-2. 接続画面でJINS MEMEを検索※
-3. 接続したいJINS MEMEをタップし接続完了（アクティベートされ赤文字で表示される）すると、画面下部**ロガー**ボタンをタップすると現在のデータが表示されます
-4. (オプション)ジャイロセンサーを使用する場合は、**設定**でジャイロを取得をオンにしてください
-5. 測定の開始時間になったらロガータブ下部の**記録**をタップ(タップした時点からのデータがCSVに残ります) ※自動保存では不要です
-6. 測定の終了時間になったら**記録終了**をタップ(タップした時点までのデータがCSVに残ります) ※自動保存では不要です
-7. ファイルを取り出したら、JINS MEMEとの接続を切る（接続画面で接続しているJINS MEMEをタップし、モーダル内の切断するをタップ）・アプリを落とす・JINS MEMEを逆さまにしてスリープさせる、などで測定を終了させます。
+1. Charge JINS MEME sufficiently.
+1. Search for JINS MEME on the connection screen*.
+1. Tap the JINS MEME you wish to connect and once the connection is complete (activated and displayed in red text), tap the **Logger** tab at the bottom of the screen to display the current data.
+1. if you wish to use the gyro sensor (optional), tap the settings tab at the bottom of the screen, move the screen, and turn on the gyro acquisition option.
+1. When it is time to start measurement, tap the "Record" label at the bottom of the logger tab (data will be saved in CSV from the time of the tap) *Not necessary for automatic saving.
+1. When it is time to end the measurement, tap the "End Recording" button (data up to the point of tapping will be saved in CSV) *Not necessary for automatic saving.
+1. After retrieving the file, disconnect from JINS MEME (tap the connected JINS MEME on the connection screen, then tap Disconnect in the modal), drop the app, or turn the JINS MEME upside down to sleep to end the measurement.
 
-## 自動保存による測定
+## Measurement & save automatically
 
-- 設定タブ→自動保存をオンにすると、指定した時間毎にファイルが区切られ自動的に保存されるようになります（上記の**記録をタップ**〜**記録終了をタップ**が不要になります）。
-- 設定タブ→保存周期で、保存する間隔を指定できます。ファイル名の拡張子の前に「_m5(数字は保存間隔)」が付与されます。
+- If you turn on "Settings Tab→Auto Save", files will be separated and saved automatically at specified time intervals (no need to **tap the record button** to **tap the end record button** above).
+- You can specify the interval at which to save the file by going to the Settings tab -> Save Cycle. The file name extension will be prefixed with "_m5 (number is the save interval)".
 
-## ファイルの種類と取り出し方法
+## File type and extraction
 
-- **(file_id)_currentData.csv**: 20Hzデータ(currentData)
-- **(file_id)_logicIndexData.csv**: 15秒間隔データ(logicIndexData)
-- **(file_id)_summaryData.csv**: 60秒間隔データ(summaryData)
-- **(file_id)_fastHeadMotion.csv**: 高速頭部運動データ(fastHeadMotion)
-- **(file_id)_slowHeadMotion.csv**: 低速頭部運動データ(slowHeadTilting, slowHeadRotation)
-- **(file_id)_motionActivity.csv**: (iOSのみ)スマートフォンで取得されたmotion activity分類(データ内容の詳細は[公式ドキュメント](https://developer.apple.com/documentation/coremotion/cmmotionactivity)をご覧ください)
-- **(file_id)_location.csv**: (iOSのみ)スマートフォンで取得された緯度経度データ
+- **(file_id)_currentData.csv**: 20Hz data (currentData)
+- **(file_id)_logicIndexData.csv**: 15-second interval data (logicIndexData)
+- **(file_id)_summaryData.csv**: 60 seconds interval data (summaryData)
+- **(file_id)_fastHeadMotion.csv**: Fast head motion data (fastHeadMotion)
+- **(file_id)_slowHeadMotion.csv**: Slow head motion data (slowHeadTilting, slowHeadRotation)
+- **(file_id)_motionActivity.csv**: (iOS only) motion activity classification obtained by smartphone. For details on data contents, please refer to [official document](https://developer.apple.com/documentation/coremotion/cmmotionactivity)
+- **(file_id)_location.csv**: (iOS only) Latitude and longitude data acquired by smartphones.
 
-file_idはiOS/Androidで以下のようになります。
+The file_id is as follows for iOS/Android. JINS MEME's UDID, which was displayed at the time of scanning on iOS, is shown in parentheses.
 
 - iOS
-    - `{日付 8文字}-{時刻 6文字}_{固有機体ID 12文字}({UDID 頭8文字})`
-    - 例: 20210719-081859_CDC007922D4F(00DF874C)_currentData.csv
+    - `{Date 8 characters}-{Time 6 characters}_{Unique Device ID 12 characters}({UDID first 8 characters})`
+    - Example: 20210719-081859_CDC007922D4F(00DF874C)_currentData.csv
 - Android
-    - `{日付 8文字}-{時刻 6文字}_{固有機体ID 12文字}`
-    - 例: 20210719-081859_CDC007922D4F_currentData.csv
+    - `{Date 8 characters}-{Time 6 characters}_{Unique Aircraft ID 12 characters}`
+    - Example: 20210719-081859_CDC007922D4F_currentData.csv
 
-※iOSでのUDIDに関して、同じJINS MEME機体を使用していても、繋げるスマートフォンの端末が異なる場合は別のUDIDになります。これはOS側の「プライバシーを考慮したトラッキング対策のため、端末別に別のUDIDとして見えるようにする」という仕様によるものです。
+Even if the same JINS MEME device is used, a different ID will be displayed if the smartphone device to which the JINS MEME is connected is different. This is due to the OS specification that "for privacy-conscious tracking measures, different UDIDs will be displayed for each device.
 
-### iOSのファイル取得
+### Retrieving iOS files
 
-- アプリ内で取得
-    - 画面下部**CSV**をタップするとファイル一覧が表示されるのでファイルをタップし詳細を表示し、**他のアプリで開く**をタップすると、ファイルの転送先が選択できます
-- Windowsで取得
-    - iTunesからiPhoneに接続しファイル共有からLoggerアプリのストレージ領域（Loggerアプリ→JINS MEME DEVELOPERS）にアクセスすると抜き出しができます。
-- Macで取得
-    - Macの場合、iPhoneを接続してLoggerアプリのストレージ領域（Loggerアプリ→JINS MEME DEVELOPERS）にアクセスすると抜き出しができます。
+- Share from the app
+    - Tap **CSV** at the bottom of the screen to display a list of files.
+    - Tap **Open in other apps** to select the destination of the file.
+- Retrieving on Windows
+    - connect to the iPhone via itunes and access the Logger app storage area (Logger app → JINS MEME DEVELOPERS) from `File Share` to extract the data.
+- Retrieving on Mac
+    - You can access the storage area of the Logger app (Logger app → JINS MEME DEVELOPERS) by connecting your iPhone to the finder app.
 
 ![itunes_download](/images/itunes_download.png)
 
-### Androidのファイル取得
+### Retrieving Android files
 
-(内部ストレージ →) Download以下にファイル種毎にフォルダが切られ保存されています。ファイラーアプリ(スマホ内のファイルを操作するアプリ、Google filesやES File Explorerなど)を使用し測定したファイルを取り出してください。
+Folders are saved for each file type under (Internal Storage ->) Download. Please use a filer app (an app to manipulate files in your phone, such as Google files or ES File Explorer) to retrieve the measured file.

@@ -1,56 +1,56 @@
-# 測定のながれ<Badge type="danger" text="アカデミック版" />
+# Measurement flow<Badge type="danger" text="Academic" />
 
-JINS MEME ES_Rの機能を使用するには、最初に接続をする必要があります。
+In order to use the functions of the JINS MEME ES_R, communication must be established between PC and the JINS MEME ES_R.
 
-## 接続
+## Connection
 
-### ドングルとPCの接続 (Windowsのみ)
+### Connecting the Dongle (Windows only)
 
-- ドングルをパソコンの任意のUSBポートに挿入し、JINS MEME ES_Rとドングルとの通信を確立させます。
-    - `重要` ドングルのドライバが認識されない場合は、Silicon labsが公開しているCP210x USB - UART ブリッジ VCPドライバをお試しください。
+- Insert the dongle in any USB port on the PC.
+    - `Important` If the dongle driver is not found, try the CP210x USB - UART bridge VCP driver provided by Silicon labs.
 
-### ①アプリの起動
+### ① Launch the app
 
-1. JINS MEME ACADEMIC  のアイコンをクリックして、ソフトウェアを起動します。
-    - 「データ取得」画面が表示されます。
+1. Click the JINS MEME ACADEMIC icon and start the software.
+    - The Acquire Data window appears.
 
-### ②ドングルとポートの設定 (Windowsのみ)
+### ② Dongle and port settings (Windows only)
 
-1. `Scan port` ボタンをクリックし、ドングルを検索します。
-    - コンボボックスにUSBのポート番号が表示されます。
-1.  一覧から通信先のポート番号を選択し、 Open ボタンをクリックします。
+-  Click the `Scan port` button to search the dongle. 
+    - The combo box shows the port number of the USB.
+- Select the destination port number from the list and click the Open button.
+    - The `Open` button changes to the `Close` button and dongle communication is established.
 
-### ③JINS MEME ES_Rの接続
+### ③ Connecting with the JINS MEME ES_R
 
-1. 接続可能な状態のJINS MEME ES_Rが近くにあるときに、 `Scan device` ボタンをクリックすると、接続可能なJINS MEME ES_Rの検索されます。
-1. コンボボックスに接続可能なJINS MEME ES_RのID番号が表示されます。  
-1. 接続対象のJINS MEME ES_Rを選択し、 `Connect' ボタンをクリックします。  
-1. ステータス表示が `Connected` に切り替わり、通信が確立されます。  
-    - PCとの相性により接続が失敗することがあります。接続が失敗した場合は再度接続をお試しください。
+1. When a connectable JINS MEME ES_R is nearby, click the `Scan` device button will start scanning for a connectable JINS MEME ES_R.
+1. The combo box shows the ID of the connectable JINS MEME ES_R.  
+1. Select the JINS MEME ES_R to connect to and click the `Connect` button.
+1. The status text changes to the `Connected` and communication is established.  
+    - Connection may fail depending on the compatibility with the PC. If the connection fails, please try to connect again.
 
-![接続](/images/pc_setting1.png)
-
-
-## 計測
-
-1. 計測開始
-    - 計測するデータモード「Select mode」、通信速度「Transmission speed」、センサーレンジ「Measurement range of Accelerometer」および「Measurement range of Gyroscope」を指定し、 `Start Measurement` ボタンをクリックすることでJINS MEME ES_Rから計測値が送信され、グラフ描画を開始します。
-    - `参考` 各項目の詳細については、「画面 ⇒ データ再生画面」を参照してください。  
-    - `重要` 「Select mode」で「Quaternion」を選択した場合、グラフは描画されません。
-1. 計測停止
-    - 計測中に `Stop Measurement` ボタンをクリックすることで、計測を停止します。
-
-![計測](/images/pc_setting2.png)
+![Connection](/images/pc_setting1.png)
 
 
-## 切断
+## Measurement
 
-1. JINS MEME ES_Rの切断
-    1. JINS MEME ES_Rの計測を停止した状態で、 `Disconnect` ボタンをクリックします。
-    1. Disconnect の表示が Connect  ボタンに切り替わり、通信が切断されます。
-1. ドングルとPCの切断 (Windowsのみ)
-    1. 任意のUSBポートでのドングル通信中に、 `Close` ボタンをクリックします。
-    1. Close  ボタンの表示が  Open  ボタンに切り替わり、ドングル通信が切断されます。
+1. Start measurement
+    - Specify the Select mode, Transmission speed, Measurement range of Accelerometer, and Measurement range of Gyroscope, and click the `Start Measurement` button to send measurement values from the JINS MEME ES_R and start drawing graphs.
+    - `Tip` Refer to "Review Data window" for the details of each item.  
+    - `Important` No graph is drawn when Quaternion is selected for Select mode.
+1. Stopping Measurement
+    - Click the `Stop Measurement` button while measuring to stop measurement.
 
-![切断](/images/pc_setting3.png)
+![Measurement](/images/pc_setting2.png)
 
+
+## Disconnection
+
+1. Disconnecting Communication of the JINS MEME ES_R
+    1. Click the `Disconnect` button while measurement with the JINS MEME ES_R is stopped.
+    1. The `Disconnect` button changes to the `Connect` button and communication is disconnected.
+1. Disconnecting Communication with the Dongle (Windows only)
+    1. While dongle communication is established from any USB port, click the `Close` button.
+    1. The `Close` button changes to the `Open` button and dongle communication is disconnected.
+
+![Disconnection](/images/pc_setting3.png)

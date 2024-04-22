@@ -1,74 +1,74 @@
-# 測定のながれ<Badge type="danger" text="アカデミック版" />
+# Measurement flow<Badge type="danger" text="Academic" />
 
-## 接続
+## Connection
 
-JINS MEME ES_Rとの通信は以下の2種類を選択できます。BLEで安定しなかった場合、USBドングル経由の接続をお試しください。
+The following two types of communication with JINS MEME ES_R can be selected. If the connection was not stable with BLE, try a connection via USB dongle.
 
-| Type | 概要 | 注意点 |
+| Type | Outline | Notes |
 |:---:|:---:|:---:|
-| BLE | 端末のBluetoothを使って直接データ受信 | 端末によって通信が安定しない場合があります |
-| USB | ドングルでデータ受信 | 特定のタイミングでUSBを挿抜する必要があります |
+| BLE | Receive data directly via Bluetooth on the android device | Communication may not be stable depending on the android device.|
+| USB | Receive data via dongle | USB must be plugged in and unplugged at a specific timing.|
 
-### 直接接続(BLE)の準備
+### Prepare for direct connection (BLE)
 
-端末のBluetoothを使用する場合は、`USE BLE`をタップすることで完了します。
+To use Bluetooth on the device, tap `USE BLE` to complete the process.
 
-### ドングル接続(USB)の準備
+### Prepare for dongle connection (USB)
 
-1. USE USBをタップします。
-2. メイン画面を表示させ、Android端末のUSBコネクタにドングルを挿入します。
-    - ドングルの接続を確認するダイアログが表示されます(①)。
-    - `参考` Android標準で対応しているチップのためドライバのインストール等は必要ありません。  
-3. **OK**をタップします。
-4. **OPEN**をタップします。
-    - ドングルとの通信が確立されます。しばらくするとドングルが接続状態なったことが表示されます(②)。
+1. Tap USE USB
+2. Display the main screen and insert the dongle in the USB connector of the Android device.  
+    - A dialog to check the dongle connection appears(①).
+    - `Tip`	Since the chip is supported by the Android standard, no driver installation is required.
+3.  Tap **OK**.
+4.  Tap **OPEN**  
+    - Communication with the dongle is established. When the inserted dongle becomes available, a screen indicating that the dongle is connected appears(②).
 
-![接続](/images/android_setting1.png)
+![Connection](/images/android_setting1.png)
 
-### JINS MEME ES_Rの接続
+### Connecting with the JINS MEME ES_R
 
-1. 画面が接続待ち状態にあることを確認し、**Scan Device**をタップします。
-    - JINS MEME ES_Rの検索が開始されます。JINS MEME ES_Rの検索は、おおよそ6秒間継続します。  
-    - JINS MEME ES_Rの検索実行の結果、1つまたは複数のJINS MEME ES_Rが発見された場合は、計測機器リストに発見されたJINS MEME ES_RのIDが表示されます。  
-    - JINS MEME ES_Rが発見されなかった場合は、右上の画面に戻ります。
-    - 1回で見つからない場合がありますので、その時はリトライしてください。
-2. 接続対象のJINS MEME ES_Rを選択し、**Connect**をタップします。  
-    - 検索で見つかっていない時はConnectできません。
-    - 接続が完了するとConnectedと表示されます。
+1. Check that the screen indicates that scanning is ready and tap **Scan Device**.  
+    - A scan for JINS MEME ES_R will be started, which will continue for approximately 6 seconds.  
+    - If one or more JINS MEME ES_Rs are found, the ID of the found JINS MEME ES_R is displayed in the device list.  
+    - If no JINS MEME ES_R is found, the screen will return to the upper right.
+    - It may not be found at the first time, so please retry at that time.
+2. Select the JINS MEME ES_R to connect and tap **Connect**.  
+    - Tap while the screen is showing the image at right.
+    - The screen at right appears when connection is completed.
 
-![接続](/images/android_setting2.png)
+![Connection](/images/android_setting2.png)
 
 
-## 計測
+## Measurement
 
-### 計測開始
+### Start measurement
 
-1. 計測するデータモード「Select mode」、通信速度「Transmission speed」、センサーレンジ「Measurement range of Accelerometer」および「Measurement range of Gyroscope」を指定し、**START MEASUREMENT** をタップすると、計測開始の確認画面が表示されます。
-    - `参考` 各項目の詳細については、[パソコンで使用する > 画面 > データ再生画面](../with-pc/windows.html)を参照してください。
-1. **OK** をタップすると、JINS MEME ES_Rから計測値が送信され、データ保存を開始します。
-1. グラフでデータを確認したい場合は `(TYPE) GRAPH DISABLED` のところをそれぞれタップすると `(TYPE) GRAPH ENABLED` と表示が変わります。モードに応じて表示できるグラフは以下のように異なります。
+1. Specify the select mode, Transmission speed, Measurement range of Accelerometer, and Measurement range of Gyroscope, and tap **START MEASUREMENT**. The Confirm Start of Measurement screen appears.
+    - `Tip` Refer to [Using from a PC > Windows > Acquire Data window](../with-pc/windows.html) for the detaill of each item.
+2. Tap **OK**, then measurement data is sent from the JINS MEME ES_R and saved.
+3. Tap each `(TYPE) GRAPH DISABLED` to see the data in a grap, then the display changes to `(TYPE) GRAPH ENABLED`. The graphs that can be displayed depend on the mode.
     - Standard: EOG, ACC
     - Full: EOG, ACC, GYRO
-    - Quartanion: 表示なし
+    - Quartanion: None
 
-![測定開始](/images/android_setting3.png)
+![Start measurement](/images/android_setting3.png)
 
-### 計測停止
+## Stop Measurement
 
-- 計測中に**STOP MEASUREMENT**タップします。  
-    - 計測停止の確認画面が表示されます。  
-- **OK** をタップします。  
-    - JINS MEME ES_Rからの計測値が保存されます。
-    - データが保存場所: /$TOP/JINS/MEME_academic (デバイスによって $TOP はダウンロード、内部ストレージ、SDカード等と異なります)
+- Tap **STOP MEASUREMENT** during measurement.
+    - The confirm stop Measurement screen appears.
+- Tap **OK**.
+    - Measurement values from the JINS MEME ES_R are saved.
+    - Data save destination: /$TOP/JINS/MEME_academic (Depending on the device, $TOP is expressed differently, such as Downloads, internal storage, sdcard, etc.)
 
-![測定停止](/images/android_setting4.png)
+![Stop Measurement](/images/android_setting4.png)
 
 
-## 切断
+## Disconnection
 
-1. JINS MEME ES_Rの計測を停止した状態で、**Disconnect**をタップします。  
-    - JINS MEME ES_R接続状態が「Status: Connected」と表示されているときに、**Disconnect**をタップしてください。
-2. 通信が切断されると、画面が切り替わります。
-3. （ドングル使用時のみ）ソフトウェアを終了させると、接続状態にあるドングルは切断されます。USBコネクタからドングルを外してください。
+1. Tap **Disconnect** while measurement with the JINS MEME ES_R is stopped.  
+    - Tap **Disconnect** while the screen is showing the image at right (JINS MEME ES_R connection status is [Connected]).
+2. The screen at below appears when communication is disconnected.
+3. (Only when using a dongle) When the software is terminated, the connected dongle is disconnected. Unplug the dongle from the USB connector.
 
-![切断](/images/android_setting5.png)
+![Disconnection](/images/android_setting5.png)

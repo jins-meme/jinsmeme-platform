@@ -2,59 +2,60 @@
 outline: deep
 ---
 
-# 外部連携<Badge type="tip" text="通常版" />
+# Share external<Badge type="tip" text="Standard" />
 
-Google DriveもしくはWebsocketを利用し、データを外部に連携することが可能です。
 
-## Google Drive 連携
+Data can be shared externally using Google Drive or Websocket.
 
-### 設定方法
+## Google Drive integration
 
-- 画面下部の設定ボタンをタップし、GoogleDrive連携のボタンスイッチをタップします。
-- (iOSのみ)外部サイトへのアクセス許可を求められるので**続ける**をタップします。
-- **Googleアカウントを選択**、もしくは**アカウントを追加**を実施し、連携したいアカウントを選択します。
-- 権限のスコープの詳細が表示されるのでチェックを入れ、Continueをタップします。Loggerではマイドライブの直下にフォルダを作成しそこにCSVを書き込みます。それ以外のフォルダへのアクセスはできないようになっています。
-- 設定完了すると、CSVファイル生成時に以下のフォルダに自動連携されます。
-    - iOS: マイドライブ/JINS_MEME_LOGGER
-    - Android: マイドライブ/JINS_MEME_LOGGER_ANDROID
-- 保存時にネットワークが不通の状態では連携されませんので、連携ボタンをタップするか手動でファイルを取り出してください。
+### How to set up
+
+- Tap the Settings button at the bottom of the screen, then tap the button switch for Google Drive share.
+- (iOS only) Tap **Continue** when asked for permission to access external sites.
+- **Select Google Account** or **Add Account** and select the account you wish to link.
+- Logger will create a folder directly under My Drive and write CSV to it. The Logger creates a folder directly under the My Drive and writes CSV to it, and no other folders can be accessed.
+- When settings are turned on, CSV files are automatically linked to the following folders when they are created.
+    - iOS: My Drive/JINS_MEME_LOGGER
+    - Android: My Drive/JINS_MEME_LOGGER_ANDROID
+- If the network is disconnected at the time of saving, the files will not be linked.
 
 ![gdrive_settings](/images/gdrive_settings.png)
 
-## WebSocket連携
+## WebSocket integration
 
-データを受信する側をWebSocket Serverとして、Logger(WebSocket Client)からリアルタイムにデータ連携が可能です。
+By receiving data with WebSocket Server, data integration is possible in real time from Logger (WebSocket Client).
 
-### 手動設定
+### Manual configuration
 
-入力欄に設定名、IPアドレス、ポートを入力し、受信したいデータタイプを選びます。
+Enter a configuration name, IP address, and port in the entry fields, and select the data type you wish to receive.
 
 ![wss_settings](/images/wss_settings.png)
 
-### QRコードからの設定情報読み込み
+### Reading settings information from QR code
 
-QRコードから簡便に設定を行うことが可能です。**wss://192.168.0.1:5000** のようにwss://{IPアドレス}:{ポート}の形式の文字列を表すQRコードを読み込ませると自動的にIPアドレスとポートをセットすることが可能です。設定名と受信したいデータタイプはセットしてください。
+Settings can be easily configured from a QR code. When a QR code representing a character string in the format of wss://{IP address}:{port}, such as **wss://192.168.0.1:5000**, is read, the IP address and port can be set automatically. Please set the setting name and the data type you want to receive.
 
-### データの受信
+### Receiving data
 
-- WebSocket Serverを起動します
-- Loggerの設定画面から追加するか、既存の設定をタップし、接続に成功するとスイッチがオンになります
-- 接続している限り、指定したデータタイプが1行毎にJSON文字列化した状態でメッセージングされ続けます
+- Start WebSocket Server
+- Add from the Logger settings screen or tap an existing setting, and if the connection is successful, the switch will turn on
+- As long as you are connected, the data type you specified will continue to be messaged as a JSON string, one line at a time.
  
-#### heartbeatメッセージの除外
+#### Exclude Heartbeat messages
 
-アプリ内で使用しているライブラリの仕様上、heartbeatメッセージ(死活監視用メッセージ)を送信することがあります。Server側では予期しないメッセージを受信することになりますので、エラーにならないよう以下のように該当文字列("heartbeat")があった場合除外する処理を入れてください。
+Due to the specification of the library used in the application, Heartbeat messages (messages for alive monitoring) may be sent, and since the server side will receive unexpected messages, please add a process to exclude the corresponding string ("heartbeat") as follows to avoid errors If you find such a string ("heartbeat"), please add a process to exclude it as follows.
 
 ```
 if(message.indexOf("heartbeat") === -1){
-  //ここに実際の処理
+  //Here is the actual processing
   //const obj = JSON.parse(messeage);
 }
 ```
 
-#### Node.js による WebSocket Serverサンプル
+#### WebSocket Server Sample with Node.js
 
-以下はNode.jsでwsパッケージを利用しLoggerからデータを受け取るサンプルスクリプトになります。このスクリプトを動作しているマシンのIPアドレスのポート5000にLoggerから接続します。
+The following is a sample script that uses the ws package in Node.js to receive data from Logger. The script connects to port 5000 of the IP address of the machine running this script from Logger.
 
 ```
 const server = require("ws").Server;
@@ -64,10 +65,10 @@ ws_server.on("connection", ws => {
   console.log("connected from client");
   ws.on('message',function(message){
     if(message.indexOf("heartbeat") === -1){
-      //メッセージを出力
+      // output message
       console.log(message);
 
-      //実際の処理する場合はparseして処理していきます
+      //In case of actual processing, parse and process
       //const obj = JSON.parse(messeage);
     }
   });

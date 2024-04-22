@@ -1,199 +1,199 @@
-# 通常版Logger データ定義<Badge type="tip" text="通常版" />
+# Standard Logger Data definition<Badge type="tip" text="Standard" />
 
-## モーション指標の軸定義
+## Axis Definition of Motion Indicators
 
 ![](/images/axisdef.png)
 
-角度に関してはセンサーの特性上ドリフト（値が一定速度で変化すること）、ハンプ（値に小さい段差が発生すること）が起こります。
+Regarding the angle, drift (value changes at a constant rate) and hump (small bumps in the value) occur due to the characteristics of the sensor.
 
-## 静止指標と歩行指標
+## Static and Gait indicators
 
-- JINS MEMEで測定できるデータのうち、 **静止指標** とあるものは、歩行・メガネを手で触っている・咀嚼などがない静止時のみに有効な指標となります。前記以外の条件で測定した時はノイズフラグとして検出されたり、不正確な値を出力したり、検出されなかったりしますのでご注意ください。summaryDataにおいては疑わしいシグナルが除外されるよう、クレンジングがかけられています。
-- JINS MEMEで測定できるデータのうち、 **歩行指標** とあるものは、歩いている時に取得できるデータになります。歩いている以外の振動・動作パターンでは正確に測定できませんのでご注意ください。
+- Among the data that can be measured by JINS MEME, the `Static` indicator is an indicator that is valid only when there is no walking, touching the glasses with the hands, chewing, etc. When data is measured under conditions other than those mentioned above, it may be detected as a noise flag, output inaccurate values, or not detected. Please note that when measurement is made under conditions other than those mentioned above, it may be detected as a noise flag, output inaccurate values, or not be detected. summaryData is cleansed to remove any suspicious signals.
+- The `Gait` indicator in the data that can be measured by JINS MEME is the data that can be obtained while walking. Please note that JINS MEME cannot accurately measure vibration and movement patterns other than walking.
 
-## 20Hzデータ(currentData)
+## 20Hz data(currentData)
 
-約20Hzでデータを取得でき、動きの把握やコントローラーなど精緻なデータの即時取得・分析に適したモードです。このデータはJINS MEMEとスマートフォンがBluetooth接続している時のみ生成されます。
+Data can be acquired at approximately 20 Hz. This mode is suitable for immediate acquisition and analysis of precise data such as controller. This data is generated only when JINS MEME and a smartphone are connected via Bluetooth.
 
-| iOS/Android/Nodejs/Logger | 型(iOS/Android) | 型(Nodejs) | 説明 | 値の範囲 |
+| iOS/Android/Nodejs/Logger | Type(iOS/Android) | Type(Nodejs) | Description | Value Range |
 |:---|:---:|:---:|:---|:---:|
-| blinkSpeed `静止指標` | Int | Number | まばたき速度、閉眼時間(mSec) | 0-400(通常90−180付近) |
-| blinkStrength `静止指標` | Int | Number | まばたき強度(uV-equiv) | 0-1000(通常30−150付近) |
-| eyeMoveUp `静止指標` | Int | Number | 視線が上に動いた時のイベント | 0: 検知無し<br/>1: 極小-7: 特大 |
-| eyeMoveDown `静止指標` | Int | Number | 視線が下に動いた時のイベント | 0: 検知無し<br/>1: 極小-7: 特大 |
-| eyeMoveLeft `静止指標` | Int | Number | 視線が左に動いた時のイベント | 0: 検知無し<br/>1: 極小-7: 特大 |
-| eyeMoveRight `静止指標` | Int | Number | 視線が右に動いた時のイベント | 0: 検知無し<br/>1: 極小-7: 特大 |
-| roll | Float | Number | 姿勢角のロール成分（左右傾き）を示す度 | -180.00 - 180.00 |
-| pitch | Float | Number | 姿勢角のピッチ成分（前後傾き）を示す度 | -180.00 - 180.00 |
-| yaw | Float | Number | 姿勢角のヨー成分（横回転）を示す度 | 0.00 - 360.00 |
-| accX | Float | Number | 加速度のX軸成分（左右）、1G=16 | -128(-8G) - 127(7.9375G) |
-| accY | Float | Number | 加速度のY軸成分（前後）、1G=16 | -128(-8G) - 127(7.9375G) |
-| accZ | Float | Number | 加速度のZ軸成分（上下）、1G=16 | -128(-8G) - 127(7.9375G) |
-| walking(isWalking) `歩行指標` | boolean | Number | かかとが地面についた時の一歩の検知(検知後0.15~0.25s後にフラグ) | 0/false: 検知無し<br/>1/true: 検知有り |
-| noiseStatus | boolean | Number | 眼電位電極のノイズ状況を表す整数値 | 0/false: ノイズ無し<br/>1/true: ノイズ有り |
-| fitError | Int | Number | JINS MEMEが実際に装着されているかどうか、揺れで5秒に1回判定 | 0: 装着中<br />1: 非装着 |
-| powerLeft | Int | Number | 電池残量を表す整数値 | 0: 充電中<br />1: 空-5: 満充電 |
-| sequenceNumber(seqNo) | Int | Number | 0-255までの循環連番整数 | 0-255 |
+| blinkSpeed `Static` | Int | Number | Blink speed, eye closing time(mSec) | 0-400(ordinary 90−180) |
+| blinkStrength `Static` | Int | Number | Blink strength(uV-equiv) | 0-1000(ordinary30−150) |
+| eyeMoveUp `Static` | Int | Number | Event when the eye moves up. | 0: none<br/>1: min-7: max |
+| eyeMoveDown `Static` | Int | Number | Event when the eye moves down. | 0: none<br/>1: min-7: max |
+| eyeMoveLeft `Static` | Int | Number | Event when the eye moves left. | 0: none<br/>1: min-7: max |
+| eyeMoveRight `Static` | Int | Number | Event when the eye moves right. | 0: none<br/>1: min-7: max |
+| roll | Float | Number | Degrees indicating the roll component (left-right tilt) of the attitude angle | -180.00 - 180.00 |
+| pitch | Float | Number | Degrees indicating the pitch component (fore-back tilt) of the attitude angle | -180.00 - 180.00 |
+| yaw | Float | Number | Degrees indicating the yaw component (horizontal rotation) of the attitude angle | 0.00 - 360.00 |
+| accX | Float | Number | X-axis component of acceleration (left/right)、1G=16 | -128(-8G) - 127(7.9375G) |
+| accY | Float | Number | Y-axis component of acceleration (fore/back)、1G=16 | -128(-8G) - 127(7.9375G) |
+| accZ | Float | Number | Z-axis component of acceleration (up/down)、1G=16 | -128(-8G) - 127(7.9375G) |
+| walking(isWalking) `Gait` | boolean | Number | Detection of one step when heel touches the ground (flagged 0.15~0.25s after detection) | 0/false: no step<br/>1/true: step |
+| noiseStatus | boolean | Number | Integer value representing the noise condition of the electrode | 0/false: low noise<br/>1/true: high noise |
+| fitError | Int | Number | JINS MEME is actually worn or not, determined once every 5 seconds by movement | 0: worn<br />1: not worn |
+| powerLeft | Int | Number | Integer value representing remaining battery capacity | 0: In charging<br />1: Empty-5: Full |
+| sequenceNumber(seqNo) | Int | Number | Circulant sequential integer from 0-255 | 0-255 |
 
-※Nodejsはnodejs-sdkの型になります(nodejsでは内部構造の問題でboolean型が使用されないので注意)
+※Nodejs will be nodejs-sdk Type (in nodejs, boolean is an integer value due to internal structure issues).
 
-## 15秒間隔データ(logicIndexData)
+## 15-second interval data (logicIndexData)
 
-15秒間隔データは生体指標を出力する一番粒度の細かいデータです。このデータはJINS MEMEとスマートフォンがBluetooth接続している時のみ生成されます。
-※サブアプリ動作時、規格化値、サブ指標、RTアルゴリズム動作時、の記載がある指標は記録されないことがあります。
+The 15-second interval data is the most granular data that outputs biometric indicators. This data is generated only when JINS MEME and a smartphone are connected via Bluetooth.
+※"When running sub-applications", "Normalized", "sub-index" and "RT algorithm in operation" may not be recorded.
 
-|Logger|API|型(API/CSV)|説明|値の範囲|
-|:--|:--|:--|:--|:--:|
-|date|date|String|計測日時|2000-01-01T00:00:00 - 2099-12-31T23:59:59|
-|stepCount`歩行指標`|stp|Number(int)|歩数| 0-255 |
-|stepCadence`歩行指標`|cad|Number(float)|ケイデンス(ピッチ)| 0-255 |
-|isStill|isl|Boolean / Number(int)|静止（装着してない）判定| true: 非装着（静止） false: 装着中（非静止）|
-|noiseTime|nis\_time|Number(float)|ノイズ時間|0.00 - 15.00|
-|isValid|vld|Boolean / Number(int)|静止状態のデータ有効性（ノイズ3秒以下かつ歩数5歩以下）| true: 有効 false: 無効|
-|xMean|tl\_xav|Number(float)|傾き平均X (度) | -180.00-180.00 |
-|xSD|tl\_xsd|Number(float)|傾き標準偏差X (度) | 0-655.36 |
-|yMean|tl\_yav|Number(float)|傾き平均Y (度) | -180.00-180.00 |
-|ySD|tl\_ysd|Number(float)|傾き標準偏差Y (度) | 0-655.36 |
-|pitchOnewayCount|hm\_po|Number(int)|頭部運動縦回数| 0-255 |
-|pitchRoundCount|hm\_pr|Number(int)|ゆっくりな首の連続傾斜回数（前後）| 0-255 |
-|yawOnewayCount|hm\_yo|Number(int)|頭部運動横回数| 0-255 |
-|yawRoundCount|hm\_yr|Number(int)|ゆっくりな首の連続傾斜回数（左右）| 0-255 |
-|xRightStepAmplitude`歩行指標`|sa\_xr|Number(float)|歩行振動X（cm,右足）| 0.00-16.00 |
-|xLeftStepAmplitude`歩行指標`|sa\_xl|Number(float)|歩行振動X（cm,左足）| 0.00-16.00 |
-|yRightStepAmplitude`歩行指標`|sa\_yr|Number(float)|歩行振動Y（cm,右足）| 0.00-16.00 |
-|yLeftStepAmplitude`歩行指標`|sa\_yl|Number(float)|歩行振動Y（cm,左足）| 0.00-16.00 |
-|zRightStepAmplitude`歩行指標`|sa\_zr|Number(float)|歩行振動Z（cm,右足）| 0.00-16.00 |
-|zLeftStepAmplitude`歩行指標`|sa\_zl|Number(float)|歩行振動Z（cm,左足）| 0.00-16.00 |
-|zLeftStepAmplitudeCal`歩行指標`|sa\_zrc|Number(float)|歩行振動Z補正有（cm,右足）| 0.00-20.00 |
-|zLeftStepAmplitudeCal`歩行指標`|sa\_zlc|Number(float)|歩行振動Z補正有（cm,左足）| 0.00-20.00 |
-|maxRightStepAcceleration`歩行指標`|st\_r|Number(float)|最大着地強度平均 (G, 右足)| 0.00-8.00 |
-|maxLeftStepAcceleration`歩行指標`|st\_l|Number(float)|最大着地強度平均 (G, 左足)| 0.00-8.00 |
-|sleepScoreStandard`静止指標`|sc\_slp\_std|Number(float)|低覚醒スコア(通常時)、まばたき強さ・速度と一部まばたき間隔から「目がトロンとなっている状態」を指標化したもの|有効時: 0(覚醒高い)-100(眠い)、無効: -1|
-|sleepScore`静止指標`|sc\_slp|Number(float)|低覚醒スコア(運転時)、運転時の姿勢(まっすぐ前を向いている状態)でクレンジングし、精度を高めたもの|有効時: 0(覚醒高い)-100(眠い)、無効: -1|
-|focusScore`静止指標`|sc\_fcs|Number(float)|没入スコア、まばたき間隔を利用し「ある一つのタスクへの注意が続いている状態」を指標化したもの|有効時: 0(没入度が低い)-100(没入度が高い)、無効: -1|
-|tensionScore`静止指標`|sc\_tsn|Number(float)|テンションスコア、まばたき強さを利用し「目が見開いている状態」を指標化したもの|有効時: 0(緊張が弱い)-100(緊張が強い)、無効: -1|
-|calmScore`静止指標`|sc\_clm|Number(float)|安定スコア、まばたき強さを利用し「外部・内部刺激を受けずに安定している状態」を指標化したもの|有効時: 0(落ち着いていない)-100(落ち着いている)、無効: -1|
-|distance|distance|Number(float)|サブアプリ動作時 前回区間との移動距離(m)|0-5000|
-|latitude|lat|Number(float)|サブアプリ動作時 緯度|-180 - 180|
-|longitude|lng|Number(float)|サブアプリ動作時 経度|-90 - 90|
-|appMeasurementStatus|app\_measurement\_status|Number(int)|サブアプリの動作状況フラグ|0: 非APP測定 2: Run測定中 3: Run一時停止中 8: Drive測定中 12: Drive一時停止中 32: Focus測定中 48: Focus一時停止中|
-|nptMean`静止指標`|npt\_av|Number(float)|NPT（実効まばたき速度）平均| -0.999 - 0.999 |
-|nptMedian`静止指標`|npt\_med|Number(float)|NPT（実効まばたき速度）中央値| -0.999 - 0.999 |
-|nptSD`静止指標`|npt\_sd|Number(float)|NPT標準偏差| 0-0.999 |
-|blinkWidthMean`静止指標`|bkw\_av|Number(float)|まばたき速度平均(mSec)| 0-300 |
-|blinkStrengthTotal`静止指標`|bkh\_sum|Number(float)|まばたき強度合計(uV-equiv) | 0-10000.0 |
-|blinkStrengthMax`静止指標`|bkh\_max|Number(float)|まばたき強度最大(uV-equiv) | 0-1000.0 |
-|blinkStrengthSD`静止指標`|bkh\_sd|Number(float)|まばたき強度標準偏差(uV-equiv) | 0.00-1000.0 |
-|blinkStrengthMean`静止指標`|bkh\_av|Number(float)|まばたき強度平均| 0-1000.0 |
-|blinkIntervalTotal`静止指標`|bki\_sum|Number(float)|まばたき間隔合計(s)| 0-120.0|
-|blinkIntervalCount`静止指標`|bki\_n|Number(int)|まばたき間隔数|0-120|
-|blinkIntervalMean`静止指標`|bki\_av|Number(float)|まばたき間隔平均| 0.00-60.00 |
-|blinkCount`静止指標`|bk\_n|Number(int)|まばたき回数|0-120|
-|blinkCountRaw`静止指標`|rbk\_n|Number(int)|まばたき回数生値| 0-255 |
-|eyeMoveUpCount`静止指標`|re\_u|Number(int)|視線移動上回数生値| 0-255 |
-|eyeMoveDownCount`静止指標`|re\_d|Number(int)|視線移動下回数生値| 0-255 |
-|eyeMoveRightCount`静止指標`|re\_r|Number(int)|視線移動右回数生値| 0-255 |
-|eyeMoveLeftCount`静止指標`|re\_l|Number(int)|視線移動左回数生値| 0-255 |
-|cummulativeTime|cum\_time|Number(int)|規格化累積時間(s)| 0-4294967296 |
-|blinkIntervalMeanWA`静止指標`|bki\_av\_wa|Number(float)|まばたき間隔平均 規格化値| 0.00-60.00 |
-|blinkStrengtnSDWA`静止指標`|bkh\_sd\_wa|Number(float)|まばたき強度標準偏差 規格化値| 0.00-1000.0 |
-|blinkStrengthMeanWA`静止指標`|bkh\_av\_wa|Number(float)|まばたき強度平均 規格化値| 0-1000.0 |
-|nptMeanWA`静止指標`|npt\_av\_wa|Number(float)|NPT（実効まばたき速度）平均 規格化値| -0.999 - 0.999 |
-|nptSDWA`静止指標`|npt\_sd\_wa|Number(float)|NPT（実効まばたき速度）標準偏差 規格化値| 0-0.999 |
-|blinkWidthMeanWA`静止指標`|bkw\_av\_wa|Number(float)|まばたき速度平均 規格化値| 0-300 |
-|nptScore`静止指標`|sc\_npt|Number(float)|覚醒サブ指標 NPTスコア|有効時: 0-100、無効: -1|
-|btsScore`静止指標`|sc\_bts|Number(float)|覚醒サブ指標 BTSスコア|有効時: 0-100、無効: -1|
-|lbsScore`静止指標`|sc\_lbs|Number(float)|覚醒サブ指標 LBSスコア|有効時: 0-100、無効: -1|
-|legacyZone`静止指標`|zone|Number(int)|RTアルゴリズム動作時 zone値|有効時: 0-100、無効: -1|
-|legacyFocus`静止指標`|focus|Number(int)|RTアルゴリズム動作時 focus値|有効時: 0-100、無効: -1|
-|legacyCalm`静止指標`|calm|Number(int)|RTアルゴリズム動作時 calm値|有効時: 0-100、無効: -1|
-|legacyPosture`静止指標`|posture|Number(int)|RTアルゴリズム動作時 posture値|有効時: 0-100、無効: -1|
-|cursor|cursor|String|次のレコードがある場合の取得開始位置|
+|Logger|API|Type(API/CSV)|Description|Value Range|
+|:---|:---|:---|:---|:---:|
+|date|date|String|measurement date|2000-01-01T00:00:00 - 2099-12-31T23:59:59|
+|stepCount `Gait`|stp|Number(int)|Step count|0-255|
+|stepCadence `Gait`|cad|Number(float)|Cadence(pitch)| 0-255 |
+|isStill|isl|Boolean / Number(int)|Still (not wearing) judgment| true: not wearing (still) false: wearing (not still)|
+|noiseTime|nis\_time|Number(float)|noise time|0.00 - 15.00|
+|isValid|vld|Boolean / Number(int)|Data validity at rest (noise less than 3 seconds and steps less than 5)| true: valid false: invalid|
+|xMean|tl\_xav|Number(float)|Mean tilt X (degree) | -180.00-180.00 |
+|xSD|tl\_xsd|Number(float)|Standard deviation of tilt X (degree) | 0-655.36 |
+|YMean|tl\_yav|Number(float)|Mean tilt Y (degree) | -180.00-180.00 |
+|ySD|tl\_ysd|Number(float)|Standard deviation of tilt Y (degree) | 0-655.36 |
+|pitchOnewayCount|hm\_po|Number(int)|Number of neck flips (back-forth)| 0-255 |
+|pitchRoundCount|hm\_pr|Number(int)|Number of slow neck flips (back-forth)| 0-255 |
+|yawOnewayCount|hm\_yo|Number(int)|Number of neck flips (right-left)| 0-255 |
+|yawRoundCount|hm\_yr|Number(int)|Number of slow neck flips (right-left)| 0-255 |
+|xRightStepAmplitude `Gait`|sa\_xr|Number(float)|Walking vibration X(cm,right foot)| 0.00-16.00 |
+|xLeftStepAmplitude `Gait`|sa\_xl|Number(float)|Walking vibration X(cm,left foot)| 0.00-16.00 |
+|yRightStepAmplitude `Gait`|sa\_yr|Number(float)|Walking vibration Y(cm,right foot)| 0.00-16.00 |
+|yLeftStepAmplitude `Gait`|sa\_yl|Number(float)|Walking vibration Y(cm,left foot)| 0.00-16.00 |
+|zRightStepAmplitude `Gait`|sa\_zr|Number(float)|Walking vibration Z(cm,right foot)| 0.00-16.00 |
+|zLeftStepAmplitude `Gait`|sa\_zl|Number(float)|Walking vibration Z(cm,left foot)| 0.00-16.00 |
+|zLeftStepAmplitudeCal `Gait`|sa\_zrc|Number(float)|Walking vibration Z corrected (cm,right foot)| 0.00-20.00 |
+|zLeftStepAmplitudeCal `Gait`|sa\_zlc|Number(float)|Walking vibration Z corrected (cm,left foot)| 0.00-20.00 |
+|maxRightStepAcceleration `Gait`|st\_r|Number(float)|Maximum landing strength average (G, right foot)| 0.00-8.00 |
+|maxLeftStepAcceleration `Gait`|st\_l|Number(float)|Maximum landing strength average (G, left foot)| 0.00-8.00 |
+|sleepScoreStandard `Static`|sc\_slp\_std|Number(float)|Low wakefulness score (normal), index of "eye trance" based on blink strength/rate and partial blink interval| 0(high wakefulness)-100(sleepy), invalid: -1|
+|sleepScore `Static`|sc\_slp|Number(float)|Corrected for low alertness score (when driving) and driving posture (looking straight ahead)| 0 (high wakefulness) -100 (sleepy), Invalid: -1|
+|focusScore `Static`|sc\_fcs|Number(float)|Indicates "sustained attention to a task" using immersion score and blink interval| 0(low immersion)-100(high immersion), Inactive: -1|
+|tensionScore `Static`|sc\_tsn|Number(float)|Tension score, an index of "eyes wide open" using blink strength| 0(low tension)-100(high tension), Invalid: -1|
+|stabilityScore `Static`|sc\_clm|Number(float)|Stability score, an index of "stable state without external or internal stimuli" using blink strength| 0(not calm)-100(calm), Invalid: -1|
+|distance|distance|Number(float)|When running sub-applications: distance traveled since last section (m)|0-5000|
+|latitude|lat|Number(float)|When running sub-applications: latitude|-180 - 180|
+|longitude|lng|Number(float)|When running sub-applications: longitude|-90 - 90|
+|appMeasurementStatus|app\_measurement\_status|Number(int)|sub-app operation status flag|0: Non-APP measurement 2: Run measurement in progress 3: Run paused 8: Drive measurement in progress 12: Drive paused 32: Focus measurement 48: Focus paused|
+|nptMean `Static`|npt\_av|Number(float)|NPT (effective blink rate) average| -0.999 - 0.999 |
+|nptMedian`Static`|npt\_med|Number(float)|NPT(Effective blink rate) median| -0.999 - 0.999 |
+|nptSD `Static`|npt\_sd|Number(float)|NPT standard deviation| 0-0.999 |
+|blinkWidthMean `Static`|bkw\_av|Number(float)|Blink speed mean(mSec)| 0-300 |
+|blinkStrengthTotal `Static`|bkh\_sum|Number(float)|Blink strength sum(uV-equiv) | 0-10000.0 |
+|blinkStrengthMax `Static`|bkh\_max|Number(float)|Blink strength max(uV-equiv) | 0-1000.0 |
+|blinkStrengthSD `Static`|bkh\_sd|Number(float)|Blink strength sd(uV-equiv) | 0.00-1000.0 |
+|blinkStrengthMean `Static`|bkh\_av|Number(float)|Blink strength mean| 0-1000.0 |
+|blinkIntervalTotal `Static`|bki\_sum|Number(float)|Blink interval sum(s)| 0-120.0|
+|blinkIntervalCount `Static`|bki\_n|Number(int)|Number of blink interval |0-120|
+|blinkIntervalMean `Static`|bki\_av|Number(float)|Blink interval mean | 0.00-60.00 |
+|blinkCount `Static`|bk\_n|Number(int)|Number of blink|0-120|
+|blinkCountRaw `Static`|rbk\_n|Number(int)|Number of blink(Raw)| 0-255 |
+|eyeMoveUpCount `Static`|re\_u|Number(int)|Eye movement count(up, Raw)| 0-255 |
+|eyeMoveDownCount `Static`|re\_d|Number(int)|Eye movement count(down, Raw)| 0-255 |
+|eyeMoveRightCount `Static`|re\_r|Number(int)|Eye movement count(right, Raw)| 0-255 |
+|eyeMoveLeftCount `Static`|re\_l|Number(int)|Eye movement count(Left, Raw)| 0-255 |
+|cummulativeTime|cum\_time|Number(int)|Cumulative normalizing time(s)| 0-4294967296 |
+|blinkIntervalMeanWA `Static`|bki\_av\_wa|Number(float)|Normalized blink interval mean| 0.00-60.00 |
+|blinkStrengtnSDWA `Static`|bkh\_sd\_wa|Number(float)|Normalized blink strength sd| 0.00-1000.0 |
+|blinkStrengthMeanWA `Static`|bkh\_av\_wa|Number(float)|Normalized blink strength mean| 0-1000.0 |
+|nptMeanWA `Static`|npt\_av\_wa|Number(float)|Normalized NPT mean| -0.999 - 0.999 |
+|nptSDWA `Static`|npt\_sd\_wa|Number(float)|Normalized NPT sd| 0-0.999 |
+|blinkWidthMeanWA `Static`|bkw\_av\_wa|Number(float)|Normalized blink speed mean| 0-300 |
+|nptScore `Static`|sc\_npt|Number(float)|Sleepiness sub-index: NPT score|0-100, Invalid: -1|
+|btsScore `Static`|sc\_bts|Number(float)|Sleepiness sub-index: BTS score|0-100, Invalid: -1|
+|lbsScore `Static`|sc\_lbs|Number(float)|Sleepiness sub-index: LBS score|0-100, Invalid: -1|
+|legacyZone `Static`|zone|Number(int)|RT algorithm in operation: zone value|0-100, Invalid: -1|
+|legacyFocus `Static`|focus|Number(int)|RT algorithm in operation: focus value|0-100, Invalid: -1|
+|legacyCalm `Static`|calm|Number(int)|RT algorithm in operation: calm value|0-100, Invalid: -1|
+|legacyPosture `Static`|posture|Number(int)|RT algorithm in operation: posture value|0-100, Invalid: -1|
+|cursor|cursor|String|Starting position to retrieve the next record if any.|
 
-## 60秒間隔データ(summaryData)
+## 60-second interval data (summaryData)
 
-1分間に1回データを取得できる、長時間の状態変化をモニタリングするのに適したモードです。MEMEアプリではJINS MEMEとスマートフォンがBluetooth接続していない時でもJINS MEME内に保存させておき、再接続時に取り出すことが可能です(Loggerアプリでは保存データは取り出せません)。
+This mode is suitable for monitoring status changes over a long period of time, allowing data to be acquired once per minute.
 
-| iOS/Android/Logger | API/Nodejs |型(API/CSV)| 説明 | 値の範囲 |
+| iOS/Android/Logger | API/Nodejs |Type(API/CSV)| Description | Value Range |
 |:---|:---:|:---:|:---|:---:|
 | date | <i>N/A</i> | String | 日付 | 1970-01-01T09:00:00 - 2106-02-07T06:28:16 |
 | <i>N/A</i> | ut | Number(int)|UNIX TIME | 0-4294967296 |
-| validDuration | val_s | Number(float)|測定秒数(s) | 0.00-60.00 |
-| noiseDuration | nis_s | Number(float)|電極ノイズ秒数(s) | 0.00-60.00 |
-| fitDuration | wea_s | Number(float)|装着秒数(s) | 0.00-60.00 |
-| walkingDuration | stp_s | Number(float)|歩行秒数(s) | 0.00-60.00 |
-| powerLeft | bl | Number(int)|バッテリーレベル | 0: 充電中<br />1:空-5:満充電|
-| eyeMoveHorizontal `静止指標` | ems_rl | Number(int)|視線移動小回数(左右) | 0-255 |
-| eyeMoveVertical `静止指標` | ems_ud | Number(int)|視線移動小回数(上下) | 0-255 |
-| eyeMoveBigHorizontal `静止指標` | eml_rl | Number(int)|視線移動大回数(左右) | 0-255 |
-| eyeMoveBigVertical `静止指標` | eml_ud | Number(int)|視線移動大回数(上下) | 0-255 |
-| headMoveVerticalCount | hm_po |Number(int)| 頭部運動回数縦 | 0-255 |
-| headMoveHorizontalCount | hm_yo | Number(int)| 頭部運動回数横 | 0-255 |
-| walkingVibrationRightX `歩行指標` | sa_xr | Number(float)|歩行振動X (cm, 右足) | 0.00-16.00 |
-| walkingVibrationLeftX `歩行指標` | sa_xl | Number(float)|歩行振動X (cm, 左足) | 0.00-16.00 |
-| walkingVibrationRightY `歩行指標` | sa_yr | Number(float)|歩行振動Y (cm, 右足) | 0.00-16.00 |
-| walkingVibrationLeftY `歩行指標` | sa_yl | Number(float)|歩行振動Y (cm, 左足) | 0.00-16.00 |
-| walkingVibrationRightZ `歩行指標` | sa_zr | Number(float)|歩行振動Z (cm, 右足) | 0.00-16.00 |
-| walkingVibrationLeftZ `歩行指標` | sa_zl | Number(float)|歩行振動Z (cm, 左足) | 0.00-16.00 |
-| landingStrengthRightMaxAvg `歩行指標` | st_r | Number(float)|最大着地強度平均 (G, 右足) | 0.00-8.00 |
-| landingStrengthLeftMaxAvg `歩行指標` | st_l | Number(float)|最大着地強度平均 (G, 左足) | 0.00-8.00 |
-| slopeXAvg | tl_xav | Number(float)|傾き平均X (度) | -180.00-180.00 |
-| slopeYAvg | tl_yav | Number(float)|傾き平均Y (度) | -180.00-180.00 |
-| slopeXStd | tl_xsd | Number(float)|傾き標準偏差X (度) | 0-655.36 |
-| slopeYStd | tl_ysd | Number(float)|傾き標準偏差Y (度) | 0-655.36 |
-| highSpeedStepsNum `歩行指標` | stp_fst | Number(int)|歩行時歩数（高速 280-370ms） | 0-255 |
-| middleSpeedStepsNum `歩行指標` | stp_mid | Number(int)|歩行時歩数（中速 380-440ms） | 0-255 |
-| lowSpeedStepsNum `歩行指標` | stp_slw | Number(int)|歩行時歩数（低速 450-590ms） | 0-255 |
-| ultraLowSpeedStepsNum `歩行指標` | stp_vsl | Number(int)|歩行時歩数（超低速 600-1000ms） | 0-255 |
-| nptAvgWeak `静止指標` `クレンジング弱` | lc_npt_av | Number(float)|NPT（実効まばたき速度）平均 | -0.256 - 0.256 |
-| weakBlinkSpeedAvg `静止指標` `クレンジング弱` | lc_bkw_av | Number(int)|まばたき速度平均(mSec) | 50-306 |
-| weakBlinkSpeedStd `静止指標` `クレンジング弱` | lc_bkw_sd | Number(float)|まばたき速度標準偏差(mSec) | 0-51.2 |
-| weakBlinkStrengthAvg `静止指標` `クレンジング弱` | lc_bkh_av | Number(int)|まばたき強度平均(uV-equiv) | 0-512 |
-| weakBlinkStrengthStd `静止指標` `クレンジング弱` | lc_bkh_sd | Number(float)|まばたき強度標準偏差(uV-equiv) | 0-51.2 |
-| weakBlinkCount `静止指標` `クレンジング弱` | lc_bk_n | Number(int)|まばたき回数 | 0-255 |
-| weakBlinkSwarmCount `静止指標` `クレンジング弱` | lc_bkg_n | Number(int)|1s以内に複数回まばたきが発生した回数 | 0-255 |
-| weakBlinkIntervalAvg `静止指標` `クレンジング弱` | lc_bki_av | Number(float)|まばたき間隔秒数平均(s) ※FW2.2.0からはRMS平均 | 0-51.2 |
-| weakBlinkIntervalCount `静止指標` `クレンジング弱` | lc_bki_n | Number(int)|まばたき間隔回数 | 0-255 |
-| nptAvgStrong `静止指標` `クレンジング強` | sc_npt_av | Number(float)|NPT（実効まばたき速度）平均 | -0.256 - 0.256 |
-| strongBlinkSpeedAvg `静止指標` `クレンジング強` | sc_bkw_av | Number(int)|まばたき速度平均(mSec) | 50-306 |
-| strongBlinkSpeedStd `静止指標` `クレンジング強` | sc_bkw_sd | Number(float)|まばたき速度標準偏差(mSec) | 0-51.2 |
-| strongBlinkStrengthAvg `静止指標` `クレンジング強` | sc_bkh_av | Number(int)|まばたき強度平均(uV-equiv) | 0-512 |
-| strongBlinkStrengthStd `静止指標` `クレンジング強` | sc_bkh_sd | Number(float)|まばたき強度標準偏差(uV-equiv) | 0-51.2 |
-| strongBlinkCount `静止指標` `クレンジング強` | sc_bk_n | Number(int)|まばたき回数 | 0-255 |
-| strongBlinkSwarmCount `静止指標` `クレンジング強` | sc_bkg_n | Number(int)|1s以内に複数回まばたきが発生した回数 | 0-255 |
-| strongBlinkIntervalAvg `静止指標` `クレンジング強` | sc_bki_av | Number(float)|まばたき間隔秒数平均(s)  ※FW2.2.0からはRMS平均| 0-51.2 |
-| strongBlinkIntervalCount `静止指標` `クレンジング強` | sc_bki_n | Number(int)|まばたき間隔回数 | 0-255 |
-|cursor|cursor|String|次のレコードがある場合の取得開始位置| null / (string)|
+| validDuration | val_s | Number(float)|Measuring seconds(s) | 0.00-60.00 |
+| noiseDuration | nis_s | Number(float)|Electrode nsoise seconds(s) | 0.00-60.00 |
+| fitDuration | wea_s | Number(float)|Wearing seconds(s) | 0.00-60.00 |
+| walkingDuration | stp_s | Number(float)|Walking seconds(s) | 0.00-60.00 |
+| powerLeft | bl | Number(int)|Battery level | 0: In charging<br />1:Empty-5:Full|
+| eyeMoveHorizontal `Static` | ems_rl | Number(int)|Small eye movement count(right, left) | 0-255 |
+| eyeMoveVertical `Static` | ems_ud | Number(int)|Small eye movement count(up, down) | 0-255 |
+| eyeMoveBigHorizontal `Static` | eml_rl | Number(int)|Large eye movement count(right, left) | 0-255 |
+| eyeMoveBigVertical `Static` | eml_ud | Number(int)|Large eye movement count(up, down) | 0-255 |
+| headMoveVerticalCount | hm_po |Number(int)| Number of neck flips (vertical) | 0-255 |
+| headMoveHorizontalCount | hm_yo | Number(int)|Number of neck flips (horizontal)| 0-255 |
+| walkingVibrationRightX `Gait` | sa_xr | Number(float)|Walking vibration X(cm,right foot)| 0.00-16.00 |
+| walkingVibrationLeftX `Gait` | sa_xl | Number(float)|Walking vibration X(cm,left foot)| 0.00-16.00 |
+| walkingVibrationRightY `Gait` | sa_yr | Number(float)|Walking vibration Y(cm,right foot)| 0.00-16.00 |
+| walkingVibrationLeftY `Gait` | sa_yl | Number(float)|Walking vibration Y(cm,left foot)| 0.00-16.00 |
+| walkingVibrationRightZ `Gait` | sa_zr | Number(float)|Walking vibration Z(cm,right foot)| 0.00-16.00 |
+| walkingVibrationLeftZ `Gait` | sa_zl | Number(float)|Walking vibration Z(cm,left foot)| 0.00-16.00 |
+| landingStrengthRightMaxAvg `Gait` | st_r | Number(float)|Maximum landing strength average (G, right foot)| 0.00-8.00 |
+| landingStrengthLeftMaxAvg `Gait` | st_l | Number(float)|Maximum landing strength average (G, left foot)| 0.00-8.00 |
+| slopeXAvg | tl_xav | Number(float)|Mean tilt X (degree)| -180.00-180.00 |
+| slopeYAvg | tl_yav | Number(float)|Mean tilt Y (degree)| -180.00-180.00 |
+| slopeXStd | tl_xsd | Number(float)|Standard deviation of tilt X (degree)| 0-655.36 |
+| slopeYStd | tl_ysd | Number(float)|Standard deviation of tilt Y (degree)| 0-655.36 |
+| highSpeedStepsNum `Gait` | stp_fst | Number(int)|Step count(High 280-370ms)| 0-255 |
+| middleSpeedStepsNum `Gait` | stp_mid | Number(int)|Step count(Mid 380-440ms)| 0-255 |
+| lowSpeedStepsNum `Gait` | stp_slw | Number(int)|Step count(Low 450-590ms)| 0-255 |
+| ultraLowSpeedStepsNum `Gait` | stp_vsl | Number(int)|Step count(Extra-low 600-1000ms)| 0-255 |
+| nptAvgWeak `Static` `weak cleansing` | lc_npt_av | Number(float)|NPT (effective blink rate) average| -0.256 - 0.256 |
+| weakBlinkSpeedAvg `Static` `weak cleansing` | lc_bkw_av | Number(int)|Blink speed mean(mSec) | 50-306 |
+| weakBlinkSpeedStd `Static` `weak cleansing` | lc_bkw_sd | Number(float)|Blink speed sd(mSec) | 0-51.2 |
+| weakBlinkStrengthAvg `Static` `weak cleansing` | lc_bkh_av | Number(int)|Blink strength mean(uV-equiv) | 0-512 |
+| weakBlinkStrengthStd `Static` `weak cleansing` | lc_bkh_sd | Number(float)|Blink strength sd(uV-equiv) | 0-51.2 |
+| weakBlinkCount `Static` `weak cleansing` | lc_bk_n | Number(int)|Number of blink | 0-255 |
+| weakBlinkSwarmCount `Static` `weak cleansing` | lc_bkg_n | Number(int)|Number of times multiple blinks occurred within 1s | 0-255 |
+| weakBlinkIntervalAvg `Static` `weak cleansing` | lc_bki_av | Number(float)|Blink interval mean(s)  *RMS average from FW2.2.0 | 0-51.2 |
+| weakBlinkIntervalCount `Static` `weak cleansing` | lc_bki_n | Number(int)|Number of blink interval | 0-255 |
+| nptAvgStrong `Static` `strong cleansing` | sc_npt_av | Number(float)|NPT (effective blink rate) average | -0.256 - 0.256 |
+| strongBlinkSpeedAvg `Static` `strong cleansing` | sc_bkw_av | Number(int)|Blink speed mean(mSec) | 50-306 |
+| strongBlinkSpeedStd `Static` `strong cleansing` | sc_bkw_sd | Number(float)|Blink speed sd(mSec) | 0-51.2 |
+| strongBlinkStrengthAvg `Static` `strong cleansing` | sc_bkh_av | Number(int)|Blink strength mean(uV-equiv) | 0-512 |
+| strongBlinkStrengthStd `Static` `strong cleansing` | sc_bkh_sd | Number(float)|Blink strength sd(uV-equiv) | 0-51.2 |
+| strongBlinkCount `Static` `strong cleansing` | sc_bk_n | Number(int)|Number of blink | 0-255 |
+| strongBlinkSwarmCount `Static` `strong cleansing` | sc_bkg_n | Number(int)|Number of times multiple blinks occurred within 1s | 0-255 |
+| strongBlinkIntervalAvg `Static` `strong cleansing` | sc_bki_av | Number(float)|Blink interval mean(s) *RMS average from FW2.2.0 | 0-51.2 |
+| strongBlinkIntervalCount `Static` `strong cleansing` | sc_bki_n | Number(int)|Number of blink interval | 0-255 |
+|cursor|cursor|String|Starting position to retrieve the next record if any.| null / (string)|
 
-## 高速頭部運動データ(fastHeadMotion)
+## Fast-speed head movement data(fastHeadMotion)
 
-0.2〜0.9秒程度の周期で頭を左右、上下に向けた時の最初の方向、回数カウントのイベントです。連続で往復すると回数がカウントアップされ、連続した動作が止まると最終値のみ返されます。**回転速度で判定するため、ジャイロセンサーをオンにする必要があります**。このデータはJINS MEMEとスマートフォンがBluetooth接続している時のみ生成されます。
+This event counts the first direction and number of times when the head is turned left, right, up or down in a cycle of about 0.2 to 0.9 seconds. The number of times is counted up when the head moves back and forth in succession, and only the final value is returned when the continuous motion stops. **The gyro sensor must be turned on to determine by rotation speed**. This data is only generated when JINS MEME and a smartphone are connected via Bluetooth.
 
-| 名前 | 型 | 説明 | 値の範囲 |
+| Name | Type | Description | Value Range |
 |:---|:---:|:---|:---:|
-| date | String | イベント発生日時 | 1970-01-01 09:00:00 - 2106-02-07 06:28:16 |
-| type | String | 発生イベント種類 | fastHeadMotion(固定値) |
-| subType | String | 向き | right, left, up, down |
-| value | Number | 回数(片道で1) | 1-65535 |
+| date | String | Event occurrence datetime | 1970-01-01 09:00:00 - 2106-02-07 06:28:16 |
+| type | String | Event Type| fastHeadMotion(fixed value) |
+| subType | String | direction | right, left, up, down |
+| value | Number | Number of times (1 for one way) | 1-65535 |
 
-## 低速頭部運動データ(傾き, slowHeadTilting)
+## Slow-speed head movement data(Tilt, slowHeadTilting)
 
-頭を真っ直ぐな状態から左右か前後に45°以上傾けて1秒間弱維持した時のイベントです。このデータはJINS MEMEとスマートフォンがBluetooth接続している時のみ生成されます。
+This event occurs when the head is tilted from a straight position to the left or right or back and forth at least 45° and maintained for less than 1 second. This data is only generated when JINS MEME and a smartphone are connected via Bluetooth.
 
-| 名前 | 型 | 説明 | 値の範囲 |
+| Name | Type | Description | Value Range |
 |:---|:---:|:---|:---:|
-| date | String | イベント発生日時 | 1970-01-01 09:00:00 - 2106-02-07 06:28:16 |
-| type | String | 発生イベント種類 | slowHeadTilting(固定値) |
-| subType | String | 向き | right, left, forward, backward |
-| value | Number | 開始・終了フラグ | 1(まっすぐから傾けた状態に遷移)<br /> -1(傾けている状態からまっすぐに遷移) |
+| date | String | Event occurrence datetime | 1970-01-01 09:00:00 - 2106-02-07 06:28:16 |
+| type | String | Event Type| slowHeadTilting(fixed value) |
+| subType | String | direction | right, left, forward, backward |
+| value | Number | Start/end flag | 1(Transition from straight to tilted)<br /> -1(Transition from tilted to straight) |
 
-## 低速頭部運動データ(回転, slowHeadRotation)
+## Slow-speed head movement data(Rotation, slowHeadRotation)
 
-頭を45°以上傾けながら3-5秒に一周回した時のカウント数のイベントです（前方向の下向きから判定開始）。このデータはJINS MEMEとスマートフォンがBluetooth接続している時のみ生成されます。
+This event is the count of the number of times you make one round every 3-5 seconds while tilting your head at least 45° (start judging from the downward direction in the forward direction). This data is only generated when JINS MEME and a smartphone are connected via Bluetooth.
 
-| 名前 | 型 | 説明 | 値の範囲 |
+| Name | Type | Description | Value Range |
 |:---|:---:|:---|:---:|
-| date | String | イベント発生日時 | 1970-01-01 09:00:00 - 2106-02-07 06:28:16 |
-| type | String | 発生イベント種類 | slowHeadRotation(固定値) |
-| subType | String | 向き | clockwise, anticlockwise |
-| value | Number | 回転数 | 1 |
+| date | String | Event occurrence datetime | 1970-01-01 09:00:00 - 2106-02-07 06:28:16 |
+| type | String | Event Type| slowHeadRotation(fixed value) |
+| subType | String | direction | clockwise, anticlockwise |
+| value | Number | number of rotations | 1 |
