@@ -1,4 +1,4 @@
-# Windows/MacOS用 Academic(ES-R)版ロガーをインストールする
+# Windows/MacOS用 Academic(ES-R)版ロガーをインストールする<Badge type="danger" text="アカデミック版" />
 
 ## ダウンロード
 

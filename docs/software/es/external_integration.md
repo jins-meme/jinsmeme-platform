@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# 外部連携
+# 外部連携<Badge type="tip" text="通常版" />
 
 Google DriveもしくはWebsocketを利用し、データを外部に連携することが可能です。
 

@@ -1,4 +1,4 @@
-# Academic版 Logger データ定義
+# Academic版 Logger データ定義<Badge type="danger" text="アカデミック版" />
 
 - JINS MEME アカデミックパックで取得可能なデータ種としては、EOG電位シグナル、加速度(Acc)、角速度(Gyro)、Quaternionの4つです
 - Full / Standard / Quaternion の3つのモードによって取得できるデータ種が異なります

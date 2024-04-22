@@ -1,4 +1,4 @@
-# 通常版Logger データ定義
+# 通常版Logger データ定義<Badge type="tip" text="通常版" />
 
 ## モーション指標の軸定義
 

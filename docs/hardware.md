@@ -2,21 +2,24 @@
 outline: deep
 ---
 
-# JINS MEME センサー
+![](/images/title.png)
 
-## 機種の種類と対応するソフトウェア
+## 機種の種類
 
-- JINS MEME 通常版は、JINS MEME内またはアプリ内で意味づけを行ったデータを取得でき、一般的な実験用途に適しています。
-- JINS MEME Academic版(ES-R)は、粒度の細かいEOGや6軸センサーの生データを取り込むことができます。最大で100Hzでの全データ種、200HzでのEOGの取得に対応しております。
+- <Badge type="tip" text="通常版" />は、JINS MEME内またはアプリ内で意味づけを行ったデータを取得でき、一般的な実験用途に適しています。
+- <Badge type="danger" text="アカデミック版" />(ES-R)は、粒度の細かいEOGや6軸センサーの生データを取り込むことができます。最大で100Hzでの全データ種、200HzでのEOGの取得に対応しております。
+- アカデミック版のデータを通常版のデータに変換するツールは提供しておりません。
 
-| 機種 | 転送周期 | ソフトウェアと対応OS | 取得可能データ |
-| :---: | :---: | :--- | :--- |
-| 通常版 | 20Hz<br/>60秒1回 | <ul><li>[通常版 Logger<br/> (iOS / Android)](/software/es/logger_app)</li><li>SDK (iOS / Android / Nodejs)<br/>※問い合わせ対応、20Hz・60秒間隔データのみ</li></ul> | - 20Hzデータ<br/>- 15秒間隔データ<br/>- 60秒間隔データ<br/>- 高速頭部運動データ<br/>- 低速頭部運動データ |
-| Academic版<br/>(ES-R) | 50/100Hz | <ul><li>Academic(ES-R)版 Logger<br/>([Windows / MacOS](/software/with-pc/) / [Android](/software/with-android/))</li><li>[SDK](https://github.com/jins-meme/ES_R-Development-Kit)</li></ul>  | - Standard Mode<br/>- Full Mode<br/>- Quaternion |
+![](/images/schematics.png)
 
-## 取得可能なデータ
+## 対応ソフトウェアと取得可能なデータ 
 
-### 通常版
+| 機種 | 転送周期 | ソフトウェアと対応OS |
+| :---: | :---: | :--- |
+| <Badge type="tip" text="通常版" /> | 20Hz<br/>60秒1回 | <ul><li>[通常版 Logger<br/> (iOS / Android)](/software/es/logger_app)</li><li>SDK (iOS / Android / Nodejs)<br/>※問い合わせ対応、20Hz・60秒間隔データのみ</li></ul> |
+| <Badge type="danger" text="アカデミック版" /><br/>(ES-R) | 50/100Hz | <ul><li>Academic(ES-R)版 Logger<br/>([Windows / MacOS](/software/with-pc/) / [Android](/software/with-android/))</li><li>[SDK](https://github.com/jins-meme/ES_R-Development-Kit)</li></ul>  |
+
+### データ一覧<Badge type="tip" text="通常版" />
 
 [詳細はこちら](/doc/data_es)からご覧ください。
 
@@ -28,7 +31,7 @@ outline: deep
 | 高速頭部運動データ | 首振りデータ, fastHeadMotion | 縦や横に顔を向けたときのイベント |
 | 低速頭部運動データ | 頭の回転と傾きデータ, slowHeadRotation, slowHeadTilting | ゆっくりとした頭の回転や傾きのイベント |
 
-### アカデミック版
+### データ一覧<Badge type="danger" text="アカデミック版" /> 
 
 [詳細はこちら](/doc/data_esr)からご覧ください。
 
@@ -41,7 +44,7 @@ outline: deep
 
 ## 製品仕様
 
-### 通常版
+<Badge type="tip" text="通常版" />
 
 | 項目 | 仕様 |
 |:---|:---|
@@ -55,7 +58,7 @@ outline: deep
 | 外部インターフェース | micro  USB端子  |
 | 使用環境条件 | ・温度：0～40℃<br>・湿度：10～90％ RH（結露なきこと） |
 
-### アカデミック版
+<Badge type="danger" text="アカデミック版" />
 
 | 項目 | 仕様 |
 |:---|:---|
@@ -70,6 +73,5 @@ outline: deep
 
 ## ご購入窓口・保証・アフターサービス
 
-- [JINS MEMEサポート](https://cloud.mail.jins.com/aboutmeme)へお問い合わせください。
-- JINS店舗・JINSオンラインショップでは受け付けておりません。
+- [JINS MEMEサポート](https://cloud.mail.jins.com/aboutmeme)へお問い合わせください。JINS店舗・JINSオンラインショップでは受け付けておりません。
 - 保障・アフターサービスはご購入から１年です。

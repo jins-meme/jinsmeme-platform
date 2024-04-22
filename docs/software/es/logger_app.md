@@ -2,11 +2,16 @@
 outline: deep
 ---
 
-# データ取得手順
+# データ取得手順<Badge type="tip" text="通常版" />
 
 ロガーアプリはJINS MEMEでのデータ取得に特化したスマートフォン向けアプリです。利用規約は[JINS MEME 利用規約](https://jinsmeme.com/term)に準じます。
 
 ## インストール
+
+**jins meme logger** で検索するか、以下のリンクからストアへ移動しインストールしてください。
+
+- [App Store (iPhone/iPad)](https://apps.apple.com/jp/app/jins-meme-logger/id1537937129)
+- [Play Store (Android)](https://play.google.com/store/apps/details?id=com.jins_meme.logger4internal)
 
 ## 測定に関する注意
 

@@ -1,4 +1,4 @@
-# Android用 Academic(ES-R)版ロガーをインストールする
+# Android用 Academic(ES-R)版ロガーをインストールする<Badge type="danger" text="アカデミック版" />
 
 JINS MEME ES_Rで取得したデータを、Android端末に保存することができます。  
 

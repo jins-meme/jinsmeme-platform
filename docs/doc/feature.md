@@ -1,10 +1,6 @@
-# 演算処理詳細 
+# 通常版の演算処理<Badge type="tip" text="通常版" />
 
-## サービスのデータの流れ<Badge type="tip" text="通常版" /><Badge type="danger" text="アカデミック" />
-
-![](/images/schematics.png)
-
-## JINS MEMEによるセンシング・20Hzデータの演算<Badge type="tip" text="通常版" />
+## JINS MEMEによるセンシング・20Hzデータの演算
 
 センサーによるデータの取得から20Hzデータに変換するまでを解説します。各センサーは100hzでデータを取得しており、JINS MEME（通常版）では以下の1次検出を実施します。
 

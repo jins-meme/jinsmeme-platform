@@ -1,4 +1,4 @@
-# TCP ソケット通信
+# TCP ソケット通信<Badge type="danger" text="アカデミック版" />
 
 ソケット通信によるログファイルは「計測情報を記載したヘッダ部」と「センシングデータを記載したボディ部」の2段構成となっています。ヘッダ部には「Data mode、Transmission speed、Accelerometer sensor's range、Gyroscope sensor's range、データ序列」の順に計測情報が記載されています。
 
