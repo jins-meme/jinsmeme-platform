@@ -1,160 +1,177 @@
-# JINS MEME 公式アプリ 利用規約 (TERMS OF USE)
+# JINS MEME Official App Terms of Use
 
-JINS MEME 公式アプリ利用規約（以下「本利用規約」といいます。）は、お客様（以下「利用者」といいます。）が、株式会社ジンズ（以下「当社」といいます。）が提供するJINS MEME公式アプリ（第4条に定めるアイテムを含み、以下「本アプリ」といいます。）を利用者の端末にダウンロードして利用するにあたっての条件を定めています（本アプリをダウンロードした端末を以下「利用デバイス」といいます。）。本利用規約は、本アプリの全てに適用されます。利用者は、本利用規約を契約の内容とすることに同意の上、本アプリを利用するものとします。本アプリはダウンロードやアップデートをできる国や地域に制限があることがあります。
-
-## 第1条 （本利用規約）
-
-1.  利用者が本アプリを利用するには、本利用規約の内容を読み、十分にご理解いただいたうえで、本利用規約に同意いただく必要があります。
-1. 利用者が未成年の場合、本アプリの利用に際して、親権者の同意を得た上でご利用ください。
-1. 利用者は、本利用規約を遵守して、本アプリを利用するものとします。
-1. 本利用規約は、本アプリにのみ適用されます。当社以外が提供するアプリを利用する場合は、各アプリが定める利用規約、プライバシーポリシーその他の定めをご確認ください。
-
-## 第2条 （本アプリの利用）
-
-本利用規約においては、下記の各用語については、それぞれ下記の意味を有するものとします。
-
-- 利用者は、JINS MEMEアカウント（以下「利用者アカウント」といいます。）の登録を行い、登録したEメールアドレスおよびパスワードを利用してログインすることを条件として、本アプリを利用することができます。
-- 利用者は、登録したEメールアドレスおよびパスワードを利用者自身の責任において厳重に保管しなければならず、これを第三者に使用させないものとします。当社は、利用者アカウントを用いた本アプリの利用を、利用者本人による利用とみなすことができるものとします。
-- 利用者は、本アプリを利用するにあたって、ご自身の責任と負担において、本アプリと連動するJINS MEME（以下「本アイウエア」といいます。）、必要な通信機器、オペレーションシステム、通信手段等を準備いただくものとします。
-
-## 第3条 （利用料）
-
-1. 本アプリは、月額又は年額の利用料を要する場合（以下「有料プラン」といいます。）があります。利用料の詳細は、JINS MEMEホームページ又は本アプリのダウンロードページに掲載しています。なお、当社は、利用者の承諾無く利用料を改定できるものとし、利用者は、改定日の次に到来する有料プランの有効期間から、改定後の料金を当社指定の方法で支払うものとします。
-1. 利用者は、Apple AppStore又はGoogle Playストアにて支払手続きを行うものとします。
-1. 有料プランは、有効期間が終了する24時間前までに更新キャンセルがなされない限り、自動更新により課金が発生します。有料プランの管理及び自動更新のオフは、iOS/Google Playアカウント設定にていつでも行うことができます。
-1. 有料プランの有効期間が終了し、更新又は新たな登録がなされない場合には、該当する本アプリを利用すること、及び同アプリにより有効期間中に蓄積したデータを閲覧することができなくなります。
-1. 利用者が有料プランの有効期間の途中で本アプリの利用を中止し又はアンインストールした場合、当社が本利用規約に基づき利用者アカウントを削除した場合や本アプリの利用停止・運用停止措置を講じた場合を含め、いかなる理由があっても支払済みの利用料は返金されません。
-
-## 第4条 （アイテム）
-
-1. 本アプリ内で仮想のアイテム又はサービス（以下「アイテム」といいます。）を有償又は無償で取得することができる場合があります。アイテムの内容、取得方法及び代金等の詳細は、JINS MEMEホームページ、本アプリ内又はアイテムの取得ページに掲載しています。
-1. 有償でアイテムを取得する場合、利用者は、Apple AppStore又はGoogle Playストアにて代金の支払手続きを行うものとします。
-1. アイテムの取得手続き（有償でアイテムを取得する場合は、前項の支払手続き）が完了した時に、利用者に対し、アイテムの利用ライセンスが付与されます。利用者は、本利用規約及び本アプリが定める利用方法にしたがって、アイテムを利用することができます。
-1. 利用者は、アイテムに対するいかなる所有権も取得しないことに同意します。
-1. 利用者は、本アプリの内外を問わず、アイテム及びその利用ライセンスを売買、譲渡又は交換することは一切できません。
-1. 前項に違反した場合、当社は、利用者のアイテム及びその利用ライセンス又は利用者のアカウントを削除することがあります。
-
-## 第5条 （本アプリの利用に関する注意事項）
-
-1. 本アプリは、疾病の診断、治療、リハビリ又は予防に使用することを意図したものではなく、医学的又はその他の専門的なアドバイスを提供するものではありません。利用者は、自身の身体的又は精神的な健康について懸念や質問がある場合は、自らの責任において、医師その他の専門家に相談することとし、本アプリを通じて提供される情報に依存して専門的な医療アドバイスを無視したり、専門家への相談を遅らせたりしないようにしてください。
-1. 本アプリが提供するストレッチやエクササイズは、必ずしもすべての方に適したものではありません。また、本アプリが提供するコンテンツには、気持ちを落ち着け眠気を誘発する内容のものが含まれます。怪我や事故の恐れがありますので、周辺の状況に十分に注意して安全を確保し、身体的・精神的に無理のない強度で取り組むようにしてください。利用者は、本アプリの使用に関連して生じた怪我その他の損害について自ら責任を負うものとし、当社は一切の責任を負わないことに同意するものとします。
-
-## 第6条 （本アプリに関する知的財産権）
-
-本アプリは、日本国および関連諸国の著作権法および著作権に関する条約ならびにその他知的財産権に関する法律および条約によって保護されており、その権利は、当社または正当な権利を有する権利者に属するものです。当社および正当な権利を有する権利者は、利用者に対し、本アプリに関する著作権、特許権、商標権その他の知的財産権について、本アプリの利用に必要な範囲を超えて、何ら譲渡・使用許諾等するものではありません。
-
-## 第7条 （禁止事項）
-
-本アプリの利用に関し、以下の行為を禁止します。
-
-1. 本アプリを、他人の法的利益を侵害し、公序良俗に反する方法または態様において利用する行為
-1. 道路交通法その他法令に反する行為、犯罪行為、不法行為もしくはこれらに結びつく行為、またはこれらを教唆もしくはほう助する行為
-1. 暴力的または性的な表現行為、人種、国籍、信条、性別、社会的身分、門地等による差別的行為、自殺、自傷行為、薬物乱用を誘引または助長する行為、その他反社会的な内容を含み他人に不快感を与える行為
-1. 公職選挙運動、特定の思想・宗教への勧誘またはそれらに類する行為
-1. 反社会的勢力（以下に定義する）に対する利益供与その他の協力行為
-- 当社または第三者の名誉、信用、権利もしくは財産等を侵害する行為
-- 実在又は架空を問わず他人に成りすます行為
-- 不正アクセス行為
-- 他人の利用者アカウントを使用する行為
-- 第三者に自己の利用者アカウントを使用させる行為
-- 他の利用者の本アプリの利用を妨害する行為
-- アイテムを不正な方法により入手、増加させる等のチート行為
-- 本人の同意を得ないで、他の利用者その他の第三者の個人情報を収集、蓄積、開示もしくは伝達する行為、またはこれらを試みる行為
-- コンピュータウィルスその他不正な情報を送信しまたは書き込む行為
-- 本アプリおよび公式サイト等の消去、改変、リバースエンジニアリング、逆コンパイル、逆アセンブル、またはこれらに類似した行為
-- 通信妨害、通信傍受、サーバーへの侵入、その他サーバーに過度の負担をかける行為
-- 当社または本アプリの社会的評価を低下させる行為、本アプリに関する知的財産権等を用いて、本アプリと類似のサービス開発、提供等を行う行為その他本アプリの運営を妨害し、または、そのおそれのある行為
-- 本利用規約および本アプリの利用に関するガイドライン等の定めに違反する行為
-- その他当社が不適切であると認めた行為
-
-## 第8条 （本利用規約に違反した場合の措置）
-
-当社は、利用者が本利用規約に違反したと合理的に判断した場合、直ちに当該利用者の利用者アカウントを削除することができるものとします。
-
-## 第9条 （利用者の表明保証）
-
-利用者は、本アプリが米国商務省の輸出規制または日本、EU その他関係国の同種の法もしくは規制に基づく輸出規制の対象となるものである可能性を認識していることを表明し保証するものとします。また、利用者は、当該法および規制により要求される有効な輸出許可を取得しない限り、当社から提供を受ける本アプリおよびそれに関連する技術データや技術情報（あらゆる技術情報、ソフトウェア、図面、取扱説明書、データ、書類等を含むものとしますがこれに限りません。）を利用者の国外に持ち出し、又は国外の第三者に提供しないことを表明し保証します。
-
-## 第10条 （免責）
-
-1. 当社は、本アプリを現状有姿にて利用者に提供するものであり、利用者に対し、本アプリおよび本アプリに付随するサービスに対する以下をはじめとする一切の保証を行いません。
-    - 本アプリがいかなる利用者の使用環境のもとでも正確に作動すること、またはすべての機能が発揮されること
-    - 本アプリが利用者の特定の目的に適合し、有用であること、および商業的有用性を有していること
-    - 本アプリの判定その他の一切の表示が常に正確であること
-    - 利用デバイスのOS、本アイウエアのファームウェア、アプリ等のアップデートをしたことによって、本アプリに関し、データの欠損その他一切の不具合も問題も発生しないこと
-    - 本アプリが、全ての利用者に対して、常に正しく機能すること、十分な品質を満たすこと
-    - 本アプリの利用に起因して利用デバイスその他の機器に不具合、誤作動や障害が生じないこと
-    - 本アプリが永続して利用できること、並びに、利用開始時の機能および性能が維持されること
-    - 本アプリの利用に中断またはエラーが発生しないこと
-    - 本アプリに関連して送信される電子メール等に、コンピュータウィルス等の有害なものが含まれていないこと
-    - 利用者に関する情報が消失せず、または、改ざんもしくは損傷が生じないこと
-    - 本アプリおよび本アプリに付随するサービスの提供が、第三者の権利・利益を侵害しないこと、または侵害の主張を受けないこと
-1. 当社は、当社の故意または重過失による場合又は本利用規約が消費者契約法第2条第3項の消費者契約に該当する場合を除き、利用者が本アプリを使用したことまたは本アプリが使用できないこともしくは機能しなかったことに起因して、利用者に生じたいかなる直接損害、間接損害、付随的・派生的損害、特別損害、逸失利益その他の損害（予見可能性の有無にかかわりません。）について、一切その責任を負いません。
-1. 本アプリの提供に関連して当社が損害賠償責任を負う場合であっても、その額は、請求の原因にかかわらず、本アプリの購入代金、当該損害が発生した月に受領した利用料の額又は100円のうち最高のものを上限とします。ただし、当社に故意または重過失がある場合はこの限りではありません。
-
-## 第11条 （ドライブ用アプリの利用に関する注意事項）
-
-1. 本アプリのうち、ドライブ用アプリは、居眠り運転等による事故を防止することを保証するものではありません。
-1. ドライブ用アプリの利用にあたり、不安定な場所や視界を妨げる場所その他安全運転に支障をきたす場所に利用デバイスを設置しないでください。
-1. 運転中のアプリ操作や画面の注視は危険です。自動車等を停止させ、安全を確認した上で操作を行ってください。
-1. 当社は、利用者の交通事故に関して、一切責任を負いません。
-
-## 第12条 （運営停止）
-
-1. 本アプリを運営するシステムに不具合等が発見された場合、同システムの保守点検を行う場合、地震、落雷、火災、洪水、天災地変、戦争、テロなどの不可抗力及び当社に過失のない事由により本アプリの運営が困難となった場合、その他の当社が必要と判断する場合には、当社は、利用者に事前に通知することなく、本アプリの全部または一部の運営を停止することができるものとします。当社は、本項による本アプリの運営停止により利用者に生じた損害について、一切の責任を負いません。
-1. 当社は、当社の判断により、利用者に事前に通知したうえで、本アプリの全部又は一部の運営を停止又は中止することがあります（例として、本アプリの運営事業の停止又は中止、第三者への譲渡、または会社分割、株式交換、株式移転、解散等による停止又は中止が挙げられますが、これらに限りません。）。本項による本アプリの運営の停止又は中止により利用者に生じた損害については、当社は、一切の責任を負いません。
-
-## 第13条 （利用停止）
-
-1. 当社は、本アプリに欠陥または第三者の権利・利益侵害の可能性が発見された場合、その他当社が必要と判断する場合には、利用者に対し、本アプリの利用停止を求めることがあります。この場合、利用者は、本アプリの利用停止に速やかに応じるものとします。本項による本アプリの利用停止により利用者に生じた損害については、第10条第2項および第3項によります。
-1. 利用者は、本アプリをアンインストール、破棄または消去することにより、いつでも本アプリの利用を停止することができます。
-
-## 第14条 （反社会的勢力の排除）
-
-1. 利用者は、暴力団、暴力団員、暴力団準構成員、暴力団関係企業、総会屋等、社会運動等標ぼうゴロまたは特殊知能暴力集団等、その他これらに準ずる者（以下総称して「反社会的勢力」といいます。）に該当しないこと、および反社会的勢力と間接的にも直接的にも関係を一切有しないことを表明し、かつ将来にわたっても該当しないことを確約します。
-1. 利用者は、自らまたは第三者を利用して以下のいずれか一つにでも該当する行為を行わないことを確約します。
-    - 暴力的な要求行為
-    - 法的な責任を超えた不当な要求行為
-    - 取引に関して脅迫的な行動をし、または暴力を用いる行為
-    - 風説を流布し、偽計または威力を用いて当社の信用を棄損し、または当社の業務を妨害する行為
-    - その他前各号に準ずる行為
-
-## 第15条 （個人情報について）
-
-本アプリの利用にあたって利用者から提供される個人情報の取扱いは、JINS MEMEプライバシーポリシーに従い行うものとします。利用者が本アプリを利用するためには、JINS MEMEプライバシーポリシーに同意していただく必要がありますので、必ずご確認ください。本利用規約に同意した場合には、JINS MEMEプライバシーポリシーにも同意したものとみなします。
-
-## 第16条 （規約の変更）
-
-1. 当社は、当社の独自の裁量により本条に従い本利用規約を変更する場合があります。この場合、当社は、変更後の利用規約（以下「新利用規約」といいます。）及びその効力発生日をJINS MEME公式ウェブサイトにおいて公表します。
-1. 前項による本利用規約の変更後に、本アプリを利用するためには、新利用規約に同意していただく必要があります。新利用規約は、前項の効力発生日から効力を生じるものとします。本利用規約の変更後に本アプリを利用した場合は、新利用規約に同意したものとみなされます。
-
-## 第17条 （通知）
-
-当社から利用者への通知は、利用者が登録した電子メールアドレスその他の通信手段アドレスへの送信または当社の公式ウェブサイト上の表示のうち、当社が適切と考える方法をもって行うことができ、利用者の連絡先が変更または誤記のために当該通知が不着だったとしても、当該通知は、電子メールや他の通信手段については発信の翌日に、ウェブサイトにおける表示については表示の日に到達したものとみなします。当社は、JINS MEME本体のファームウェアおよび本アプリを含むJINS MEMEに関するアップデート情報等の重要なお知らせを、利用者が登録したEメールアドレスに通知することがあります。
-
-## 第18条 （再委託）
-
-当社は、利用者の同意を得ることなく、本アプリおよび本アプリに付随するサービスの提供の一部を、第三者に委託することができます。この場合、当社は当該委託先に対し、本契約において利用者に対して負う義務と同等の義務を遵守させるものとし、当該委託先の義務違反について、利用者に対し責任を負うものとします。
-
-## 第19条 （存続条項）
-
-利用者に対する本アプリの提供終了後においても、第3条第4項及び第5項、第5条第2項、第6条、第9条、第10条、第11条第4項、第12条、第13条第1項、第15条、第18条ないし第22条その他当社の免責を定める規定は、なお有効なものとして存続します。
-
-## 第20条 （分離可能性）
-
-本利用規約の一部が法令または裁判所の決定等により、無効であると宣言された場合であっても、その他の部分については、引き続き有効に存続するものとします。
-
-## 第21条 （準拠法）
-
-本利用規約および本アプリに関する紛争については日本法を準拠法とします。
-
-## 第22条 （管轄）
-
-本利用規約および本アプリに関する紛争については東京地方裁判所を第一審の専属的合意管轄裁判所とします。
+These JINS MEME Official App Terms of Use (these “Terms of Use”) set forth the terms and conditions for when the customer (the “User”) downloads to the User’s device (the device on which the App is downloaded shall hereinafter be referred to as the 
+“Device”) and uses the JINS MEME Official App (including the items set forth in Article 4; the “App”) provided by JINS Inc (“JINS”). These Terms of Use apply to the entire App. The User shall use the App
+ after agreeing with these Terms of Use as the contents of the agreement.
+The App may have restrictions on the countries and areas that can be downloaded or updated.
 
 
-- 2015年11月3日発効
-- 2016年12月13日改訂
-- 2017年2月10日改訂
-- 2021年6月30日改訂
-- 2021年11月18日改訂
+## Article 1. Terms of Use
+
+1. In order for the User to use the App, the User will need to agree to these Terms of Use upon reading and fully understanding the contents hereof.
+1. If the User is a minor, please obtain the consent of a person who has parental authority when using the App.
+1. The User shall use the App by complying with these Terms of Use.
+1. These Terms of Use shall apply only to the App. If apps other than those provided by JINS are used, please confirm the terms of use, privacy policies and other provisions set forth by each app.
+
+## Article 2. Use of the App
+
+1. The User may use the App on the condition of registering for a JINS MEME account (the “User Account”) and logging in by using the registered e-mail address and password.
+1. The User must strictly safeguard the registered e-mail address and password at the User’s own responsibility and shall not allow the use thereof by a third party. JINS may deem the use of the App through the User account as User’s own use.
+1. In using the App, the User shall, at User’s own responsibility and expense, prepare JINS MEME which works with the App (the “Eyewear”), as well as the necessary telecommunication device, operation system, telecommunication means, etc.
+
+## Article 3. Usage Fees
+
+1. The App may require monthly or annual fees (the “Paid Plan”). Details of the usage fees are published on the homepage of JINS MEME or the downloaded pages of the App. JINS may revise the usage fees without obtaining the User’s consent; the User shall pay the revised fees from the effective period for the Paid Plan which arrives after the revision date in a manner designated by JINS.
+1. The User shall take the payment procedures through the Apple AppStore or Google Play store.
+1. On the Paid Plan, the surcharge automatically arises unless cancellation of renewal is made within 24 hours before termination of the effective period. Management of the Paid Plan and turning off the automatic renewal may be made in the iOS/Google Play account settings at any time.
+1. If the effective period of the Paid Plan terminates and no renewal or new registration is made, it will no longer be possible to use the relevant App or review the data accumulated during the effective period of such App.
+1. In the event that the User cancels or uninstalls the use of the App during the effective period of the Paid Plan, or if JINS deletes the User account in accordance with these Terms or Use, or if JINS takes measures for suspension of use or operation of the App, or in other similar cases, no usage fees already paid shall be refunded for any reason whatsoever.
+
+## Article 4. Items
+
+1. Within the App, virtual items or services (collectively, the “Items”) may be obtained with or without compensation. The contents of the Items, and the details including manner of acquisition and prices, etc., are published within the JINS MEME homepage, the App or on the pages where the Items are obtained.
+1. In obtaining paid Items, the User shall take the relevant price payment procedures through the Apple AppStore or Google Play store.
+1. Upon completing the procedures for obtaining the Items (the payment procedures as set forth in the preceding paragraph in the case of obtaining paid Items), a license for using the Items shall be granted to the User. The User may use the Items in accordance with these Terms of Use and in the manner of use designated by the App.
+1. The User agrees that the User will not obtain any ownership in the Items.
+1. The User shall in no way, whether within or outside of the App, sell, transfer, or exchange Items under the use license.
+1. In breaching the preceding paragraph, JINS may delete the User’s Items, the use license thereof, or the User’s account.
+
+## Article 5. Matters to be Noted Regarding the Use of the App
+
+1. The App is not intended to be used for the diagnosis, treatment, rehabilitation or prevention of diseases, or to provide medical or other the User’s physical or mental health, the User shall consult with physicians or other professionals at the User’s own responsibility, shall not disregard professional medical advice by relying on the information provided by the App, and shall not delay in consulting with professionals.
+1. The stretch and exercise routines provided by the App are not necessarily suitable for all people. In addition, the contents provided by the App include contents that may relax people and induce drowsiness and may cause injury or accidents to the User; thus, sufficient care should be taken with regard to the surrounding circumstances to ensure safety, and the User shall engage in such stretch and exercise routines using their reasonable physical and mental strength.
+1. The User agrees that the User shall be responsible for any injury and other damage incurred in relation to the use of the App, and JINS shall in no way be liable therefor.
+
+## Article 6. Intellectual Property Rights Concerning the App
+
+The App is protected by the copyright laws and treaties concerning copyrights in Japan and various relevant countries, as well as by other laws and treaties concerning intellectual property rights, and such rights belong to JINS or the rights holders having lawful rights. JINS and the rights holders having lawful rights do not transfer or license to the User any copyrights, patent rights, trademark rights or other intellectual property rights regarding the App, beyond the extent necessary for the use of the App.
+
+
+## Article 7. Prohibited Matters
+
+The following acts are prohibited in regard to the use of the App:
+
+- Acts of using the App in a manner or means to infringe the legal interests of others and violate public order and morals;
+- Acts that violate the Road Traffic Act and other laws and regulations, criminal acts, unlawful acts or acts tied thereto, or acts that incite or aid and abet such acts;
+- Acts of violent or sexual expressions, discriminatory acts based on race, nationality, creed, gender, social status, lineage, etc., acts that induce or encourage suicide, self-harming acts or drug abuse, or other acts that contain anti-social content and cause discomfort to others;
+- Acts of campaigning for public office, solicitation to a particular belief or religion or acts similar thereto;
+- Acts of offering illegal profits to Anti-Social Forces (defined below) and other cooperative acts;
+- Acts that infringe upon the reputation, trust, rights or property, etc. of JINS or a third party;
+- Acts of impersonating another person, whether real or fictitious;
+- Acts of unauthorized access;
+- Acts of using the User Account of another person;
+- Acts of allowing a third party to use one’s own User Account;
+- Acts that interfere with the use of the App by another User;
+- Acts of cheating, including obtaining or increasing, etc. the Items in an improper manner;
+- Acts of collecting, accumulating, disclosing or transferring personal information of another User or other third party without obtaining that person’s consent, or acts of attempting such acts;
+- Acts of transmitting or writing-in computer viruses or other unlawful information;
+- Acts of eliminating, modifying, reverse engineering, reverse compiling or reverse assembling the App or the official site, etc., or acts that are similar thereto;
+- Acts of jamming communications, intercepting communications, invading servers or that cause other excessive burdens on the server;
+- Acts that lower the social reputation of JINS or the App; acts of developing, providing, etc., similar services to those of the App by using intellectual property rights relating to the App; and acts that interfere or may interfere with the operation of the App;
+- Acts violating these Terms of Use or any provisions such as the guidelines concerning the use of the App; and
+Other acts that JINS recognizes as inappropriate.
+
+## Article 8. Measures Upon the Violation of these Terms of Use
+
+If JINS reasonably determines that the User has violated these Terms of Use, JINS may delete the User Account of such User immediately.
+
+
+## Article 9. Representations and Warranties of the User
+
+The User shall represent and warrant that there is a possibility that the App will be subject to the Export Controls of the United States Department of Commerce or similar export laws and regulations under the laws or regulations of Japan, the EU or relevant countries. In addition, the User shall represent and warrant that the User will not take out of the User’s country or provide to a third party outside of the country the App and the technical data and technical information relating thereto provided from JINS (including, but not limited to, any technical information, software, drawings, user manuals, data, documents, etc.), without obtaining a valid export license required by such laws or regulations.
+
+
+## Article 10. Exclusion of Liability
+
+1. JINS shall provide the App as-is to the User and makes no warranty to the User, including the following, regarding the App and the services incidental to the App, that:
+    - The App will accurately operate under the User’s usage environment or demonstrate all of the functions;
+    - The App conforms with the particular purpose of the User, is useful and has commercial usefulness;
+    - The assessment of the App and other displays are always accurate;
+    - A loss of data or any other failure or problems concerning the App will not occur as a result of updating the OS of the Device, firmware of the Eyewear or any apps, etc.;
+    - The App will always function correctly and meet sufficient qualities for all Users;
+    - No failure, malfunction or harm will occur to the Device or other equipment due to the use of the App;
+    - The App can be used perpetually and the performance and capability at the usage start time can be maintained;
+    - No interruption or error will occur in the use of the App;
+    - Harmful items such as computer viruses are not included in e-mails, etc. transmitted in relation to the App;
+    - Information regarding the User will not be erased, and no alteration or damage thereof will occur; and
+    - The App and the provision of the services incidental to the App will not infringe on any rights and interests of a third party, and will not be subject to claim for infringement.
+1. JINS will not be liable for any direct damages, indirect damages, incidental or consequential damages, special damages, lost profits and other damages (whether or not foreseeable) caused by the User using the App or the App not being able to be used or not functioning, except if due to the intent or gross negligence of JINS or if these Terms of Use correspond to a consumer 
+contract under Article 2(3) of the Consumer Contract Act.
+1. Regardless of the cause of the claim, if JINS is liable to provide compensatory damages in relation to the provision of the App, the maximum of that amount will the highest of (i) the purchase price of the App, (ii) the usage fee amount received for the month in which such damages occur, or (iii) JPY 100; provided, however, that this does not apply if there is any intent or gross negligence on the part of JINS.
+
+## Article 11. Precautions Concerning the Use of Apps When Driving
+
+1. Among the apps in the App, the app for driving does not warrant the prevention of accidents due to falling asleep while driving, etc.
+1. In using the app for driving, please do not install the Device in places that are unstable, that obstruct the field of vision or that impede safe driving.
+1. Operating apps or keeping one’s eyes on the screen while driving is dangerous. Please only operate the apps after stopping your vehicle and confirming your safety.
+1. JINS is not liable for any traffic accident the User may suffer.
+
+## Article 12. Suspension of Operation
+
+1. If a failure, etc. in the system operating the App is discovered, if maintenance inspection of such system is to be made, if the operation of the App becomes difficult due to an event of force majeure such as an earthquake, lightning, fire, flood, natural disaster, war or terrorism, and for which JINS is not negligent, or if JINS otherwise determines as necessary, JINS may suspend the entire or partial operation of the App without notifying the User in advance. JINS will not be liable for damages incurred by the User due to the suspension of operation of the App in accordance with this paragraph.
+1. JINS may suspend or discontinue the entire or partial operation of the App based on JINS’s judgment upon notifying the User in advance (examples may include, but are not limited to, suspension or discontinuation due to suspension or discontinuation of the operating business of the App, transfer to a third party, or corporate split, share exchange, share transfer or dissolution). JINS will not be liable for damages incurred by the User due to the suspension or discontinuation of operation of the App in accordance with this paragraph.
+
+## Article 13. Discontinuation of Use
+
+1. If a defect of the App or a possibility of infringement of the rights or interests of a third party is discovered, or if JINS otherwise determines as necessary, JINS may request User to discontinue the use of the App. In this instance, the User shall promptly comply with the discontinuation of the use of the App. Damages incurred by the User due to the discontinuation of the use of the App according to this paragraph will be in accordance with Article 10, Paragraphs 2 and 3.
+1. The User may discontinue the use of the App at any time by uninsta
+lling, destroying or erasing the App.
+
+## Article 14. Exclusion of Anti-Social Forces
+
+1. The User represents that the User is not an organized crime group, organized crime group member, organized crime group quasi-member, organized crime group-related business, corporate extortionist or the like, racketeer advocating a social/political movement or special intelligence organized crime group and others corresponding thereto (collectively, “Anti-Social Forces”) and that the User does not have any direct or indirect relations with Anti-Social Forces, and affirms that the User will not constitute the same in the future.
+1. The User affirms that the User will not, nor will the User use a third party to, engage in acts that correspond to any of the following:
+    - Violent acts of demand;
+    - Unjust acts of demand that exceed legal responsibility;
+    - Acts of engaging in threatening behavior or using violence in regard to a transaction;
+    - Acts of spreading rumors, deceiving or using power to damage JINS’s confidence or to interfere with JINS’s business; and
+    - Other acts corresponding to each item above.
+
+## Article 15. Personal Information
+
+Personal information provided from the User in using the App shall be handled pursuant to the JINS MEME Privacy Policy. Since the User will need to consent to the JINS MEME Privacy Policy in order to use the App, the User must confirm the JINS MEME Privacy Policy without fail. If the User consents to these Terms of Use, the User shall be deemed to have also consented to the JINS MEME Privacy Policy.
+
+
+## Article 16. Amendment of the Terms
+
+
+- There may be instances where JINS will amend these Terms of Use pursuant to this Article at JINS’s own discretion. In such instance, JINS will announce the amended terms of use (the “New Terms of Use”) and the effective date on the JINS MEME official website.
+- After the amendment of these Terms of Use pursuant to the preceding paragraph, the User will need to consent to the New Terms of Use in order to use the App. The New Terms of Use will take effect on the effective date as set forth in the preceding paragraph. If the App is used after the amendment of these Terms of Use, the User shall be deemed to have consented to the New Terms of Use.
+
+## Article 17. Notice
+
+The notice sent by JINS to the User may be made in a manner as considered appropriate by JINS from among sending the notice to the e-mail address registered by the User, sending the notice to another telecommunication means address registered by the User, and publishing the notice on JINS’s official website; even if such notice does not reach the User due to a change or error in stating the User’s contact details, such notice is considered to have reached the User on the day immediately after the date of delivery in the case of an e-mail or other telecommunication means, or on date of publication in the case of a publication on the website.
+JINS may give notice of important notifications such as update information concerning JINS MEME, including firmware of the main body of JINS MEME and the App, to the e-mail address registered by the User.
+
+
+## Article 18. Sub-Contracting
+
+JINS may, without needing to obtain consent from the User, subcontract the App and part of the services provided incidental to the App to a third party. In this case, JINS shall cause the relevant contractor to comply with the same obligations as those imposed on JINS in accordance with this Agreement, and shall be responsible to the User for any breach of obligations by the relevant contractor.
+
+
+## Article 19. Survival
+
+
+Even after the provision of the App to the User is terminated, the provisions of Article 3.4, 3.5, 5.2, 6, 9, 10, 11.4, 12, 13.1, 15, 18 through 22, and other provisions setting forth exemption of JINS shall 
+remain valid.
+
+
+## Article 20. Severability
+
+Even if a part of these Terms of Use is declared to be invalid due to the laws and regulations or a decision of a court, etc., the other parts shall continue to remain in effect.
+
+
+## Article 21. Governing Law
+
+Disputes concerning these Terms of Use and the App shall be governed by Japanese law.
+
+
+## Article 22. Jurisdiction
+
+The Tokyo District Court shall be the exclusive court with jurisdiction in the first instance for disputes concerning these Terms of Use and the App.
+
+- Effective Date: November 3, 2015
+- Revised on December 13, 2016
+- Revised on February 10, 2017
+- Revised on June 30, 2021
+- Revised on November 18, 2021

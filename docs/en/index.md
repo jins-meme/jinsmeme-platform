@@ -11,17 +11,17 @@ hero:
 
 features:
   - icon: 
-      src: /images/cursor-icon.svg
+      src: /images/icon_chip.svg
     title: JINS MEME Sensing Core
     details: EOG & 6-axis motion biometric sensor that can be worn naturally in the form of glasses and blends in with daily life
     link: /en/hardware
   - icon: 
-      src: /images/target-line-icon.svg
+      src: /images/icon_app.svg
     title: Software
     details: Software that can store time series data for long time data
     link: /en/hardware.html
   - icon: 
-      src: /images/question-mark-line-icon.svg
+      src: /images/icon_folder.svg
     title: Document
     details: Explanation of the unique processing of biological data, such as artifact removal methods, aggregation methods, etc.
     link: /en/doc/vital_data.html

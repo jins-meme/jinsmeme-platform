@@ -103,10 +103,81 @@ export default defineConfig({
         nav: [
           { text: 'JINS website', link: 'https://www.jins.com' }
         ],
-        sidebar: [
-          { text: 'App terms of service', link: '/en/doc/term_app' },
-          { text: 'SDK terms of service', link: '/en/doc/term_sdk' },
+    sidebar: [
+      {
+        text: 'Contents',
+        items: [
+          { text: 'JINS MEME Sensing Core', link: '/en/hardware' },
+          {
+            text: 'Software', collapsed: false,
+            items: [
+              {
+                text: 'Standard Logger', collapsed: true,
+                items: [
+                  { text: 'Data acquisition procedure', link: '/en/software/es/logger_app' },
+                  { text: 'External share', link: '/en/software/es/external_integration.md' },
+                ]
+              },
+              {
+                text: 'Academic Logger', collapsed: true,
+                items: [
+                  {
+                    text: 'Using with a PC', collapsed: true,
+                    items: [
+                      { text: 'Installing the Software', link: '/en/software/with-pc/' },
+                      { text: 'Measurement flow', link: '/en/software/with-pc/measuring' },
+                      { text: 'User Interface', link: '/en/software/with-pc/windows' },
+                      { text: 'TCP-Socket', link: '/en/software/with-pc/tcp' },
+                    ]
+                  },
+                  {
+                    text: 'Using with an Android', collapsed: true,
+                    items: [
+                      { text: 'Installing the Software', link: '/en/software/with-android/' },
+                      { text: 'Measurement flow', link: '/en/software/with-android/measuring' },
+                    ]
+                  },
+
+                ]
+              },
+            ]
+          },
+          {
+            text: 'Document', collapsed: false,
+            items: [
+              { text: 'Papers & Presentations', link: '/en/doc/papers' },
+              {
+                text: 'Data definition', collapsed: false,
+                items: [
+                  { text: 'Standard Logger', link: '/en/doc/data_es' },
+                  { text: 'Academic Logger', link: '/en/doc/data_esr' },
+                ]
+              },
+              {
+                text: 'Analysis', collapsed: false,
+                items: [
+                  { text: 'Data processing details', link: '/en/doc/feature' },
+                  { text: 'Notes specific to vital data', link: '/en/doc/vital_data' },
+                  { text: 'Short-term scene', link: '/en/doc/analysis_sample' },
+                  { text: 'Long-term time series', link: '/en/doc/summarize_data' },
+                  { text: 'Motion tracking', link: '/en/doc/motion-tracking-howto' },
+                ]
+              },
+
+            ]
+          },
+          { text: 'Precautions', link: '/en/notice' },
+          {
+            text: 'Terms', collapsed: true,
+            items: [
+              { text: 'Application terms of use', link: '/en/doc/term_app' },
+              { text: 'SDK terms of use', link: '/en/doc/term_sdk' },
+              { text: 'Platform terms of use', link: '/en/doc/term_platform' },
+            ]
+          },
         ]
+      }
+    ],
       }
     }
   }
