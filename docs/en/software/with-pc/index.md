@@ -1,5 +1,7 @@
 # Installing the Academic(ES-R) Logger for Windows/MacOS<Badge type="danger" text="Academic" />
 
+## Download
+
 Please download from [here](https://github.com/jins-meme/ES_R-DataLogger/releases).
 
 ## Windows

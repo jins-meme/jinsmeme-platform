@@ -4,24 +4,24 @@ outline: deep
 
 ![](/images/title.png)
 
-## 機種の種類
+## Model Type
 
-- <Badge type="tip" text="通常版" />は、JINS MEME内またはアプリ内で意味づけを行ったデータを取得でき、一般的な実験用途に適しています。
-- <Badge type="danger" text="アカデミック版" />(ES-R)は、粒度の細かいEOGや6軸センサーの生データを取り込むことができます。最大で100Hzでの全データ種、200HzでのEOGの取得に対応しております。
-- アカデミック版のデータを通常版のデータに変換するツールは提供しておりません。
+- <Badge type="tip" text="Standard" />can acquire data with semantics within JINS MEME or within the application, and is suitable for general experimental use.
+- <Badge type="danger" text="Academic" />(ES-R) can capture raw data from EOG and 6-axis sensors with fine granularity. It supports acquisition of all data types at a maximum of 100 Hz and EOG at 200 Hz.
+- We do not provide a tool to convert Academic Edition data to Standard Edition data.
 
 ![](/images/schematics.png)
 
-## 対応ソフトウェアと取得可能なデータ 
+## Supported software and obtainable data 
 
-| 機種 | 転送周期 | ソフトウェアと対応OS |
+| Model | Frequency | Software and OS |
 | :---: | :---: | :--- |
-| <Badge type="tip" text="通常版" /> | 20Hz<br/>60秒1回 | <ul><li>[通常版 Logger<br/> (iOS / Android)](/software/es/logger_app)</li><li>SDK (iOS / Android / Nodejs)<br/>※問い合わせ対応、20Hz・60秒間隔データのみ</li></ul> |
-| <Badge type="danger" text="アカデミック版" /><br/>(ES-R) | 50/100Hz | <ul><li>Academic(ES-R)版 Logger<br/>([Windows / MacOS](/software/with-pc/) / [Android](/software/with-android/))</li><li>[SDK](https://github.com/jins-meme/ES_R-Development-Kit)</li></ul>  |
+| <Badge type="tip" text="Standard" /> | 20Hz<br/>Once per 60s | <ul><li>[Standard Logger<br/> (iOS / Android)](/software/es/logger_app)</li><li>SDK (iOS / Android / Nodejs)<br/>※Inquiry support, 20Hz and 60 second interval data only</li></ul> |
+| <Badge type="danger" text="Academic" /><br/>(ES-R) | 50/100Hz | <ul><li>Academic(ES-R) Logger<br/>([Windows / MacOS](/software/with-pc/) / [Android](/software/with-android/))</li><li>[SDK](https://github.com/jins-meme/ES_R-Development-Kit)</li></ul>  |
 
-### データ一覧<Badge type="tip" text="通常版" />
+### Data types<Badge type="tip" text="Standard" />
 
-[詳細はこちら](/doc/data_es)からご覧ください。
+For more information, please [click here](/doc/data_es).
 
 | データ種類 | 名称・別称 | 含まれる指標の例 |
 |:---|:---|:---|
@@ -31,9 +31,9 @@ outline: deep
 | 高速頭部運動データ | 首振りデータ, fastHeadMotion | 縦や横に顔を向けたときのイベント |
 | 低速頭部運動データ | 頭の回転と傾きデータ, slowHeadRotation, slowHeadTilting | ゆっくりとした頭の回転や傾きのイベント |
 
-### データ一覧<Badge type="danger" text="アカデミック版" /> 
+### Data types<Badge type="danger" text="Academic" /> 
 
-[詳細はこちら](/doc/data_esr)からご覧ください。
+For more information, please [click here](/doc/data_esr).
 
 | データ種類 | 含まれる指標の例 |
 |:---|:---|
@@ -44,7 +44,7 @@ outline: deep
 
 ## 製品仕様
 
-<Badge type="tip" text="通常版" />
+<Badge type="tip" text="通常Standard版" />
 
 | 項目 | 仕様 |
 |:---|:---|
@@ -58,7 +58,7 @@ outline: deep
 | 外部インターフェース | micro  USB端子  |
 | 使用環境条件 | ・温度：0～40℃<br>・湿度：10～90％ RH（結露なきこと） |
 
-<Badge type="danger" text="アカデミック版" />
+<Badge type="danger" text="Academic" />
 
 | 項目 | 仕様 |
 |:---|:---|

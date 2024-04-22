@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Share external<Badge type="tip" text="Standard" />
+# External share <Badge type="tip" text="Standard" />
 
 
 Data can be shared externally using Google Drive or Websocket.
