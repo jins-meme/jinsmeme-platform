@@ -23,55 +23,57 @@ outline: deep
 
 For more information, please [click here](/doc/data_es).
 
-| データ種類 | 名称・別称 | 含まれる指標の例 |
-|:---|:---|:---|
-| 20Hzデータ | リアルタイムデータ, currentData | まばたきイベント、視線移動、加速度、角度 |
-| 15秒間隔データ | ロジック指標データ, logicIndexData | 集中、落ち着き、緊張、覚醒、歩数、姿勢角(前後・左右)、歩行振動(X/Y/Z)、まばたき統計指標(H/W, Mean/Sd) |
-| 60秒間隔データ | サマリデータ, スタンダードデータ, summaryData | 歩数(ピッチ4段階)、姿勢角(前後・左右)、歩行振動(X/Y/Z)、まばたき統計指標(H/W, Mean/Sd) | 
-| 高速頭部運動データ | 首振りデータ, fastHeadMotion | 縦や横に顔を向けたときのイベント |
-| 低速頭部運動データ | 頭の回転と傾きデータ, slowHeadRotation, slowHeadTilting | ゆっくりとした頭の回転や傾きのイベント |
+| Data type | Name | Examples of indices |
+|:---:|:---:|:---|
+| 20Hz data | realtime data, currentData | Blink event, eye movement, acceleration, angle |
+| 15s-interval data | logicIndexData | Concentration, calm, tension, awakeness, number of steps,, posture angle (forward/backward, left/right), gait vibration (X/Y/Z), blink statistical indices (H/W, Mean/Sd) |
+| 60s-interval data | standard data, summaryData | Number of steps, posture angle (forward/backward, left/right), gait vibration (X/Y/Z), blink statistical index (H/W, Mean/Sd) | 
+| 15s-interval trigger | triggerEvent | Threshold for 15-second interval data<br/>（Ex: Concentrated data, >60 pt at 50% weighted average, minimum notification interval 120s） |
+| High-speed head movement data | fastHeadMotion | Events when the face is turned vertically or horizontally |
+| Low-speed head movement data | slowHeadRotation, slowHeadTilting | Slow head turning or tilt events |
 
 ### Data types<Badge type="danger" text="Academic" /> 
 
 For more information, please [click here](/doc/data_esr).
 
-| データ種類 | 含まれる指標の例 |
+| Data type | Indices |
 |:---|:---|
-| Standard Mode データ | EOG電位シグナル, 加速度（1行に2データ） |
-| Full Mode データ | EOG電位シグナル, 加速度, 角速度 |
-| Quaternion データ | Quaternion |
+| Standard Mode data | EOG potential, accelerations（2data / line） |
+| Full Mode data | EOG potential, accelerations, angular velocity |
+| Quaternion data | Quaternion |
 
 
-## 製品仕様
+## Specifications
 
-<Badge type="tip" text="通常Standard版" />
+<Badge type="tip" text="Standard" />
 
-| 項目 | 仕様 |
+| Item | Specification |
 |:---|:---|
-| バッテリー | リチャージブルリチウムイオンバッテリー内蔵 |
-| 充電時間 | 約2.5h |
-| 使用時間 | アクティブモード（連続使用 ジャイロなし）：最大約24時間<br/>アクティブモード（連続使用 ジャイロあり）：最大約12時間<br/>スリーブモード（待機状態）：約2週間 |
-| 質量 | 約32g（度なしUVカットレンズの場合） |
-| 材質 | プラスチック(core/crip)、SUS316L(core)、TR-90(frame) |
-| センサー | ・3点式眼電位センサー(Resolusion: 12bit, Ideal: 2.5mV)<br>・3軸加速度センサー<br>・3軸ジャイロ（角速度）センサー |
-| データ通信 | Bluetooth Low Energyによる無線通信 |
-| 外部インターフェース | micro  USB端子  |
-| 使用環境条件 | ・温度：0～40℃<br>・湿度：10～90％ RH（結露なきこと） |
+| Battery | Built-in rechargeable Lithium ion battery |
+| Charging Time | Approx. 2.5h |
+| Usage Time | - Active mode(w/o Gyro): Max 24h<br>- Active mode(w/ Gyro): Max 12h<br>- Sleep mode: Approx. 2 weeks |
+| Weight | Approx. 32g (UV cut lens without power) |
+| Material |  Plastic(core/crip)、SUS316L(core)、TR-90(frame) |
+| Sensor | · 3-point electrooculography sensor(Resolusion: 12bit, Ideal: 2.5mV)<br>· 3-axis accelerometer sensor<br>· 3-axis gyro (angular) sensor |
+| Data communication | · Wireless communication via Bluetooth Low Energy |
+| Charging terminal | Micro  USB端 |
+| Use environmental conditions | · Temperature: 0 to 40°C<br>· Humidity: 10 to 90% RH (non-condensing) |
 
 <Badge type="danger" text="Academic" />
 
-| 項目 | 仕様 |
+| Item | Specification |
 |:---|:---|
-| バッテリー | リチャージブルリチウムイオンバッテリー内蔵 |
-| 充電時間 | 約2.5h |
-| 使用時間 | - Quartanion mode: 約9h<br>- Full node: 約11h<br>- Standard mode: 約15h |
-| 質量 | 約32g（度なしUVカットレンズの場合） |
-| 材質 | プラスチック(core/crip)、SUS316L(core)、TR-90(frame) |
-| センサー | ・3点式眼電位センサー(Resolusion: 12bit, Ideal: 2.5mV)<br>・3軸加速度センサー<br>・3軸ジャイロ（角速度）センサー |
-| データ通信 | ・Bluetooth Low Energyによる無線通信 |
-| 使用環境条件 | ・温度：0～40℃<br>・湿度：10～90％ RH（結露なきこと） |
+| Battery | Built-in rechargeable Lithium ion battery |
+| Charging Time | Approx. 2.5h |
+| Usage Time | - Quartanion mode: Approx. 9h<br>- Full mode: Approx. 11h<br>- Standard mode: Approx. 15h |
+| Weight | Approx. 32g (UV cut lens without power) |
+| Material |  Plastic(core/crip)、SUS316L(core)、TR-90(frame) |
+| Sensor | · 3-point electrooculography sensor(Resolusion: 12bit, Ideal: 2.5mV)<br>· 3-axis accelerometer sensor<br>· 3-axis gyro (angular) sensor |
+| Data communication | · Wireless communication via Bluetooth Low Energy |
+| Charging terminal | Micro  USB端 |
+| Use environmental conditions | · Temperature: 0 to 40°C<br>· Humidity: 10 to 90% RH (non-condensing) |
 
-## ご購入窓口・保証・アフターサービス
+## Contact for purchase, warranty and after-sales service
 
-- [JINS MEMEサポート](https://cloud.mail.jins.com/aboutmeme)へお問い合わせください。JINS店舗・JINSオンラインショップでは受け付けておりません。
-- 保障・アフターサービスはご購入から１年です。
+- Please contact your dealer or [JINS MEME Customer Support Center](https://jinsmeme.com/support) (The JINS store does not support this service).
+- Warranty and after-sales service is one year from purchase.
