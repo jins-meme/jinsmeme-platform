@@ -4,8 +4,9 @@ JINS MEME ES_Rで取得したデータを、Android端末に保存すること�
 
 ## ソフトウェアをダウンロードする
 
-[ここ](https://github.com/jins-meme/ES_R-DataLogger/releases) からファイルをダウンロードしてください。 
-
+- [ここ](https://github.com/jins-meme/ES_R-DataLogger/releases) からファイルをダウンロードしてください。 
+  - Android8以降, BLE4.2搭載端末
+  
 ## インストールする
 
 Android12端末の画面を例に説明します。

@@ -4,6 +4,13 @@
 
 [こちら](https://github.com/jins-meme/ES_R-DataLogger/releases) からファイルをダウンロードしてください。 
 
+## ソフトウェア動作環境
+
+|OS| 環境|
+|:---:|:---:|
+| 対応OS（Windows） | Microsoft Windows 10以降 64bit<br>プロセッサ：Intel Core i5 2.30GHz 以上 （推奨 Intel Core i7）<br>メモリー：2GB以上 （推奨 4GB）<br>推奨画面解像度：1024×768以上 |
+| 対応OS（MacOS） | MacOS 13以降<br>メモリー：2GB以上 （推奨 4GB）<br>推奨画面解像度：1024×768以上 |
+
 ## Windows
 
 ### インストール

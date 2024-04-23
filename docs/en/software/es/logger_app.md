@@ -10,8 +10,8 @@ outline: deep
 
 Search for **jins meme logger** or click on the link below to go to the store and install.
 
-- [App Store (iPhone/iPad)](https://apps.apple.com/jp/app/jins-meme-logger/id1537937129)
-- [Play Store (Android)](https://play.google.com/store/apps/details?id=com.jins_meme.logger4internal)
+- [App Store (iPhone/iPad)](https://apps.apple.com/jp/app/jins-meme-logger/id1537937129), iOS/iPadOS 13.0 or later, devices with BLE4.2
+- [Play Store (Android)](https://play.google.com/store/apps/details?id=com.jins_meme.logger4internal), Android 8 or later, devices with BLE4.2
 
 ## Precautions for measurements
 

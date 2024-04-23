@@ -4,7 +4,8 @@ The data acquired with the JINS MEME ES_R can be saved on an Android device.<br>
 
 ## Downloading the Software
 
-Please download from [here](https://github.com/jins-meme/ES_R-DataLogger/releases).
+- Please download from [here](https://github.com/jins-meme/ES_R-DataLogger/releases).
+  - Android 8 or later, devices with BLE4.2
 
 ## Installation
 

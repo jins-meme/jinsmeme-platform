@@ -19,7 +19,7 @@ features:
       src: /images/icon_app.svg
     title: Software
     details: Software that can store time series data for long time data
-    link: /en/hardware.html
+    link: /en/hardware.html#supported-software-and-obtainable-data
   - icon: 
       src: /images/icon_folder.svg
     title: Document
