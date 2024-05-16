@@ -13,7 +13,7 @@ export default defineConfig({
       {
         text: "コンテンツ一覧",
         items: [
-          { text: "大事なお知らせ", link: "/eol" },
+          { text: "重要なお知らせ", link: "/eol" },
           { text: "JINS MEME センサー", link: "/hardware" },
           {
             text: "ソフトウェア",
