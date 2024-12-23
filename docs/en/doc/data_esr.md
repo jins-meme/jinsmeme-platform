@@ -15,7 +15,7 @@
 
 ## Full Mode
 
-Full is the mode with the most data types and is the most versatile and easy to use. Please see **[Detail]({{ base_path }}/assets/pdf/sample_full.pdf)**.
+Full is the mode with the most data types and is the most versatile and easy to use. Please see [**Detail**](/pdf/sample_full.pdf).
 
 | Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
@@ -35,7 +35,7 @@ Full is the mode with the most data types and is the most versatile and easy to 
 
 ## Standard Mode
 
-Standard mode is useful when you want to acquire detailed EOG data at twice the speed (two data per line), but it does not retain angular velocity data. Please see **[Detail]({{ base_path }}/assets/pdf/sample_standard.pdf)**.
+Standard mode is useful when you want to acquire detailed EOG data at twice the speed (two data per line), but it does not retain angular velocity data. Please see [**Detail**](/pdf/sample_standard.pdf).
 
 | Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
@@ -56,7 +56,7 @@ Standard mode is useful when you want to acquire detailed EOG data at twice the 
 
 ## Quaternion Mode
 
-Quaternion is a special mode for acquiring data used for attitude control, etc. Please see **[Detail]({{ base_path }}/assets/pdf/sample_quaternion.pdf)**.
+Quaternion is a special mode for acquiring data used for attitude control, etc. Please see [**Detail**](/pdf/sample_quaternion.pdf).
 
 | Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|

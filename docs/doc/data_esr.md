@@ -35,7 +35,7 @@ Fullはデータ種が一番多いモードで、最も汎用的に使いやす�
 
 ## Standard Mode
 
-StandardはEOGが倍速(1行に2データ)で取得できEOGを詳細に取りたい時に便利ですが、角速度のデータが残りません。[**詳細な解説**](/assets/pdf/sample_standard.pdf)をご覧ください。
+StandardはEOGが倍速(1行に2データ)で取得できEOGを詳細に取りたい時に便利ですが、角速度のデータが残りません。[**詳細な解説**](/pdf/sample_standard.pdf)をご覧ください。
 
 | Name | Type | 説明 | 値の範囲 |
 |:---:|:---:|:---:|:---:|
@@ -56,7 +56,7 @@ StandardはEOGが倍速(1行に2データ)で取得できEOGを詳細に取り�
 
 ## Quaternion Mode
 
-Quaternionは姿勢制御などで使用するデータを取得するための特殊モードです。[**詳細な解説](/assets/pdf/sample_quaternion.pdf)をご覧ください。
+Quaternionは姿勢制御などで使用するデータを取得するための特殊モードです。[**詳細な解説**](/pdf/sample_quaternion.pdf)をご覧ください。
 
 | Name | Type | 説明 | 値の範囲 |
 |:---:|:---:|:---:|:---:|
