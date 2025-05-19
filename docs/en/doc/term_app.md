@@ -1,10 +1,8 @@
 # JINS MEME Official App Terms of Use
 
-These JINS MEME Official App Terms of Use (these “Terms of Use”) set forth the terms and conditions for when the customer (the “User”) downloads to the User’s device (the device on which the App is downloaded shall hereinafter be referred to as the 
-“Device”) and uses the JINS MEME Official App (including the items set forth in Article 4; the “App”) provided by JINS Inc (“JINS”). These Terms of Use apply to the entire App. The User shall use the App
+These JINS MEME Official App Terms of Use (these “Terms of Use”) set forth the terms and conditions for when the customer (the “User”) downloads to the User’s device (the device on which the App is downloaded shall hereinafter be referred to as the “Device”) and uses the JINS MEME Official App (including the items set forth in Article 4; the “App”) provided by JINS Inc (“JINS”). These Terms of Use apply to the entire App. The User shall use the App
  after agreeing with these Terms of Use as the contents of the agreement.
 The App may have restrictions on the countries and areas that can be downloaded or updated.
-
 
 ## Article 1. Terms of Use
 
@@ -46,7 +44,6 @@ The App may have restrictions on the countries and areas that can be downloaded 
 
 The App is protected by the copyright laws and treaties concerning copyrights in Japan and various relevant countries, as well as by other laws and treaties concerning intellectual property rights, and such rights belong to JINS or the rights holders having lawful rights. JINS and the rights holders having lawful rights do not transfer or license to the User any copyrights, patent rights, trademark rights or other intellectual property rights regarding the App, beyond the extent necessary for the use of the App.
 
-
 ## Article 7. Prohibited Matters
 
 The following acts are prohibited in regard to the use of the App:
@@ -75,11 +72,9 @@ Other acts that JINS recognizes as inappropriate.
 
 If JINS reasonably determines that the User has violated these Terms of Use, JINS may delete the User Account of such User immediately.
 
-
 ## Article 9. Representations and Warranties of the User
 
 The User shall represent and warrant that there is a possibility that the App will be subject to the Export Controls of the United States Department of Commerce or similar export laws and regulations under the laws or regulations of Japan, the EU or relevant countries. In addition, the User shall represent and warrant that the User will not take out of the User’s country or provide to a third party outside of the country the App and the technical data and technical information relating thereto provided from JINS (including, but not limited to, any technical information, software, drawings, user manuals, data, documents, etc.), without obtaining a valid export license required by such laws or regulations.
-
 
 ## Article 10. Exclusion of Liability
 
@@ -95,8 +90,7 @@ The User shall represent and warrant that there is a possibility that the App wi
     - Harmful items such as computer viruses are not included in e-mails, etc. transmitted in relation to the App;
     - Information regarding the User will not be erased, and no alteration or damage thereof will occur; and
     - The App and the provision of the services incidental to the App will not infringe on any rights and interests of a third party, and will not be subject to claim for infringement.
-1. JINS will not be liable for any direct damages, indirect damages, incidental or consequential damages, special damages, lost profits and other damages (whether or not foreseeable) caused by the User using the App or the App not being able to be used or not functioning, except if due to the intent or gross negligence of JINS or if these Terms of Use correspond to a consumer 
-contract under Article 2(3) of the Consumer Contract Act.
+1. JINS will not be liable for any direct damages, indirect damages, incidental or consequential damages, special damages, lost profits and other damages (whether or not foreseeable) caused by the User using the App or the App not being able to be used or not functioning, except if due to the intent or gross negligence of JINS or if these Terms of Use correspond to a consumer contract under Article 2(3) of the Consumer Contract Act.
 1. Regardless of the cause of the claim, if JINS is liable to provide compensatory damages in relation to the provision of the App, the maximum of that amount will the highest of (i) the purchase price of the App, (ii) the usage fee amount received for the month in which such damages occur, or (iii) JPY 100; provided, however, that this does not apply if there is any intent or gross negligence on the part of JINS.
 
 ## Article 11. Precautions Concerning the Use of Apps When Driving
@@ -131,9 +125,7 @@ lling, destroying or erasing the App.
 
 Personal information provided from the User in using the App shall be handled pursuant to the JINS MEME Privacy Policy. Since the User will need to consent to the JINS MEME Privacy Policy in order to use the App, the User must confirm the JINS MEME Privacy Policy without fail. If the User consents to these Terms of Use, the User shall be deemed to have also consented to the JINS MEME Privacy Policy.
 
-
 ## Article 16. Amendment of the Terms
-
 
 - There may be instances where JINS will amend these Terms of Use pursuant to this Article at JINS’s own discretion. In such instance, JINS will announce the amended terms of use (the “New Terms of Use”) and the effective date on the JINS MEME official website.
 - After the amendment of these Terms of Use pursuant to the preceding paragraph, the User will need to consent to the New Terms of Use in order to use the App. The New Terms of Use will take effect on the effective date as set forth in the preceding paragraph. If the App is used after the amendment of these Terms of Use, the User shall be deemed to have consented to the New Terms of Use.
@@ -143,28 +135,21 @@ Personal information provided from the User in using the App shall be handled pu
 The notice sent by JINS to the User may be made in a manner as considered appropriate by JINS from among sending the notice to the e-mail address registered by the User, sending the notice to another telecommunication means address registered by the User, and publishing the notice on JINS’s official website; even if such notice does not reach the User due to a change or error in stating the User’s contact details, such notice is considered to have reached the User on the day immediately after the date of delivery in the case of an e-mail or other telecommunication means, or on date of publication in the case of a publication on the website.
 JINS may give notice of important notifications such as update information concerning JINS MEME, including firmware of the main body of JINS MEME and the App, to the e-mail address registered by the User.
 
-
 ## Article 18. Sub-Contracting
 
 JINS may, without needing to obtain consent from the User, subcontract the App and part of the services provided incidental to the App to a third party. In this case, JINS shall cause the relevant contractor to comply with the same obligations as those imposed on JINS in accordance with this Agreement, and shall be responsible to the User for any breach of obligations by the relevant contractor.
 
-
 ## Article 19. Survival
 
-
-Even after the provision of the App to the User is terminated, the provisions of Article 3.4, 3.5, 5.2, 6, 9, 10, 11.4, 12, 13.1, 15, 18 through 22, and other provisions setting forth exemption of JINS shall 
-remain valid.
-
+Even after the provision of the App to the User is terminated, the provisions of Article 3.4, 3.5, 5.2, 6, 9, 10, 11.4, 12, 13.1, 15, 18 through 22, and other provisions setting forth exemption of JINS shall remain valid.
 
 ## Article 20. Severability
 
 Even if a part of these Terms of Use is declared to be invalid due to the laws and regulations or a decision of a court, etc., the other parts shall continue to remain in effect.
 
-
 ## Article 21. Governing Law
 
 Disputes concerning these Terms of Use and the App shall be governed by Japanese law.
-
 
 ## Article 22. Jurisdiction
 
