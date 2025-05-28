@@ -88,8 +88,8 @@
 |blinkIntervalTotal`静止指標`|bki\_sum|Number(float)|まばたき間隔合計(s)| 0-120.0|
 |blinkIntervalCount`静止指標`|bki\_n|Number(int)|まばたき間隔数|0-120|
 |blinkIntervalMean`静止指標`|bki\_av|Number(float)|まばたき間隔平均| 0.00-60.00 |
-|blinkCount`静止指標`|bk\_n|Number(int)|まばたき回数|0-120|
-|blinkCountRaw`静止指標`|rbk\_n|Number(int)|まばたき回数生値| 0-255 |
+|blinkCount`静止指標`|bk\_n|Number(int)|まばたき回数(35<=強度<=250、90<=速度<=250でフィルタ)|0-120|
+|blinkCountRaw`静止指標`|rbk\_n|Number(int)|まばたき回数生値(フィルタなし)| 0-255 |
 |eyeMoveUpCount`静止指標`|re\_u|Number(int)|視線移動上回数生値| 0-255 |
 |eyeMoveDownCount`静止指標`|re\_d|Number(int)|視線移動下回数生値| 0-255 |
 |eyeMoveRightCount`静止指標`|re\_r|Number(int)|視線移動右回数生値| 0-255 |

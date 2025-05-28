@@ -88,8 +88,8 @@ The 15-second interval data is the most granular data that outputs biometric ind
 |blinkIntervalTotal `Static`|bki\_sum|Number(float)|Blink interval sum(s)| 0-120.0|
 |blinkIntervalCount `Static`|bki\_n|Number(int)|Number of blink interval |0-120|
 |blinkIntervalMean `Static`|bki\_av|Number(float)|Blink interval mean | 0.00-60.00 |
-|blinkCount `Static`|bk\_n|Number(int)|Number of blink|0-120|
-|blinkCountRaw `Static`|rbk\_n|Number(int)|Number of blink(Raw)| 0-255 |
+|blinkCount `Static`|bk\_n|Number(int)|Number of blink(filtered with 35<=Strength<=250、90<=Speed<=250)|0-120|
+|blinkCountRaw `Static`|rbk\_n|Number(int)|Number of blink(Raw, no filter)| 0-255 |
 |eyeMoveUpCount `Static`|re\_u|Number(int)|Eye movement count(up, Raw)| 0-255 |
 |eyeMoveDownCount `Static`|re\_d|Number(int)|Eye movement count(down, Raw)| 0-255 |
 |eyeMoveRightCount `Static`|re\_r|Number(int)|Eye movement count(right, Raw)| 0-255 |
