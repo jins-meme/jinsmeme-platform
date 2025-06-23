@@ -2,7 +2,7 @@
 
 ## Axis Definition of Motion Indicators
 
-![](/images/axisdef.png)
+![axes definition](/images/axisdef.png)
 
 Regarding the angle, drift (value changes at a constant rate) and hump (small bumps in the value) occur due to the characteristics of the sensor.
 
@@ -11,12 +11,19 @@ Regarding the angle, drift (value changes at a constant rate) and hump (small bu
 - Among the data that can be measured by JINS MEME, the `Static` indicator is an indicator that is valid only when there is no walking, touching the glasses with the hands, chewing, etc. When data is measured under conditions other than those mentioned above, it may be detected as a noise flag, output inaccurate values, or not detected. Please note that when measurement is made under conditions other than those mentioned above, it may be detected as a noise flag, output inaccurate values, or not be detected. summaryData is cleansed to remove any suspicious signals.
 - The `Gait` indicator in the data that can be measured by JINS MEME is the data that can be obtained while walking. Please note that JINS MEME cannot accurately measure vibration and movement patterns other than walking.
 
+## Timestamp Format
+
+- Timestamps are provided in RFC3339 format.
+- If the string ends with Z, it is in UTC (Coordinated Universal Time, Japan Standard Time -9 hours).
+- If the string ends with +0900, it is in JST (Japan Standard Time, UTC+9 hours).
+
 ## 20Hz data(currentData)
 
 Data can be acquired at approximately 20 Hz. This mode is suitable for immediate acquisition and analysis of precise data such as controller. This data is generated only when JINS MEME and a smartphone are connected via Bluetooth.
 
-| iOS/Android/Nodejs/Logger | Type(iOS/Android) | Type(Nodejs) | Description | Value Range |
+| item name | Type(iOS/Android) | Type(Nodejs) | Description | Value Range |
 |:---|:---:|:---:|:---|:---:|
+|date / date|String|String|This is a timestamp assigned by the receiving device.|1970-01-01T00:00:00Z - 2099-12-31T23:59:59|
 | blinkSpeed `Static` | Int | Number | Blink speed, eye closing time(mSec) | 0-400(ordinary 90−180) |
 | blinkStrength `Static` | Int | Number | Blink strength(uV-equiv) | 0-1000(ordinary30−150) |
 | eyeMoveUp `Static` | Int | Number | Event when the eye moves up. | 0: none<br/>1: min-7: max |
@@ -42,128 +49,128 @@ Data can be acquired at approximately 20 Hz. This mode is suitable for immediate
 The 15-second interval data is the most granular data that outputs biometric indicators. This data is generated only when JINS MEME and a smartphone are connected via Bluetooth.
 ※"When running sub-applications", "Normalized", "sub-index" and "RT algorithm in operation" may not be recorded.
 
-|Logger|API|Type(API/CSV)|Description|Value Range|
-|:---|:---|:---|:---|:---:|
-|date|date|String|measurement date|2000-01-01T00:00:00 - 2099-12-31T23:59:59|
-|stepCount `Gait`|stp|Number(int)|Step count|0-255|
-|stepCadence `Gait`|cad|Number(float)|Cadence(pitch)| 0-255 |
-|isStill|isl|Boolean / Number(int)|Still (not wearing) judgment| true: not wearing (still) false: wearing (not still)|
-|noiseTime|nis\_time|Number(float)|noise time|0.00 - 15.00|
-|isValid|vld|Boolean / Number(int)|Data validity at rest (noise less than 3 seconds and steps less than 5)| true: valid false: invalid|
-|xMean|tl\_xav|Number(float)|Mean tilt X (degree) | -180.00-180.00 |
-|xSD|tl\_xsd|Number(float)|Standard deviation of tilt X (degree) | 0-655.36 |
-|YMean|tl\_yav|Number(float)|Mean tilt Y (degree) | -180.00-180.00 |
-|ySD|tl\_ysd|Number(float)|Standard deviation of tilt Y (degree) | 0-655.36 |
-|pitchOnewayCount|hm\_po|Number(int)|Number of neck flips (back-forth)| 0-255 |
-|pitchRoundCount|hm\_pr|Number(int)|Number of slow neck flips (back-forth)| 0-255 |
-|yawOnewayCount|hm\_yo|Number(int)|Number of neck flips (right-left)| 0-255 |
-|yawRoundCount|hm\_yr|Number(int)|Number of slow neck flips (right-left)| 0-255 |
-|xRightStepAmplitude `Gait`|sa\_xr|Number(float)|Walking vibration X(cm,right foot)| 0.00-16.00 |
-|xLeftStepAmplitude `Gait`|sa\_xl|Number(float)|Walking vibration X(cm,left foot)| 0.00-16.00 |
-|yRightStepAmplitude `Gait`|sa\_yr|Number(float)|Walking vibration Y(cm,right foot)| 0.00-16.00 |
-|yLeftStepAmplitude `Gait`|sa\_yl|Number(float)|Walking vibration Y(cm,left foot)| 0.00-16.00 |
-|zRightStepAmplitude `Gait`|sa\_zr|Number(float)|Walking vibration Z(cm,right foot)| 0.00-16.00 |
-|zLeftStepAmplitude `Gait`|sa\_zl|Number(float)|Walking vibration Z(cm,left foot)| 0.00-16.00 |
-|zLeftStepAmplitudeCal `Gait`|sa\_zrc|Number(float)|Walking vibration Z corrected (cm,right foot)| 0.00-20.00 |
-|zLeftStepAmplitudeCal `Gait`|sa\_zlc|Number(float)|Walking vibration Z corrected (cm,left foot)| 0.00-20.00 |
-|maxRightStepAcceleration `Gait`|st\_r|Number(float)|Maximum landing strength average (G, right foot)| 0.00-8.00 |
-|maxLeftStepAcceleration `Gait`|st\_l|Number(float)|Maximum landing strength average (G, left foot)| 0.00-8.00 |
-|sleepScoreStandard `Static`|sc\_slp\_std|Number(float)|Low wakefulness score (normal), index of "eye trance" based on blink strength/rate and partial blink interval| 0(high wakefulness)-100(sleepy), invalid: -1|
-|sleepScore `Static`|sc\_slp|Number(float)|Corrected for low alertness score (when driving) and driving posture (looking straight ahead)| 0 (high wakefulness) -100 (sleepy), Invalid: -1|
-|focusScore `Static`|sc\_fcs|Number(float)|Indicates "sustained attention to a task" using immersion score and blink interval| 0(low immersion)-100(high immersion), Inactive: -1|
-|tensionScore `Static`|sc\_tsn|Number(float)|Tension score, an index of "eyes wide open" using blink strength| 0(low tension)-100(high tension), Invalid: -1|
-|stabilityScore `Static`|sc\_clm|Number(float)|Stability score, an index of "stable state without external or internal stimuli" using blink strength| 0(not calm)-100(calm), Invalid: -1|
-|distance|distance|Number(float)|When running sub-applications: distance traveled since last section (m)|0-5000|
-|latitude|lat|Number(float)|When running sub-applications: latitude|-180 - 180|
-|longitude|lng|Number(float)|When running sub-applications: longitude|-90 - 90|
-|appMeasurementStatus|app\_measurement\_status|Number(int)|sub-app operation status flag|0: Non-APP measurement 2: Run measurement in progress 3: Run paused 8: Drive measurement in progress 12: Drive paused 32: Focus measurement 48: Focus paused|
-|nptMean `Static`|npt\_av|Number(float)|NPT (effective blink rate) average| -0.999 - 0.999 |
-|nptMedian`Static`|npt\_med|Number(float)|NPT(Effective blink rate) median| -0.999 - 0.999 |
-|nptSD `Static`|npt\_sd|Number(float)|NPT standard deviation| 0-0.999 |
-|blinkWidthMean `Static`|bkw\_av|Number(float)|Blink speed mean(mSec)| 0-300 |
-|blinkStrengthTotal `Static`|bkh\_sum|Number(float)|Blink strength sum(uV-equiv) | 0-10000.0 |
-|blinkStrengthMax `Static`|bkh\_max|Number(float)|Blink strength max(uV-equiv) | 0-1000.0 |
-|blinkStrengthSD `Static`|bkh\_sd|Number(float)|Blink strength sd(uV-equiv) | 0.00-1000.0 |
-|blinkStrengthMean `Static`|bkh\_av|Number(float)|Blink strength mean| 0-1000.0 |
-|blinkIntervalTotal `Static`|bki\_sum|Number(float)|Blink interval sum(s)| 0-120.0|
-|blinkIntervalCount `Static`|bki\_n|Number(int)|Number of blink interval |0-120|
-|blinkIntervalMean `Static`|bki\_av|Number(float)|Blink interval mean | 0.00-60.00 |
-|blinkCount `Static`|bk\_n|Number(int)|Number of blink(filtered with 35<=Strength<=250、90<=Speed<=250)|0-120|
-|blinkCountRaw `Static`|rbk\_n|Number(int)|Number of blink(Raw, no filter)| 0-255 |
-|eyeMoveUpCount `Static`|re\_u|Number(int)|Eye movement count(up, Raw)| 0-255 |
-|eyeMoveDownCount `Static`|re\_d|Number(int)|Eye movement count(down, Raw)| 0-255 |
-|eyeMoveRightCount `Static`|re\_r|Number(int)|Eye movement count(right, Raw)| 0-255 |
-|eyeMoveLeftCount `Static`|re\_l|Number(int)|Eye movement count(Left, Raw)| 0-255 |
-|cummulativeTime|cum\_time|Number(int)|Cumulative normalizing time(s)| 0-4294967296 |
-|blinkIntervalMeanWA `Static`|bki\_av\_wa|Number(float)|Normalized blink interval mean| 0.00-60.00 |
-|blinkStrengtnSDWA `Static`|bkh\_sd\_wa|Number(float)|Normalized blink strength sd| 0.00-1000.0 |
-|blinkStrengthMeanWA `Static`|bkh\_av\_wa|Number(float)|Normalized blink strength mean| 0-1000.0 |
-|nptMeanWA `Static`|npt\_av\_wa|Number(float)|Normalized NPT mean| -0.999 - 0.999 |
-|nptSDWA `Static`|npt\_sd\_wa|Number(float)|Normalized NPT sd| 0-0.999 |
-|blinkWidthMeanWA `Static`|bkw\_av\_wa|Number(float)|Normalized blink speed mean| 0-300 |
-|nptScore `Static`|sc\_npt|Number(float)|Sleepiness sub-index: NPT score|0-100, Invalid: -1|
-|btsScore `Static`|sc\_bts|Number(float)|Sleepiness sub-index: BTS score|0-100, Invalid: -1|
-|lbsScore `Static`|sc\_lbs|Number(float)|Sleepiness sub-index: LBS score|0-100, Invalid: -1|
-|legacyZone `Static`|zone|Number(int)|RT algorithm in operation: zone value|0-100, Invalid: -1|
-|legacyFocus `Static`|focus|Number(int)|RT algorithm in operation: focus value|0-100, Invalid: -1|
-|legacyCalm `Static`|calm|Number(int)|RT algorithm in operation: calm value|0-100, Invalid: -1|
-|legacyPosture `Static`|posture|Number(int)|RT algorithm in operation: posture value|0-100, Invalid: -1|
-|cursor|cursor|String|Starting position to retrieve the next record if any.|
+|Logger/API item name|Type(API/CSV)|Description|Value Range|
+|:---|:---|:---|:---:|
+|date / date|String|The measurement date and time indicate the period summarized from 15 seconds before up to this timestamp. The 15-second intervals are not based on when the measurement button is pressed, but are counted in 15-second increments from when the connection starts. Data is recorded at each point where summarization occurs from the start to the end of measurement.|1970-01-01T00:00:00Z - 2099-12-31T23:59:59|
+|stepCount / stp `Gait`|Number(int)|Step count|0-255|
+|stepCadence / cad `Gait`|Number(float)|Cadence(pitch)| 0-255 |
+|isStill / isl|Boolean / Number(int)|Still (not wearing) judgment| true: not wearing (still) false: wearing (not still)|
+|noiseTime / nis_time|Number(float)|noise time|0.00 - 15.00|
+|isValid / vld|Boolean / Number(int)|Data validity at rest (noise less than 3 seconds and steps less than 5)| true: valid false: invalid|
+|xMean / tl_xav|Number(float)|Mean tilt X (degree) | -180.00-180.00 |
+|xSD / tl_xsd|Number(float)|Standard deviation of tilt X (degree) | 0-655.36 |
+|YMean / tl_yav|Number(float)|Mean tilt Y (degree) | -180.00-180.00 |
+|ySD / tl_ysd|Number(float)|Standard deviation of tilt Y (degree) | 0-655.36 |
+|pitchOnewayCount / hm_po|Number(int)|Number of neck flips (back-forth)| 0-255 |
+|pitchRoundCount / hm_pr|Number(int)|Number of slow neck flips (back-forth)| 0-255 |
+|yawOnewayCount / hm_yo|Number(int)|Number of neck flips (right-left)| 0-255 |
+|yawRoundCount / hm_yr|Number(int)|Number of slow neck flips (right-left)| 0-255 |
+|xRightStepAmplitude / sa_xr `Gait`|Number(float)|Walking vibration X(cm,right foot)| 0.00-16.00 |
+|xLeftStepAmplitude / sa_xl `Gait`|Number(float)|Walking vibration X(cm,left foot)| 0.00-16.00 |
+|yRightStepAmplitude / sa_yr `Gait`|Number(float)|Walking vibration Y(cm,right foot)| 0.00-16.00 |
+|yLeftStepAmplitude / sa_yl `Gait`|Number(float)|Walking vibration Y(cm,left foot)| 0.00-16.00 |
+|zRightStepAmplitude / sa_zr `Gait`|Number(float)|Walking vibration Z(cm,right foot)| 0.00-16.00 |
+|zLeftStepAmplitude / sa_zl `Gait`|Number(float)|Walking vibration Z(cm,left foot)| 0.00-16.00 |
+|zLeftStepAmplitudeCal / sa_zrc `Gait`|Number(float)|Walking vibration Z corrected (cm,right foot)| 0.00-20.00 |
+|zLeftStepAmplitudeCal / sa_zlc `Gait`|Number(float)|Walking vibration Z corrected (cm,left foot)| 0.00-20.00 |
+|maxRightStepAcceleration / st_r `Gait`|Number(float)|Maximum landing strength average (G, right foot)| 0.00-8.00 |
+|maxLeftStepAcceleration / st_l `Gait`|Number(float)|Maximum landing strength average (G, left foot)| 0.00-8.00 |
+|sleepScoreStandard / sc_slp_std `Static`|Number(float)|Low wakefulness score (normal), index of "eye trance" based on blink strength/rate and partial blink interval| 0(high wakefulness)-100(sleepy), invalid: -1|
+|sleepScore / sc_slp `Static`|Number(float)|Corrected for low alertness score (when driving) and driving posture (looking straight ahead)| 0 (high wakefulness) -100 (sleepy), Invalid: -1|
+|focusScore / sc_fcs `Static`|Number(float)|Indicates "sustained attention to a task" using immersion score and blink interval| 0(low immersion)-100(high immersion), Inactive: -1|
+|tensionScore / sc_tsn `Static`|Number(float)|Tension score, an index of "eyes wide open" using blink strength| 0(low tension)-100(high tension), Invalid: -1|
+|stabilityScore / sc_clm `Static`|Number(float)|Stability score, an index of "stable state without external or internal stimuli" using blink strength| 0(not calm)-100(calm), Invalid: -1|
+|distance / distance|Number(float)|When running sub-applications: distance traveled since last section (m)|0-5000|
+|latitude / lat|Number(float)|When running sub-applications: latitude|-180 - 180|
+|longitude / lng|Number(float)|When running sub-applications: longitude|-90 - 90|
+|appMeasurementStatus / app_measurement_status|Number(int)|sub-app operation status flag|0: Non-APP measurement 2: Run measurement in progress 3: Run paused 8: Drive measurement in progress 12: Drive paused 32: Focus measurement 48: Focus paused|
+|nptMean / npt_av `Static`|Number(float)|NPT (effective blink rate) average| -0.999 - 0.999 |
+|nptMedian / npt_med `Static`|Number(float)|NPT(Effective blink rate) median| -0.999 - 0.999 |
+|nptSD / npt_sd `Static`|Number(float)|NPT standard deviation| 0-0.999 |
+|blinkWidthMean / bkw_av `Static`|Number(float)|Blink speed mean(mSec)| 0-300 |
+|blinkStrengthTotal / bkh_sum `Static`|Number(float)|Blink strength sum(uV-equiv) | 0-10000.0 |
+|blinkStrengthMax / bkh_max `Static`|Number(float)|Blink strength max(uV-equiv) | 0-1000.0 |
+|blinkStrengthSD / bkh_sd `Static`|Number(float)|Blink strength sd(uV-equiv) | 0.00-1000.0 |
+|blinkStrengthMean / bkh_av `Static`|Number(float)|Blink strength mean| 0-1000.0 |
+|blinkIntervalTotal / bki_sum `Static`|Number(float)|Blink interval sum(s)| 0-120.0|
+|blinkIntervalCount / bki_n `Static`|Number(int)|Number of blink interval |0-120|
+|blinkIntervalMean / bki_av `Static`|Number(float)|Blink interval mean | 0.00-60.00 |
+|blinkCount / bk_n `Static`|Number(int)|Number of blink(filtered with 35<=Strength<=250、90<=Speed<=250)|0-120|
+|blinkCountRaw / rbk_n `Static`|Number(int)|Number of blink(Raw, no filter)| 0-255 |
+|eyeMoveUpCount / re_u `Static`|Number(int)|Eye movement count(up, Raw)| 0-255 |
+|eyeMoveDownCount / re_d `Static`|Number(int)|Eye movement count(down, Raw)| 0-255 |
+|eyeMoveRightCount / re_r `Static`|Number(int)|Eye movement count(right, Raw)| 0-255 |
+|eyeMoveLeftCount / re_l `Static`|Number(int)|Eye movement count(Left, Raw)| 0-255 |
+|cummulativeTime / cum_time|Number(int)|Cumulative normalizing time(s)| 0-4294967296 |
+|blinkIntervalMeanWA / bki_av_wa `Static`|Number(float)|Normalized blink interval mean| 0.00-60.00 |
+|blinkStrengtnSDWA / bkh_sd_wa `Static`|Number(float)|Normalized blink strength sd| 0.00-1000.0 |
+|blinkStrengthMeanWA / bkh_av_wa `Static`|Number(float)|Normalized blink strength mean| 0-1000.0 |
+|nptMeanWA / npt_av_wa `Static`|Number(float)|Normalized NPT mean| -0.999 - 0.999 |
+|nptSDWA / npt_sd_wa `Static`|Number(float)|Normalized NPT sd| 0-0.999 |
+|blinkWidthMeanWA / bkw_av_wa `Static`|Number(float)|Normalized blink speed mean| 0-300 |
+|nptScore / sc_npt `Static`|Number(float)|Sleepiness sub-index: NPT score|0-100, Invalid: -1|
+|btsScore / sc_bts `Static`|Number(float)|Sleepiness sub-index: BTS score|0-100, Invalid: -1|
+|lbsScore / sc_lbs `Static`|Number(float)|Sleepiness sub-index: LBS score|0-100, Invalid: -1|
+|legacyZone / zone `Static`|Number(int)|RT algorithm in operation: zone value|0-100, Invalid: -1|
+|legacyFocus / focus `Static`|Number(int)|RT algorithm in operation: focus value|0-100, Invalid: -1|
+|legacyCalm / calm `Static`|Number(int)|RT algorithm in operation: calm value|0-100, Invalid: -1|
+|legacyPosture / posture `Static`|Number(int)|RT algorithm in operation: posture value|0-100, Invalid: -1|
+|cursor / cursor|String|Starting position to retrieve the next record if any.| random string |
 
 ## 60-second interval data (summaryData)
 
 This mode is suitable for monitoring status changes over a long period of time, allowing data to be acquired once per minute.
 
-| iOS/Android/Logger | API/Nodejs |Type(API/CSV)| Description | Value Range |
-|:---|:---:|:---:|:---|:---:|
-| date | <i>N/A</i> | String | 日付 | 1970-01-01T09:00:00 - 2106-02-07T06:28:16 |
-| <i>N/A</i> | ut | Number(int)|UNIX TIME | 0-4294967296 |
-| validDuration | val_s | Number(float)|Measuring seconds(s) | 0.00-60.00 |
-| noiseDuration | nis_s | Number(float)|Electrode nsoise seconds(s) | 0.00-60.00 |
-| fitDuration | wea_s | Number(float)|Wearing seconds(s) | 0.00-60.00 |
-| walkingDuration | stp_s | Number(float)|Walking seconds(s) | 0.00-60.00 |
-| powerLeft | bl | Number(int)|Battery level | 0: In charging<br />1:Empty-5:Full|
-| eyeMoveHorizontal `Static` | ems_rl | Number(int)|Small eye movement count(right, left) | 0-255 |
-| eyeMoveVertical `Static` | ems_ud | Number(int)|Small eye movement count(up, down) | 0-255 |
-| eyeMoveBigHorizontal `Static` | eml_rl | Number(int)|Large eye movement count(right, left) | 0-255 |
-| eyeMoveBigVertical `Static` | eml_ud | Number(int)|Large eye movement count(up, down) | 0-255 |
-| headMoveVerticalCount | hm_po |Number(int)| Number of neck flips (vertical) | 0-255 |
-| headMoveHorizontalCount | hm_yo | Number(int)|Number of neck flips (horizontal)| 0-255 |
-| walkingVibrationRightX `Gait` | sa_xr | Number(float)|Walking vibration X(cm,right foot)| 0.00-16.00 |
-| walkingVibrationLeftX `Gait` | sa_xl | Number(float)|Walking vibration X(cm,left foot)| 0.00-16.00 |
-| walkingVibrationRightY `Gait` | sa_yr | Number(float)|Walking vibration Y(cm,right foot)| 0.00-16.00 |
-| walkingVibrationLeftY `Gait` | sa_yl | Number(float)|Walking vibration Y(cm,left foot)| 0.00-16.00 |
-| walkingVibrationRightZ `Gait` | sa_zr | Number(float)|Walking vibration Z(cm,right foot)| 0.00-16.00 |
-| walkingVibrationLeftZ `Gait` | sa_zl | Number(float)|Walking vibration Z(cm,left foot)| 0.00-16.00 |
-| landingStrengthRightMaxAvg `Gait` | st_r | Number(float)|Maximum landing strength average (G, right foot)| 0.00-8.00 |
-| landingStrengthLeftMaxAvg `Gait` | st_l | Number(float)|Maximum landing strength average (G, left foot)| 0.00-8.00 |
-| slopeXAvg | tl_xav | Number(float)|Mean tilt X (degree)| -180.00-180.00 |
-| slopeYAvg | tl_yav | Number(float)|Mean tilt Y (degree)| -180.00-180.00 |
-| slopeXStd | tl_xsd | Number(float)|Standard deviation of tilt X (degree)| 0-655.36 |
-| slopeYStd | tl_ysd | Number(float)|Standard deviation of tilt Y (degree)| 0-655.36 |
-| highSpeedStepsNum `Gait` | stp_fst | Number(int)|Step count(High 280-370ms)| 0-255 |
-| middleSpeedStepsNum `Gait` | stp_mid | Number(int)|Step count(Mid 380-440ms)| 0-255 |
-| lowSpeedStepsNum `Gait` | stp_slw | Number(int)|Step count(Low 450-590ms)| 0-255 |
-| ultraLowSpeedStepsNum `Gait` | stp_vsl | Number(int)|Step count(Extra-low 600-1000ms)| 0-255 |
-| nptAvgWeak `Static` `weak cleansing` | lc_npt_av | Number(float)|NPT (effective blink rate) average| -0.256 - 0.256 |
-| weakBlinkSpeedAvg `Static` `weak cleansing` | lc_bkw_av | Number(int)|Blink speed mean(mSec) | 50-306 |
-| weakBlinkSpeedStd `Static` `weak cleansing` | lc_bkw_sd | Number(float)|Blink speed sd(mSec) | 0-51.2 |
-| weakBlinkStrengthAvg `Static` `weak cleansing` | lc_bkh_av | Number(int)|Blink strength mean(uV-equiv) | 0-512 |
-| weakBlinkStrengthStd `Static` `weak cleansing` | lc_bkh_sd | Number(float)|Blink strength sd(uV-equiv) | 0-51.2 |
-| weakBlinkCount `Static` `weak cleansing` | lc_bk_n | Number(int)|Number of blink | 0-255 |
-| weakBlinkSwarmCount `Static` `weak cleansing` | lc_bkg_n | Number(int)|Number of times multiple blinks occurred within 1s | 0-255 |
-| weakBlinkIntervalAvg `Static` `weak cleansing` | lc_bki_av | Number(float)|Blink interval mean(s)  *RMS average from FW2.2.0 | 0-51.2 |
-| weakBlinkIntervalCount `Static` `weak cleansing` | lc_bki_n | Number(int)|Number of blink interval | 0-255 |
-| nptAvgStrong `Static` `strong cleansing` | sc_npt_av | Number(float)|NPT (effective blink rate) average | -0.256 - 0.256 |
-| strongBlinkSpeedAvg `Static` `strong cleansing` | sc_bkw_av | Number(int)|Blink speed mean(mSec) | 50-306 |
-| strongBlinkSpeedStd `Static` `strong cleansing` | sc_bkw_sd | Number(float)|Blink speed sd(mSec) | 0-51.2 |
-| strongBlinkStrengthAvg `Static` `strong cleansing` | sc_bkh_av | Number(int)|Blink strength mean(uV-equiv) | 0-512 |
-| strongBlinkStrengthStd `Static` `strong cleansing` | sc_bkh_sd | Number(float)|Blink strength sd(uV-equiv) | 0-51.2 |
-| strongBlinkCount `Static` `strong cleansing` | sc_bk_n | Number(int)|Number of blink | 0-255 |
-| strongBlinkSwarmCount `Static` `strong cleansing` | sc_bkg_n | Number(int)|Number of times multiple blinks occurred within 1s | 0-255 |
-| strongBlinkIntervalAvg `Static` `strong cleansing` | sc_bki_av | Number(float)|Blink interval mean(s) *RMS average from FW2.2.0 | 0-51.2 |
-| strongBlinkIntervalCount `Static` `strong cleansing` | sc_bki_n | Number(int)|Number of blink interval | 0-255 |
-|cursor|cursor|String|Starting position to retrieve the next record if any.| null / (string)|
+| Logger/API item name|Type(API/CSV)|Description|Value Range|
+|:---|:---|:---|:---:|
+|date|String|Timestamp, CSV only. The timing of the intervals is based on the minute set in the JINS MEME RTC. The data for the previous 1 minute is summarized, and data is recorded at each point where summarization occurs from the start to the end of measurement.|1970-01-01T00:00:00Z - 2099-12-31T23:59:59|
+|ut|Number(int)|UNIX TIME, API only|0-4294967296|
+|validDuration / val_s|Number(float)|Measuring seconds(s)|0.00-60.00|
+|noiseDuration / nis_s|Number(float)|Electrode nsoise seconds(s)|0.00-60.00|
+|fitDuration / wea_s|Number(float)|Wearing seconds(s)|0.00-60.00|
+|walkingDuration / stp_s|Number(float)|Walking seconds(s)|0.00-60.00|
+|powerLeft / bl|Number(int)|Battery level|0: In charging<br />1:Empty-5:Full|
+|eyeMoveHorizontal / ems_rl `Static`|Number(int)|Small eye movement count(right, left)|0-255|
+|eyeMoveVertical / ems_ud `Static`|Number(int)|Small eye movement count(up, down)|0-255|
+|eyeMoveBigHorizontal / eml_rl `Static`|Number(int)|Large eye movement count(right, left)|0-255|
+|eyeMoveBigVertical / eml_ud `Static`|Number(int)|Large eye movement count(up, down)|0-255|
+|headMoveVerticalCount / hm_po|Number(int)|Number of neck flips (vertical)|0-255|
+|headMoveHorizontalCount / hm_yo|Number(int)|Number of neck flips (horizontal)|0-255|
+|walkingVibrationRightX / sa_xr `Gait`|Number(float)|Walking vibration X(cm,right foot)|0.00-16.00|
+|walkingVibrationLeftX / sa_xl `Gait`|Number(float)|Walking vibration X(cm,left foot)|0.00-16.00|
+|walkingVibrationRightY / sa_yr `Gait`|Number(float)|Walking vibration Y(cm,right foot)|0.00-16.00|
+|walkingVibrationLeftY / sa_yl `Gait`|Number(float)|Walking vibration Y(cm,left foot)|0.00-16.00|
+|walkingVibrationRightZ / sa_zr `Gait`|Number(float)|Walking vibration Z(cm,right foot)|0.00-16.00|
+|walkingVibrationLeftZ / sa_zl `Gait`|Number(float)|Walking vibration Z(cm,left foot)|0.00-16.00|
+|landingStrengthRightMaxAvg / st_r `Gait`|Number(float)|Maximum landing strength average (G, right foot)|0.00-8.00|
+|landingStrengthLeftMaxAvg / st_l `Gait`|Number(float)|Maximum landing strength average (G, left foot)|0.00-8.00|
+|slopeXAvg / tl_xav|Number(float)|Mean tilt X (degree)|-180.00-180.00|
+|slopeYAvg / tl_yav|Number(float)|Mean tilt Y (degree)|-180.00-180.00|
+|slopeXStd / tl_xsd|Number(float)|Standard deviation of tilt X (degree)|0-655.36|
+|slopeYStd / tl_ysd|Number(float)|Standard deviation of tilt Y (degree)|0-655.36|
+|highSpeedStepsNum / stp_fst `Gait`|Number(int)|Step count(High 280-370ms)|0-255|
+|middleSpeedStepsNum / stp_mid `Gait`|Number(int)|Step count(Mid 380-440ms)|0-255|
+|lowSpeedStepsNum / stp_slw `Gait`|Number(int)|Step count(Low 450-590ms)|0-255|
+|ultraLowSpeedStepsNum / stp_vsl `Gait`|Number(int)|Step count(Extra-low 600-1000ms)|0-255|
+|nptAvgWeak / lc_npt_av `Static` `weak cleansing`|Number(float)|NPT (effective blink rate) average|-0.256 - 0.256|
+|weakBlinkSpeedAvg / lc_bkw_av `Static` `weak cleansing`|Number(int)|Blink speed mean(mSec)|50-306|
+|weakBlinkSpeedStd / lc_bkw_sd `Static` `weak cleansing`|Number(float)|Blink speed sd(mSec)|0-51.2|
+|weakBlinkStrengthAvg / lc_bkh_av `Static` `weak cleansing`|Number(int)|Blink strength mean(uV-equiv)|0-512|
+|weakBlinkStrengthStd / lc_bkh_sd `Static` `weak cleansing`|Number(float)|Blink strength sd(uV-equiv)|0-51.2|
+|weakBlinkCount / lc_bk_n `Static` `weak cleansing`|Number(int)|Number of blink|0-255|
+|weakBlinkSwarmCount / lc_bkg_n `Static` `weak cleansing`|Number(int)|Number of times multiple blinks occurred within 1s|0-255|
+|weakBlinkIntervalAvg / lc_bki_av `Static` `weak cleansing`|Number(float)|Blink interval mean(s)  *RMS average from FW2.2.0|0-51.2|
+|weakBlinkIntervalCount / lc_bki_n `Static` `weak cleansing`|Number(int)|Number of blink interval|0-255|
+|nptAvgStrong / sc_npt_av `Static` `strong cleansing`|Number(float)|NPT (effective blink rate) average|-0.256 - 0.256|
+|strongBlinkSpeedAvg / sc_bkw_av `Static` `strong cleansing`|Number(int)|Blink speed mean(mSec)|50-306|
+|strongBlinkSpeedStd / sc_bkw_sd `Static` `strong cleansing`|Number(float)|Blink speed sd(mSec)|0-51.2|
+|strongBlinkStrengthAvg / sc_bkh_av `Static` `strong cleansing`|Number(int)|Blink strength mean(uV-equiv)|0-512|
+|strongBlinkStrengthStd / sc_bkh_sd `Static` `strong cleansing`|Number(float)|Blink strength sd(uV-equiv)|0-51.2|
+|strongBlinkCount / sc_bk_n `Static` `strong cleansing`|Number(int)|Number of blink|0-255|
+|strongBlinkSwarmCount / sc_bkg_n `Static` `strong cleansing`|Number(int)|Number of times multiple blinks occurred within 1s|0-255|
+|strongBlinkIntervalAvg / sc_bki_av `Static` `strong cleansing`|Number(float)|Blink interval mean(s) *RMS average from FW2.2.0|0-51.2|
+|strongBlinkIntervalCount / sc_bki_n `Static` `strong cleansing`|Number(int)|Number of blink interval|0-255|
+|cursor / cursor|String|Starting position to retrieve the next record if any.| random string |
 
 ## Fast-speed head movement data(fastHeadMotion)
 
@@ -171,7 +178,7 @@ This event counts the first direction and number of times when the head is turne
 
 | Name | Type | Description | Value Range |
 |:---|:---:|:---|:---:|
-| date | String | Event occurrence datetime | 1970-01-01 09:00:00 - 2106-02-07 06:28:16 |
+| date | String | Event occurrence datetime | 1970-01-01T00:00:00Z - 2099-12-31T23:59:59|
 | type | String | Event Type| fastHeadMotion(fixed value) |
 | subType | String | direction | right, left, up, down |
 | value | Number | Number of times (1 for one way) | 1-65535 |
@@ -182,7 +189,7 @@ This event occurs when the head is tilted from a straight position to the left o
 
 | Name | Type | Description | Value Range |
 |:---|:---:|:---|:---:|
-| date | String | Event occurrence datetime | 1970-01-01 09:00:00 - 2106-02-07 06:28:16 |
+| date | String | Event occurrence datetime | 1970-01-01T00:00:00Z - 2099-12-31T23:59:59|
 | type | String | Event Type| slowHeadTilting(fixed value) |
 | subType | String | direction | right, left, forward, backward |
 | value | Number | Start/end flag | 1(Transition from straight to tilted)<br /> -1(Transition from tilted to straight) |
@@ -193,7 +200,7 @@ This event is the count of the number of times you make one round every 3-5 seco
 
 | Name | Type | Description | Value Range |
 |:---|:---:|:---|:---:|
-| date | String | Event occurrence datetime | 1970-01-01 09:00:00 - 2106-02-07 06:28:16 |
+| date | String | Event occurrence datetime | 1970-01-01T00:00:00Z - 2099-12-31T23:59:59|
 | type | String | Event Type| slowHeadRotation(fixed value) |
 | subType | String | direction | clockwise, anticlockwise |
 | value | Number | number of rotations | 1 |
