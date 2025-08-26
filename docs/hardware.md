@@ -73,5 +73,5 @@ outline: deep
 
 ## ご購入窓口・保証・アフターサービス
 
-- [JINS MEMEサポート](https://cloud.mail.jins.com/aboutmeme)へお問い合わせください。JINS店舗・JINSオンラインショップでは受け付けておりません。
+- [JINS MEMEサポート](https://krs.bz/jins/m/aboutmeme)へお問い合わせください。JINS店舗・JINSオンラインショップでは受け付けておりません。
 - 保障・アフターサービスはご購入から１年です。

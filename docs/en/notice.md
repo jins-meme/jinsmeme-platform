@@ -3,7 +3,7 @@
 In order to enjoy prolonged use of your JINS MEME, read this manual carefully before use to use it correctly and safely.
 
 *	Copying this document in part or entirety without permission is prohibited.
-*	Every effort has been made to ensure the accuracy of the content of this document, but if you notice any errors or have any questions, please contact your dealer or [JINS MEME Customer Support Center](https://cloud.mail.jins.com/aboutmeme) https://cloud.mail.jins.com/aboutmeme ( **The JINS store does not support this service** ).
+*	Every effort has been made to ensure the accuracy of the content of this document, but if you notice any errors or have any questions, please contact your dealer or [JINS MEME Customer Support Center](https://krs.bz/jins/m/aboutmeme) https://krs.bz/jins/m/aboutmeme ( **The JINS store does not support this service** ).
 *	The contents of this document may change in the future without notice.
 *	The product could be damaged if it is used in a manner not described in this document.
 
