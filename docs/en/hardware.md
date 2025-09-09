@@ -14,6 +14,8 @@ outline: deep
 
 ## Supported software and obtainable data 
 
+All software can be downloaded and installed free of charge.
+
 | Model | Frequency | Software and OS |
 | :---: | :---: | :--- |
 | <Badge type="tip" text="Standard" /> | 20Hz<br/>Once per 60s | <ul><li>[Standard Logger<br/> (iOS / Android)](/software/es/logger_app)</li><li>SDK (iOS / Android / Nodejs)<br/>※Inquiry support, 20Hz and 60 second interval data only</li></ul> |
@@ -72,6 +74,18 @@ For more information, please [click here](/doc/data_esr).
 | Data communication | · Wireless communication via Bluetooth Low Energy |
 | Charging terminal | Micro  USB端 |
 | Use environmental conditions | · Temperature: 0 to 40°C<br>· Humidity: 10 to 90% RH (non-condensing) |
+
+## Frame types
+
+| Wellington Black | Wellington Brown |
+|:---|:---|
+|![Wellington Black](/images/type_wellington_black.png) | ![Wellington Brown](/images/type_wellington_brown.png) |
+| Square Black |Square Navy | 
+| ![Square Black](/images/type_square_black.png) | ![Square Navy](/images/type_square_navy.png) |
+| Oval Brown | Oval Red |
+| ![Oval Brown](/images/type_oval_brown.png) | ![Oval Red](/images/type_oval_red.png) |
+| Boston Black| Boston Brown |
+| ![Boston Black](/images/type_boston_black.png) | ![Boston Brown](/images/type_boston_brown.png) |
 
 ## Contact for purchase, warranty and after-sales service
 

@@ -12,7 +12,9 @@ outline: deep
 
 ![](/images/schematics.png)
 
-## 対応ソフトウェアと取得可能なデータ 
+## 対応ソフトウェアと取得可能なデータ
+
+ソフトウェアは全て無償でダウンロード・インストールできます。
 
 | 機種 | 転送周期 | ソフトウェアと対応OS |
 | :---: | :---: | :--- |
@@ -70,6 +72,18 @@ outline: deep
 | センサー | ・3点式眼電位センサー(Resolusion: 12bit, Ideal: 2.5mV)<br>・3軸加速度センサー<br>・3軸ジャイロ（角速度）センサー |
 | データ通信 | ・Bluetooth Low Energyによる無線通信 |
 | 使用環境条件 | ・温度：0～40℃<br>・湿度：10～90％ RH（結露なきこと） |
+
+## フレームの種類
+
+| Wellington Black | Wellington Brown |
+|:---|:---|
+|![Wellington Black](/images/type_wellington_black.png) | ![Wellington Brown](/images/type_wellington_brown.png) |
+| Square Black |Square Navy | 
+| ![Square Black](/images/type_square_black.png) | ![Square Navy](/images/type_square_navy.png) |
+| Oval Brown | Oval Red |
+| ![Oval Brown](/images/type_oval_brown.png) | ![Oval Red](/images/type_oval_red.png) |
+| Boston Black| Boston Brown |
+| ![Boston Black](/images/type_boston_black.png) | ![Boston Brown](/images/type_boston_brown.png) |
 
 ## ご購入窓口・保証・アフターサービス
 

@@ -14,7 +14,7 @@ export default defineConfig({
         text: "コンテンツ一覧",
         items: [
           { text: "重要なお知らせ", link: "/eol" },
-          { text: "JINS MEME センサー", link: "/hardware" },
+          { text: "ハードウェア", link: "/hardware" },
           {
             text: "ソフトウェア",
             collapsed: false,
@@ -128,7 +128,7 @@ export default defineConfig({
             text: "Contents",
             items: [
               { text: "Important Notice", link: "/en/eol" },
-              { text: "JINS MEME Sensing Core", link: "/en/hardware" },
+              { text: "Hardware", link: "/en/hardware" },
               {
                 text: "Software",
                 collapsed: false,

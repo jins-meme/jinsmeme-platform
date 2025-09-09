@@ -12,7 +12,7 @@ hero:
 features:
   - icon: 
       src: /images/icon_chip.svg
-    title: JINS MEME Sensing Core
+    title: JINS MEME Hardware
     details: EOG & 6-axis motion biometric sensor that can be worn naturally in the form of glasses and blends in with daily life
     link: /en/hardware
   - icon: 

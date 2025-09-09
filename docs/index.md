@@ -12,7 +12,7 @@ hero:
 features:
   - icon: 
       src: /images/icon_chip.svg
-    title: JINS MEME センサー
+    title: JINS MEME ハードウェア
     details: メガネ型で自然に装着でき、生活に溶け込む眼電位&6軸モーション生体センサー
     link: /hardware
   - icon: 
