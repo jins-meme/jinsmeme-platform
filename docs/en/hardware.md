@@ -90,4 +90,4 @@ For more information, please [click here](/doc/data_esr).
 ## Contact for purchase, warranty and after-sales service
 
 - Please contact your dealer or [JINS MEME Support](https://krs.bz/jins/m/aboutmeme) (The JINS store does not support this service).
-- Warranty and after-sales service is one year from purchase.
+- Warranty and after-sales service is 6 months from purchase.
