@@ -40,8 +40,8 @@ layout: doc
 | accX | Float | Number | 加速度のX軸成分（左右）、1G=16 | -128(-8G) - 127(7.9375G) |
 | accY | Float | Number | 加速度のY軸成分（前後）、1G=16 | -128(-8G) - 127(7.9375G) |
 | accZ | Float | Number | 加速度のZ軸成分（上下）、1G=16 | -128(-8G) - 127(7.9375G) |
-| walking(isWalking) `歩行指標` | boolean | Number | かかとが地面についた時の一歩の検知(検知後0.15~0.25s後にフラグ) | 0/false: 検知無し<br/>1/true: 検知有り |
-| noiseStatus | boolean | Number | 眼電位電極のノイズ状況を表す整数値 | 0/false: ノイズ無し<br/>1/true: ノイズ有り |
+| walking `歩行指標`<br/>(旧データではisWalking) | boolean<br/>(旧データではInt) | Number | かかとが地面についた時の一歩の検知(検知後0.15~0.25s後にフラグ) | 0/false: 検知無し<br/>1/true: 検知有り |
+| noiseStatus | boolean<br/>(旧データではInt) | Number | 眼電位電極のノイズ状況を表す整数値 | 0/false: ノイズ無し<br/>1/true: ノイズ有り |
 | fitError | Int | Number | JINS MEMEが実際に装着されているかどうか、揺れで5秒に1回判定 | 0: 装着中<br />1: 非装着 |
 | powerLeft | Int | Number | 電池残量を表す整数値 | 0: 充電中<br />1: 空-5: 満充電 |
 | sequenceNumber(seqNo) | Int | Number | 0-255までの循環連番整数 | 0-255 |
@@ -50,8 +50,8 @@ layout: doc
 
 ## 15秒間隔データ(logicIndexData)
 
-15秒間隔データは生体指標を出力する一番粒度の細かいデータです。このデータはJINS MEMEとスマートフォンがBluetooth接続している時のみ生成されます。
-※サブアプリ動作時、規格化値、サブ指標、RTアルゴリズム動作時、の記載がある指標は記録されないことがあります。
+15秒間隔データは生体指標を出力する一番粒度の細かいデータです。このデータはJINS MEMEとスマートフォンがBluetooth接続している時のみ生成されます。  
+※規格化値、サブ指標の記載がある指標は記録されないことがあります。
 
 |Logger/API項目名|型(API/CSV)|説明|値の範囲|
 |:--|:--|--|:--:|
@@ -84,10 +84,6 @@ layout: doc
 |focusScore / sc_fcs `静止指標`|Number(float)|没入スコア、まばたき間隔を利用し「ある一つのタスクへの注意が続いている状態」を指標化したもの|有効時: 0(没入度が低い)-100(没入度が高い)、無効: -1|
 |tensionScore / sc_tsn `静止指標`|Number(float)|テンションスコア、まばたき強さを利用し「目が見開いている状態」を指標化したもの|有効時: 0(緊張が弱い)-100(緊張が強い)、無効: -1|
 |calmScore / sc_clm `静止指標`|Number(float)|安定スコア、まばたき強さを利用し「外部・内部刺激を受けずに安定している状態」を指標化したもの|有効時: 0(落ち着いていない)-100(落ち着いている)、無効: -1|
-|distance / distance|Number(float)|サブアプリ動作時 前回区間との移動距離(m)|0-5000|
-|latitude / lat|Number(float)|サブアプリ動作時 緯度|-180 - 180|
-|longitude / lng|Number(float)|サブアプリ動作時 経度|-90 - 90|
-|appMeasurementStatus / app_measurement_status|Number(int)|サブアプリの動作状況フラグ|0: 非APP測定 2: Run測定中 3: Run一時停止中 8: Drive測定中 12: Drive一時停止中 32: Focus測定中 48: Focus一時停止中|
 |nptMean / npt_av `静止指標`|Number(float)|NPT（実効まばたき速度）平均| -0.999 - 0.999 |
 |nptMedian / npt_med `静止指標`|Number(float)|NPT（実効まばたき速度）中央値| -0.999 - 0.999 |
 |nptSD / npt_sd `静止指標`|Number(float)|NPT標準偏差| 0-0.999 |
@@ -115,6 +111,15 @@ layout: doc
 |nptScore / sc_npt `静止指標`|Number(float)|覚醒サブ指標 NPTスコア|有効時: 0-100、無効: -1|
 |btsScore / sc_bts `静止指標`|Number(float)|覚醒サブ指標 BTSスコア|有効時: 0-100、無効: -1|
 |lbsScore / sc_lbs `静止指標`|Number(float)|覚醒サブ指標 LBSスコア|有効時: 0-100、無効: -1|
+
+以下の指標は旧JINS MEMEアプリにより生成されていた項目です。
+
+|Logger/API項目名|型(API/CSV)|説明|値の範囲|
+|:--|:--|--|:--:|
+|distance / distance|Number(float)|サブアプリ動作時 前回区間との移動距離(m)|0-5000|
+|latitude / lat|Number(float)|サブアプリ動作時 緯度|-180 - 180|
+|longitude / lng|Number(float)|サブアプリ動作時 経度|-90 - 90|
+|appMeasurementStatus / app_measurement_status|Number(int)|サブアプリの動作状況フラグ|0: 非APP測定 2: Run測定中 3: Run一時停止中 8: Drive測定中 12: Drive一時停止中 32: Focus測定中 48: Focus一時停止中|
 |legacyZone / zone `静止指標`|Number(int)|RTアルゴリズム動作時 zone値|有効時: 0-100、無効: -1|
 |legacyFocus / focus `静止指標`|Number(int)|RTアルゴリズム動作時 focus値|有効時: 0-100、無効: -1|
 |legacyCalm / calm `静止指標`|Number(int)|RTアルゴリズム動作時 calm値|有効時: 0-100、無効: -1|
