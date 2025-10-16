@@ -1,86 +1,45 @@
 ---
 outline: deep
 ---
+# Hardware
 
-![](/images/title.png)
+![JINS MEME title](/images/title.png)
 
-## Model Type
-
-- <Badge type="tip" text="Standard" />can acquire data with semantics within JINS MEME or within the application, and is suitable for general experimental use.
-- <Badge type="danger" text="Academic" />(ES-R) can capture raw data from EOG and 6-axis sensors with fine granularity. It supports acquisition of all data types at a maximum of 100 Hz and EOG at 200 Hz.
-- We do not provide a tool to convert Academic Edition data to Standard Edition data.
-
-![](/images/schematics.png)
-
-## Supported software and obtainable data 
-
-All software can be downloaded and installed free of charge.
-
-| Model | Frequency | Software and OS |
-| :---: | :---: | :--- |
-| <Badge type="tip" text="Standard" /> | 20Hz<br/>Once per 60s | <ul><li>[Standard Logger<br/> (iOS / Android)](/software/es/logger_app)</li><li>SDK (iOS / Android / Nodejs)<br/>※Inquiry support, 20Hz and 60 second interval data only</li></ul> |
-| <Badge type="danger" text="Academic" /><br/>(ES-R) | 50/100Hz | <ul><li>Academic(ES-R) Logger<br/>([Windows / MacOS](/software/with-pc/) / [Android](/software/with-android/))</li><li>[SDK](https://github.com/jins-meme/ES_R-Development-Kit)</li></ul>  |
-
-### Data types<Badge type="tip" text="Standard" />
-
-For more information, please [click here](/doc/data_es).
-
-| Data type | Name | Examples of indices |
-|:---:|:---:|:---|
-| 20Hz data | realtime data, currentData | Blink event, eye movement, acceleration, angle |
-| 15s-interval data | logicIndexData | Concentration, calm, tension, awakeness, number of steps,, posture angle (forward/backward, left/right), gait vibration (X/Y/Z), blink statistical indices (H/W, Mean/Sd) |
-| 60s-interval data | standard data, summaryData | Number of steps, posture angle (forward/backward, left/right), gait vibration (X/Y/Z), blink statistical index (H/W, Mean/Sd) | 
-| 15s-interval trigger | triggerEvent | Threshold for 15-second interval data<br/>（Ex: Concentrated data, >60 pt at 50% weighted average, minimum notification interval 120s） |
-| High-speed head movement data | fastHeadMotion | Events when the face is turned vertically or horizontally |
-| Low-speed head movement data | slowHeadRotation, slowHeadTilting | Slow head turning or tilt events |
-
-### Data types<Badge type="danger" text="Academic" /> 
-
-For more information, please [click here](/doc/data_esr).
-
-| Data type | Indices |
-|:---|:---|
-| Standard Mode data | EOG potential, accelerations（2data / line） |
-| Full Mode data | EOG potential, accelerations, angular velocity |
-| Quaternion data | Quaternion |
+## Product comparison
 
 
-## Specifications
+| Item | ES <Badge type="tip" text="Standard" /> | ES-R <Badge type="danger" text="Academic" /> |
+|:---|:---|:---|
+| Overview | JINS MEME Standard edition. Acquires data with semantics provided by the device or app. Suitable for general experimental use. | Academic edition. Captures fine-grained raw EOG and 6-axis sensor data. Intended for algorithm development. |
+| Frequency | 20Hz, once per 60s | 50/100Hz |
+| Supported software | Logger ([iOS/Android](/en/software/es/logger_app))<br />SDK (iOS/Android/Nodejs) — Inquiry support; only 20Hz / 60s interval data | Logger ([Windows/macOS](/en/software/with-pc/) / [Android](/en/software/with-android/))<br />[SDK](https://github.com/jins-meme/ES_R-Development-Kit) |
+| Main data types | - R3: 20Hz realtime data (currentData) blink, eye movement, acceleration, angle<br />- R5: 15s-interval logic indicators (logicIndexData) concentration, calm, etc.<br />-  R4: 60s-interval summary (summaryData). <br /><br />[See details](/en/doc/data_es). | R1: Select one mode before measurement <br />- Full Mode: EOG, acceleration, angular velocity<br />- Standard Mode: EOG (2 values per line), acceleration<br />- Quaternion mode: Quaternion (orientation representation). <br /><br />[See details](/en/doc/data_esr). |
+| Continuous usage time | - Active (no gyro): up to approx. 24h<br />- Active (with gyro): up to approx. 12h<br />- Sleep mode: approx. 2 weeks | - Full mode: approx. 11h<br />- Standard mode: approx. 15h<br />- Quaternion mode: approx. 9h |
 
-<Badge type="tip" text="Standard" />
+![Schematics](/images/schematics.png)
+
+You can pseudo-convert R1 data (Full / Standard) to R2/R3/R5 using the [conversion app](https://jinsmeme.streamlit.app/). If the app is in sleep mode, press the Up button to wake it.
+
+
+## Common specifications
 
 | Item | Specification |
 |:---|:---|
-| Battery | Built-in rechargeable Lithium ion battery |
-| Charging Time | Approx. 2.5h |
-| Usage Time | - Active mode(w/o Gyro): Max 24h<br>- Active mode(w/ Gyro): Max 12h<br>- Sleep mode: Approx. 2 weeks |
-| Weight | Approx. 32g (UV cut lens without power) |
-| Material |  Plastic(core/crip)、SUS316L(core)、TR-90(frame) |
-| Sensor | · 3-point electrooculography sensor(Resolusion: 12bit, Ideal: 2.5mV)<br>· 3-axis accelerometer sensor<br>· 3-axis gyro (angular) sensor |
+| Battery | Built-in rechargeable lithium-ion battery |
+| Charging clip interface | Micro USB connector |
+| Charging time | Approx. 2.5h |
+| Weight | Approx. 32g (without prescription, with UV-cut lens) |
+| Material | Plastic (core/crip), SUS316L (core), TR-90 (frame) |
+| Sensors | 3-point electrooculography sensor (Resolution: 12bit, Ideal: 2.5mV); 3-axis accelerometer; 3-axis gyro (angular velocity) sensor |
 | Data communication | · Wireless communication via Bluetooth Low Energy |
-| Charging terminal | Micro  USB端 |
-| Use environmental conditions | · Temperature: 0 to 40°C<br>· Humidity: 10 to 90% RH (non-condensing) |
-
-<Badge type="danger" text="Academic" />
-
-| Item | Specification |
-|:---|:---|
-| Battery | Built-in rechargeable Lithium ion battery |
-| Charging Time | Approx. 2.5h |
-| Usage Time | - Quartanion mode: Approx. 9h<br>- Full mode: Approx. 11h<br>- Standard mode: Approx. 15h |
-| Weight | Approx. 32g (UV cut lens without power) |
-| Material |  Plastic(core/crip)、SUS316L(core)、TR-90(frame) |
-| Sensor | · 3-point electrooculography sensor(Resolusion: 12bit, Ideal: 2.5mV)<br>· 3-axis accelerometer sensor<br>· 3-axis gyro (angular) sensor |
-| Data communication | · Wireless communication via Bluetooth Low Energy |
-| Charging terminal | Micro  USB端 |
-| Use environmental conditions | · Temperature: 0 to 40°C<br>· Humidity: 10 to 90% RH (non-condensing) |
+| Operating conditions | Temperature: 0–40°C; Humidity: 10–90% RH (non-condensing) |
 
 ## Frame types
 
 | Wellington Black | Wellington Brown |
 |:---|:---|
 |![Wellington Black](/images/type_wellington_black.png) | ![Wellington Brown](/images/type_wellington_brown.png) |
-| Square Black |Square Navy | 
+| Square Black | Square Navy |
 | ![Square Black](/images/type_square_black.png) | ![Square Navy](/images/type_square_navy.png) |
 | Oval Brown | Oval Red |
 | ![Oval Brown](/images/type_oval_brown.png) | ![Oval Red](/images/type_oval_red.png) |
