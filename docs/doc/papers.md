@@ -4,6 +4,9 @@ Please email support-jinsmeme@jins.com with any requests for additions or correc
 
 | Year | Category | Title | Translated title | Authors | Conference / Journal |
 | ---- | ---- | ---- | ---- | ---- | ---- |
+| 2025 | Journal | Assessment of Listening Effort by Eye Blinks and Head Tilt Angle Using a Glasses-Type Wearable Device | 眼鏡型ウェアラブルデバイスを用いた瞬きと頭部傾斜角度による聴取努力の評価 | M. Minagi, et al. | Ear & Hearing, June 03, 2025.  |
+| 2024 | Journal | Evaluating the Correlation between EyeglassType Wearable Device Measurements and Subjective Physical Activity Assessments | 眼鏡型ウェアラブルデバイスの測定値と主観的身体活動評価の相関関係の評価 | M. Inoue, et al. | Cureus Journal of Medical Science. 2024 Aug 26;16(8):e67853 |
+| 2024 | Conference | The Catcher in the Eye: Recognizing Users by their Blinks | 瞳のキャッチャー：瞬きでユーザーを識別する | R. Iijima, et al. | ASIA CCS '24 |
 | 2024 | Journal | ウェアラブルセンサを用いた姿勢改善システムを搭載した衣類の開発 | Development of clothing with a posture improvement system using wearable sensors | 藤原充希，瀬川典久 | 2023年度 京都産業大学 情報理工学部 学士論文 |
 | 2023 | Conference | スマートアイグラスを用いた listening effort の計測の試み: 頭位傾斜角を指標として | Assessment of Listening Effort with Smart Eye Glasses: Head motion | 皆木正人，他 | 第68回日本聴覚医学会学術総会・学術講演会 |
 | 2023 | Conference | スマートアイグラスを用いた listening effort の計測の試み: 瞬目を指標として | Assessment of Listening Effort with Smart Eye Glasses: Eye blink rate | 田原 敬，他 | 第68回日本聴覚医学会学術総会・学術講演会 |

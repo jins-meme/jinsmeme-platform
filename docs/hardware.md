@@ -11,9 +11,10 @@ outline: deep
 |:---|:---|:---|
 | 機種の概要 | JINS MEME 標準版。アプリや内部処理で意味付けされたデータを取得。一般的な実験向け。 | アカデミック版。粒度の細かいEOGや6軸センサーの生データを取得可能。アルゴリズム開発向け。|
 | 転送周期 | 20Hz, 60秒1回 | 50/100Hz |
-| 対応ソフトウェア | - Logger [（iOS/Android）](/software/es/logger_app)<br/>- SDK（iOS/Android/Nodejs）※20Hz・60秒間隔データのみ、問い合わせ対応 | - Logger ([Windows / macOS](/software/with-pc/) / [Android](/software/with-android/))<br /> -[SDK](https://github.com/jins-meme/ES_R-Development-Kit)|
+| 対応ソフトウェア | - Logger [（iOS/Android）](/software/es/logger_app) | - Logger ([Windows / macOS](/software/with-pc/) / [Android](/software/with-android/))<br /> -[SDK](https://github.com/jins-meme/ES_R-Development-Kit)|
 | 主なデータ種類 | - __R3__: 20Hz リアルタイムデータ(currentData): まばたき、視線移動、加速度、角度<br/>- __R5__: 15秒間隔 ロジック指標(logicIndexData): 集中・落ち着き等<br/>- __R4__: 60秒間隔 サマリ(summaryData)<br /><br />[詳細はこちら](/doc/data_es)| __R1__: 測定前にいずれかのモードを選択<br />- Full Mode: EOG、加速度、角速度<br/>- Standard Mode: EOG（1行に2データ）、加速度<br/>- Quaternion mode: Quaternion（姿勢表現）<br /><br />[詳細はこちら](/doc/data_esr)|
 | 使用時間（連続） | - アクティブ（ジャイロなし）：最大約24時間<br/>- アクティブ（ジャイロあり）：最大約12時間<br/>- スリーブモード：約2週間 | - Full mode: 約11h<br/>- Standard mode: 約15h<br/>- Quartanion mode: 約9h |
+| 一式単価 | 19,800円 (1.60標準クリアレンズ込み【度付き対応可】。オプションレンズは追加料金が必要です) | 64,900円 (1.60標準クリアレンズ込み【度付き対応可】。オプションレンズは追加料金が必要です) |
 
 ![](/images/schematics.png)
 

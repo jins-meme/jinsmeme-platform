@@ -12,7 +12,7 @@ outline: deep
 |:---|:---|:---|
 | Overview | JINS MEME Standard edition. Acquires data with semantics provided by the device or app. Suitable for general experimental use. | Academic edition. Captures fine-grained raw EOG and 6-axis sensor data. Intended for algorithm development. |
 | Frequency | 20Hz, once per 60s | 50/100Hz |
-| Supported software | Logger ([iOS/Android](/en/software/es/logger_app))<br />SDK (iOS/Android/Nodejs) — Inquiry support; only 20Hz / 60s interval data | Logger ([Windows/macOS](/en/software/with-pc/) / [Android](/en/software/with-android/))<br />[SDK](https://github.com/jins-meme/ES_R-Development-Kit) |
+| Supported software | Logger ([iOS/Android](/en/software/es/logger_app)) | Logger ([Windows/macOS](/en/software/with-pc/) / [Android](/en/software/with-android/))<br />[SDK](https://github.com/jins-meme/ES_R-Development-Kit) |
 | Main data types | - R3: 20Hz realtime data (currentData) blink, eye movement, acceleration, angle<br />- R5: 15s-interval logic indicators (logicIndexData) concentration, calm, etc.<br />-  R4: 60s-interval summary (summaryData). <br /><br />[See details](/en/doc/data_es). | R1: Select one mode before measurement <br />- Full Mode: EOG, acceleration, angular velocity<br />- Standard Mode: EOG (2 values per line), acceleration<br />- Quaternion mode: Quaternion (orientation representation). <br /><br />[See details](/en/doc/data_esr). |
 | Continuous usage time | - Active (no gyro): up to approx. 24h<br />- Active (with gyro): up to approx. 12h<br />- Sleep mode: approx. 2 weeks | - Full mode: approx. 11h<br />- Standard mode: approx. 15h<br />- Quaternion mode: approx. 9h |
 

@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "JINS MEME Platform"
   text: "生体データ活用の\n一歩先へ"
-  tagline: 生体データの活用によって医療費増大・労働力不足などの社会課題を解決するべく、JINS MEMEセンサー・ツール・ドキュメントを企業や研究開発機関向けに提供しています。
+  tagline: 生体データの活用によって医療費増大・労働力不足などの社会課題を解決するべく、JINS MEMEセンサー・ツール・ドキュメントを研究機関向けに提供しています。
   image:
     src: /images/logo.png
 
