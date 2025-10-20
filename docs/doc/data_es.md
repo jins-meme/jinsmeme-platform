@@ -8,7 +8,7 @@ layout: doc
 
 ![軸定義](/images/axisdef.png)
 
-角度に関してはセンサーの特性上ドリフト（値が一定速度で変化すること）、ハンプ（値に小さい段差が発生すること）が起こります。
+<small>アカデミック版の角速度軸は矢印方向が角速度のマイナス側になります</small>
 
 ## 静止指標と歩行指標
 
@@ -46,7 +46,9 @@ layout: doc
 | powerLeft | Int | Number | 電池残量を表す整数値 | 0: 充電中<br />1: 空-5: 満充電 |
 | sequenceNumber(seqNo) | Int | Number | 0-255までの循環連番整数 | 0-255 |
 
-※Nodejsはnodejs-sdkの型になります(nodejsでは内部構造の問題でboolean型が使用されないので注意)
+<small>※Nodejsはnodejs-sdkの型になります(nodejsでは内部構造の問題でboolean型が使用されないので注意)</small>  
+<small>※角度に関してはセンサーの特性上ドリフト（値が一定速度で変化すること）、ハンプ（値に小さい段差が発生すること）が起こります。</small>
+
 
 ## 15秒間隔データ(logicIndexData)
 

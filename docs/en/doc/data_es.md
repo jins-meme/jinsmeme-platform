@@ -4,7 +4,7 @@
 
 ![axes definition](/images/axisdef.png)
 
-Regarding the angle, drift (value changes at a constant rate) and hump (small bumps in the value) occur due to the characteristics of the sensor.
+<small>In the academic version, the angular velocity axis points in the direction of negative angular velocity.</small>
 
 ## Static and Gait indicators
 
@@ -42,7 +42,8 @@ Data can be acquired at approximately 20 Hz. This mode is suitable for immediate
 | powerLeft | Int | Number | Integer value representing remaining battery capacity | 0: In charging<br />1: Empty-5: Full |
 | sequenceNumber(seqNo) | Int | Number | Circulant sequential integer from 0-255 | 0-255 |
 
-※Nodejs will be nodejs-sdk Type (in nodejs, boolean is an integer value due to internal structure issues).
+<small>※Nodejs will be nodejs-sdk Type (in nodejs, boolean is an integer value due to internal structure issues).</small>  
+<small>※Regarding angles, sensor characteristics may cause drift (where values change at a constant rate) and humps (where small steps occur in the values).</small>
 
 ## 15-second interval data (logicIndexData)
 
@@ -156,8 +157,8 @@ This mode is suitable for monitoring status changes over a long period of time, 
 |highSpeedStepsNum / stp_fst `Gait`|Number(int)|Step count(High 280-370ms)|0-255|
 |middleSpeedStepsNum / stp_mid `Gait`|Number(int)|Step count(Mid 380-440ms)|0-255|
 |lowSpeedStepsNum / stp_slw `Gait`|Number(int)|Step count(Low 450-590ms)|0-255|
-|ultraLowSpeedStepsNum / stp_vsl `Gait`|Number(int)|Step count(Extra-low 600-1000ms)|0-255|
-|nptAvgWeak / lc_npt_av `Static` `weak cleansing`|Number(float)|NPT (effective blink rate) average|-0.256 - 0.256|
+| ultraLowSpeedStepsNum / stp_vsl `Gait` | Number(int) | Step count(Extra-low 600-1000ms) | 0-255 |
+|nptAvgWeak / lc_npt_av `Static` `weak cleansing` |Number(float)|NPT (effective blink rate) average|-0.256 - 0.256|
 |weakBlinkSpeedAvg / lc_bkw_av `Static` `weak cleansing`|Number(int)|Blink speed mean(mSec)|50-306|
 |weakBlinkSpeedStd / lc_bkw_sd `Static` `weak cleansing`|Number(float)|Blink speed sd(mSec)|0-51.2|
 |weakBlinkStrengthAvg / lc_bkh_av `Static` `weak cleansing`|Number(int)|Blink strength mean(uV-equiv)|0-512|
