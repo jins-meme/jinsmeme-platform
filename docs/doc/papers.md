@@ -1,6 +1,6 @@
 # Papers & Presentations
 
-Please email support-jinsmeme@jins.com with any requests for additions or corrections.
+Please email komoda@jins.com with any requests for additions or corrections.
 
 | Year | Category | Title | Translated title | Authors | Conference / Journal |
 | ---- | ---- | ---- | ---- | ---- | ---- |
