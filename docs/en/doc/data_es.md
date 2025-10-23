@@ -4,8 +4,6 @@
 
 ![axes definition](/images/axisdef.png)
 
-<small>In the academic version, the angular velocity axis points in the direction of negative angular velocity.</small>
-
 ## Static and Gait indicators
 
 - Among the data that can be measured by JINS MEME, the `Static` indicator is an indicator that is valid only when there is no walking, touching the glasses with the hands, chewing, etc. When data is measured under conditions other than those mentioned above, it may be detected as a noise flag, output inaccurate values, or not detected. Please note that when measurement is made under conditions other than those mentioned above, it may be detected as a noise flag, output inaccurate values, or not be detected. summaryData is cleansed to remove any suspicious signals.

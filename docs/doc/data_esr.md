@@ -11,7 +11,8 @@
 | Standard Mode | 50/100hz | o | o | - | - |
 | Quaternion | 50/100Hz | - | - | - | o |
 
-![](/images/axisdef.png)
+![](/images/axisdef_esr.png)
+<small>Pitch軸がGYRO_X, Roll軸がGYRO_Y, Yaw軸がGYRO_Zと記録されます。</small>
 
 ## Full Mode
 

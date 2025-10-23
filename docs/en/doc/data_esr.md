@@ -11,7 +11,8 @@
 | Standard Mode | 50/100hz | o | o | - | - |
 | Quaternion | 50/100Hz | - | - | - | o |
 
-![](/images/axisdef.png)
+![](/images/axisdef_esr.png)
+<small>The Pitch axis is recorded as GYRO_X, the Roll axis as GYRO_Y, and the Yaw axis as GYRO_Z.</small>
 
 ## Full Mode
 
