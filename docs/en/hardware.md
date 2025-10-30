@@ -7,7 +7,6 @@ outline: deep
 
 ## Product comparison
 
-
 | Item | ES <Badge type="tip" text="Standard" /> | ES-R <Badge type="danger" text="Academic" /> |
 |:---|:---|:---|
 | Overview | JINS MEME Standard edition. Acquires data with semantics provided by the device or app. Suitable for general experimental use. | Academic edition. Captures fine-grained raw EOG and 6-axis sensor data. Intended for algorithm development. |
@@ -20,7 +19,6 @@ outline: deep
 
 You can pseudo-convert R1 data (Full / Standard) to R2/R3/R5 using the [conversion app](https://jinsmeme.streamlit.app/). If the app is in sleep mode, press the Up button to wake it.
 
-
 ## Common specifications
 
 | Item | Specification |
@@ -31,7 +29,7 @@ You can pseudo-convert R1 data (Full / Standard) to R2/R3/R5 using the [conversi
 | Weight | Approx. 32g (without prescription, with UV-cut lens) |
 | Material | Plastic (core/crip), SUS316L (core), TR-90 (frame) |
 | Sensors | 3-point electrooculography sensor (Resolution: 12bit, Ideal: 2.5mV); 3-axis accelerometer; 3-axis gyro (angular velocity) sensor |
-| Data communication | · Wireless communication via Bluetooth Low Energy |
+| Data communication | - Wireless communication via Bluetooth Low Energy<br />- Radio wave range: max. 7m |
 | Operating conditions | Temperature: 0–40°C; Humidity: 10–90% RH (non-condensing) |
 
 ## Frame types
