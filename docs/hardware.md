@@ -48,5 +48,5 @@ R1データ(Full / Standard)からR2/R3/R5データへは、[変換アプリ](ht
 
 ## ご購入窓口・保証・アフターサービス
 
-- [JINS MEMEサポート](https://krs.bz/jins/m/aboutmeme)へお問い合わせください。JINS店舗・JINSオンラインショップでは受け付けておりません。
+- [jins-assist-support@jins.com](<mailto:jins-assist-support@jins.com?subject=%5BJINS%20MEME%5D%20お問い合わせ&body=ご所属:%20%0D%0Aお問い合わせ内容:%20詳細をご記入ください>) へメールにてお問い合わせください。JINS店舗・JINSオンラインショップでは受け付けておりません。
 - 保証・アフターサービスはご購入から6か月です。
