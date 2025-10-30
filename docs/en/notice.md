@@ -2,10 +2,10 @@
 
 In order to enjoy prolonged use of your JINS MEME, read this manual carefully before use to use it correctly and safely.
 
-*	Copying this document in part or entirety without permission is prohibited.
-*	Every effort has been made to ensure the accuracy of the content of this document, but if you notice any errors or have any questions, please contact your dealer or [JINS MEME Customer Support Center](https://krs.bz/jins/m/aboutmeme) https://krs.bz/jins/m/aboutmeme ( **The JINS store does not support this service** ).
-*	The contents of this document may change in the future without notice.
-*	The product could be damaged if it is used in a manner not described in this document.
+- Copying this document in part or entirety without permission is prohibited.
+- Every effort has been made to ensure the accuracy of the content of this document, but if you notice any errors or have any questions, please email [jins-assist-support@jins.com](<mailto:jins-assist-support@jins.com?subject=%5BJINS%20MEME%5D%20Inquiries&body=Affiliation:%20%0D%0ADetails:%20>) ( **The JINS store does not support this service** ).
+- The contents of this document may change in the future without notice.
+- The product could be damaged if it is used in a manner not described in this document.
 
 ## Notes on Handling
 
@@ -46,7 +46,6 @@ Contact the JINS MEME dealer or JINS MEME Customer Support Center for return det
 * Dispose of accessories for the JINS MEME, such as the AC adapter, in accordance with local regulations.
 
 * Recycle the package in accordance with local regulations.
-
 
 ## Notes on handling the 3-point electrooculography sensor parts (nose pad and inter-eyebrows part)
 
@@ -205,9 +204,9 @@ Otherwise, it may lead to an injury or accident such as the swallowing of small 
 
 ## Trademarks
 
-*	Android is a trademark or registered trademark of Google Inc.
-*	Microsoft and Windows are registered trademarks of Microsoft Corporation in the United States and other countries.
-*	Mac OS is registered trademarks of Apple Inc. in the United States and other countries.
-*	Bluetooth is a trademark or registered trademark of Bluetooth SGI Inc. in the United States.
-*	Other company names and product names are trademarks or registered trademarks of their respective companies.
-*	The symbols &trade; and &reg; are abbreviated for trademarks and registered trademarks in the text of this document.
+- Android is a trademark or registered trademark of Google Inc.
+- Microsoft and Windows are registered trademarks of Microsoft Corporation in the United States and other countries.
+- Mac OS is registered trademarks of Apple Inc. in the United States and other countries.
+- Bluetooth is a trademark or registered trademark of Bluetooth SGI Inc. in the United States.
+- Other company names and product names are trademarks or registered trademarks of their respective companies.
+- The symbols &trade; and &reg; are abbreviated for trademarks and registered trademarks in the text of this document.

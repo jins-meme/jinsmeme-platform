@@ -46,7 +46,10 @@ You can pseudo-convert R1 data (Full / Standard) to R2/R3/R5 using the [conversi
 | Boston Black| Boston Brown |
 | ![Boston Black](/images/type_boston_black.png) | ![Boston Brown](/images/type_boston_brown.png) |
 
-## Contact for purchase, warranty and after-sales service
+## Contact for warranty and after-sales service (Japan only)
 
-- Please contact your dealer or [JINS MEME Support](https://krs.bz/jins/m/aboutmeme) (The JINS store does not support this service).
-- Warranty and after-sales service is 6 months from purchase.
+Warranty and after-sales service are available only for research institutions and companies based in Japan. Please refer to the Japanese version of this page.
+
+## Contact for purchase (Japan only)
+
+Only research institutions and companies based in Japan may purchase this product. Please refer to the Japanese version of this page.
