@@ -34,14 +34,14 @@ You can pseudo-convert R1 data (Full / Standard) to R2/R3/R5 using the [conversi
 
 ## Frame types
 
-| Wellington Black | Wellington Brown |
+| Wellington Black (for Men) | Wellington Brown (for Men) |
 |:---|:---|
 |![Wellington Black](/images/type_wellington_black.png) | ![Wellington Brown](/images/type_wellington_brown.png) |
-| Square Black | Square Navy |
+| Square Black (for Men) | Square Navy (for Men) |
 | ![Square Black](/images/type_square_black.png) | ![Square Navy](/images/type_square_navy.png) |
-| Oval Brown | Oval Red |
+| Oval Brown (for Women) | Oval Red (for Women) |
 | ![Oval Brown](/images/type_oval_brown.png) | ![Oval Red](/images/type_oval_red.png) |
-| Boston Black| Boston Brown |
+| Boston Black (for Women) | Boston Brown (for Women) |
 | ![Boston Black](/images/type_boston_black.png) | ![Boston Brown](/images/type_boston_brown.png) |
 
 ## Contact for warranty and after-sales service (Japan only)
