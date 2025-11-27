@@ -94,7 +94,7 @@ layout: doc
 |blinkStrengthMean / bkh_av `静止指標`|Number(float)|まばたき強度平均| 0-1000.0 |
 |blinkIntervalTotal / bki_sum `静止指標`|Number(float)|まばたき間隔合計(s)| 0-120.0|
 |blinkIntervalCount / bki_n `静止指標`|Number(int)|まばたき間隔数|0-120|
-|blinkIntervalMean / bki_av `静止指標`|Number(float)|まばたき間隔平均| 0.00-60.00 |
+|blinkIntervalMean / bki_av `静止指標`|Number(float)|まばたき間隔平均(s)| 0.00-60.00 |
 |blinkCount / bk_n `静止指標`|Number(int)|まばたき回数(35<=強度<=250、90<=速度<=250でフィルタ)|0-120|
 |blinkCountRaw / rbk_n `静止指標`|Number(int)|まばたき回数生値(フィルタなし)| 0-255 |
 |eyeMoveUpCount / re_u `静止指標`|Number(int)|視線移動上回数生値| 0-255 |
