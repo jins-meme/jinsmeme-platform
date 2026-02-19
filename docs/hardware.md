@@ -44,14 +44,10 @@ R1データ(Full / Standard)からR2/R3/R5データへは、[変換アプリ](ht
 | Boston Black (for Women) | Boston Brown (for Women) |
 | ![Boston Black](/images/type_boston_black.png) | ![Boston Brown](/images/type_boston_brown.png) |
 
-## 保証・アフターサービス
-
-- [jins-assist-support@jins.com](<mailto:jins-assist-support@jins.com?subject=%5BJINS%20MEME%5D%20お問い合わせ&body=ご所属:%20%0D%0Aお問い合わせ内容:%20詳細をご記入ください>) へメールにてお問い合わせください。JINS店舗・JINSオンラインショップでは受け付けておりません。
-- 保証・アフターサービスはご購入から6か月です。
-
 ## ご購入方法
 
-ご購入は以下の流れになります。
+- ご購入は以下の流れになります。販売・発送は日本に拠点のある組織のみとなっています（個人向けは非対応）。
+- 日本国外へは輸出業者経由でご依頼ください。直接の問い合わせは受けつけておりません。
 
 ### (1) ソフトウェア動作確認と見積依頼
 
@@ -70,4 +66,9 @@ R1データ(Full / Standard)からR2/R3/R5データへは、[変換アプリ](ht
 
 ### (4) お受け取りとお支払い
 
-商品を受領しましたら、ご請求書に記載の方法でお支払いください。
+商品を受領しましたら、ご請求書に記載の方法（銀行振込）でお支払いください。クレジット決済、コンビニ決済等には対応しておりません。
+
+## 保証・アフターサービス
+
+- [jins-assist-support@jins.com](<mailto:jins-assist-support@jins.com?subject=%5BJINS%20MEME%5D%20お問い合わせ&body=ご所属:%20%0D%0Aお問い合わせ内容:%20詳細をご記入ください>) へメールにてお問い合わせください。JINS店舗・JINSオンラインショップでは受け付けておりません。
+- 保証・アフターサービスはご購入から6か月です。

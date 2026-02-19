@@ -32,22 +32,6 @@ You can pseudo-convert R1 data (Full / Standard) to R2/R3/R5 using the [conversi
 | Data communication | - Wireless communication via Bluetooth Low Energy<br />- Radio wave range: max. 7m |
 | Operating conditions | Temperature: 0–40°C; Humidity: 10–90% RH (non-condensing) |
 
-## Frame types
+## Contact for purchase, warranty and after-sales service
 
-| Wellington Black (for Men) | Wellington Brown (for Men) |
-|:---|:---|
-|![Wellington Black](/images/type_wellington_black.png) | ![Wellington Brown](/images/type_wellington_brown.png) |
-| Square Black (for Men) | Square Navy (for Men) |
-| ![Square Black](/images/type_square_black.png) | ![Square Navy](/images/type_square_navy.png) |
-| Oval Brown (for Women) | Oval Red (for Women) |
-| ![Oval Brown](/images/type_oval_brown.png) | ![Oval Red](/images/type_oval_red.png) |
-| Boston Black (for Women) | Boston Brown (for Women) |
-| ![Boston Black](/images/type_boston_black.png) | ![Boston Brown](/images/type_boston_brown.png) |
-
-## Contact for warranty and after-sales service (Japan only)
-
-Warranty and after-sales service are available only for research institutions and companies based in Japan. Please refer to the Japanese version of this page.
-
-## Contact for purchase (Japan only)
-
-Only research institutions and companies based in Japan may purchase this product. Please refer to the Japanese version of this page.
+We only support invoicing and shipping of products to organizations based in Japan (not individuals). Please purchase through an importer that can meet the above conditions. We do not accept direct inquiries.
