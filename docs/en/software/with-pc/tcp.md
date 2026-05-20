@@ -2,8 +2,7 @@
 
 The socket communication log file consists of two parts: the header containing the measurement information and the body containing the sensing data. The header contains the measurement information "Data mode, Transmission speed, Accelerometer sensor's range, Gyroscope sensor's range, and data rank" respectively.
 
->
- For Select mode "Full", Transmission speed "100Hz", Measurement range of Accelerometer "±4g", and Measurement range of Gyroscope "1000dps"
+For Select mode "Full", Transmission speed "100Hz", Measurement range of Accelerometer "±4g", and Measurement range of Gyroscope "1000dps"
 
 ```
 //Data mode  : Full
@@ -13,18 +12,14 @@ The socket communication log file consists of two parts: the header containing t
 //ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,GYRO_X,GYRO_Y,GYRO_Z,EOG_L,EOG_R,EOG_H,EOG_V
 ```
 
-
-
 ## ■Data Rank in each Measurement Mode
 
-
-### 1) When Measurement mode is "Standard"
+### 1. When Measurement mode is "Standard"
 
 ```
 //ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,EOG_L1,EOG_R1,EOG_L2,EOG_R2,EOG_H1,EOG_H2,EOG_V1,EOG_V2
 ```
 
-> 
 Description  
 Artifact, Total count, Measurement date/time, Acceleration sensor value (X-axis), Acceleration sensor value (Y-axis), Acceleration sensor value (Z-axis), EOG sensor value 1 (left), EOG sensor value 1 (right), EOG sensor value 2 (left), EOG sensor value 2 (right), EOG sensor value 1 (horizontal difference), EOG sensor value 2 (horizontal difference), EOG sensor value 1 (vertical difference), EOG sensor value 2 (vertical difference)
 
@@ -40,14 +35,12 @@ Artifact, Total count, Measurement date/time, Acceleration sensor value (X-axis)
 ,3,2016/03/15 01:25:10.89,801,302,16553,-48,-161,-16,-152,113,136,104,84
 ```
 
-
-### 2) When Measurement mode is "Full"
+### 2. When Measurement mode is "Full"
 
 ```
 //ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,GYRO_X,GYRO_Y,GYRO_Z,EOG_L,EOG_R,EOG_H,EOG_V
 ```
 
-> 
 Description  
 Artifact, Total count, Measurement date/time, Acceleration sensor value (X-axis), Acceleration sensor value (Y-axis), Acceleration sensor value (Z-axis), Angular velocity sensor value (X-axis), Angular velocity sensor value (Y-axis), Angular velocity sensor value (Z-axis), EOG sensor value (left), EOG sensor value (right), EOG sensor value (horizontal difference), EOG sensor value (vertical difference)
 
@@ -63,8 +56,7 @@ Artifact, Total count, Measurement date/time, Acceleration sensor value (X-axis)
 ,3,2016/03/15 01:26:07.25,896,249,16539,15,34,-58,-9,-196,187,102
 ```
 
-
-### 3) When measurement mode is "Quaternion"
+### 3. When measurement mode is "Quaternion"
 
 ```
 // Data mode  : Quaternion
@@ -75,7 +67,6 @@ Artifact, Total count, Measurement date/time, Acceleration sensor value (X-axis)
 //ARTIFACT,NUM,DATE,QUATERNION_W,QUATERNION_X,QUATERNION_Y,QUATERNION_Z
 ```
 
-> 
 Description
 Artifact, Total count, Measurement date/time, Quaternion (W) Quaternion (X) Quaternion (Y) Quaternion (Z)
 
@@ -95,10 +86,10 @@ Artifact, Total count, Measurement date/time, Quaternion (W) Quaternion (X) Quat
 
 Below is a sample of data reception in Python.
 
-```
+```tcp_client.py
 import socket
-target_ip = "127.0.0.1" //Change here
-target_port = 60000 //Change here
+target_ip = "127.0.0.1" #Change here
+target_port = 60000 #Change here
 buffer_size = 4096
 
 # 1.Creating a Socket Object

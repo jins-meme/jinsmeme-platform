@@ -12,18 +12,14 @@
 //ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,GYRO_X,GYRO_Y,GYRO_Z,EOG_L,EOG_R,EOG_H,EOG_V
 ```
 
-
-
 ## ■各計測モードのデータ序列について
 
-
-### ①計測モードが「Standard」の場合
+### 1. 計測モードが「Standard」の場合
 
 ```
 //ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,EOG_L1,EOG_R1,EOG_L2,EOG_R2,EOG_H1,EOG_H2,EOG_V1,EOG_V2
 ```
 
-> 
 【説明】  
 アーチファクト、総カウント、計測日時、加速度センサー値（X軸）、加速度センサー値（Y軸）、加速度センサー値（Z軸）、EOGセンサー値1（左）、EOGセンサー値1（右）、EOGセンサー値2（左）、EOGセンサー値2（右）、EOGセンサー値1（水平差分）、EOGセンサー値2（水平差分）、EOGセンサー値1（垂直差分）、EOGセンサー値2（垂直差分）
 
@@ -39,14 +35,12 @@
 ,3,2016/03/15 01:25:10.89,801,302,16553,-48,-161,-16,-152,113,136,104,84
 ```
 
-
-### ②計測モードが「Full」の場合
+### 2. 計測モードが「Full」の場合
 
 ```
 //ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,GYRO_X,GYRO_Y,GYRO_Z,EOG_L,EOG_R,EOG_H,EOG_V
 ```
 
-> 
 【説明】
 アーチファクト、総カウント、計測日時、加速度センサー値（X軸）、加速度センサー値（Y軸）、加速度センサー値（Z軸）、角速度センサー値（X軸）、角速度センサー値（Y軸）、角速度センサー値（Z軸）、EOGセンサー値（左）、EOGセンサー値（右）、EOGセンサー値（水平差分）、EOGセンサー値（垂直差分）
 
@@ -62,8 +56,7 @@
 ,3,2016/03/15 01:26:07.25,896,249,16539,15,34,-58,-9,-196,187,102
 ```
 
-
-### ③計測モードが「Quaternion」の場合
+### 3. 計測モードが「Quaternion」の場合
 
 ```
 // Data mode  : Quaternion
@@ -74,7 +67,6 @@
 //ARTIFACT,NUM,DATE,QUATERNION_W,QUATERNION_X,QUATERNION_Y,QUATERNION_Z
 ```
 
-> 
 【説明】
 アーチファクト、総カウント、計測日時、クォータニオン(W)、クォータニオン(X)、クォータニオン(Y)、クォータニオン(Z)
 
@@ -94,10 +86,10 @@
 
 以下がPythonでのデータ受信サンプルです。
 
-```
+```tcp_client.py
 import socket
-target_ip = "127.0.0.1" //Change here
-target_port = 60000 //Change here
+target_ip = "127.0.0.1" #Change here
+target_port = 60000 #Change here
 buffer_size = 4096
 
 # 1.ソケットオブジェクトの作成
