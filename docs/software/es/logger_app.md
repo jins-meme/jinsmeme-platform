@@ -10,8 +10,8 @@ outline: deep
 
 **jins meme logger** で検索するか、以下のリンクからストアへ移動しインストールしてください。
 
-- [iPhone/iPad(App Store)](https://apps.apple.com/jp/app/jins-meme-logger/id1537937129) iOS/iPadOS 13.0以降, BLE4.2搭載端末
-- [Android 12以降(Play Store)](https://play.google.com/store/apps/details?id=com.jins_meme.logger4internal) BLE4.2搭載端末
+- [iPhone/iPad(App Store)](https://apps.apple.com/jp/app/jins-meme-logger/id1537937129) iOS/iPadOS 13.0以降, BLE4.2以降搭載端末
+- [Android 12以降(Play Store)](https://play.google.com/store/apps/details?id=com.jins_meme.logger4internal) BLE4.2以降搭載端末
 - [Android 8-11(APKファイルをインストール)](https://jins-assist-ui-binary.s3.ap-northeast-1.amazonaws.com/logger/android/jinsmeme-logger-2.0.3.76.apk) 
 
 ※Android8未満は対応していません
