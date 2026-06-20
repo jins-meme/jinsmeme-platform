@@ -86,7 +86,7 @@ Artifact, Total count, Measurement date/time, Quaternion (W) Quaternion (X) Quat
 
 Below is a sample of data reception in Python.
 
-```tcp_client.py
+```python [tcp_client.py]
 import socket
 target_ip = "127.0.0.1" #Change here
 target_port = 60000 #Change here

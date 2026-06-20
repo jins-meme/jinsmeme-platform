@@ -27,7 +27,7 @@ export default defineConfig({
                   { text: "データ取得手順", link: "/software/es/logger_app" },
                   {
                     text: "外部連携",
-                    link: "/software/es/external_integration.md",
+                    link: "/software/es/external_integration",
                   },
                 ],
               },
@@ -53,12 +53,12 @@ export default defineConfig({
                   },
                   {
                     text: "Androidでの使用",
+                    link: "/software/with-android/",
                     collapsed: true,
                     items: [
-                      { text: "インストール", link: "/software/with-android/" },
                       {
-                        text: "測定のながれ",
-                        link: "/software/with-android/measuring",
+                        text: "旧バージョン",
+                        link: "/software/with-android/old_app",
                       },
                     ],
                   },
@@ -144,7 +144,7 @@ export default defineConfig({
                       },
                       {
                         text: "External share",
-                        link: "/en/software/es/external_integration.md",
+                        link: "/en/software/es/external_integration",
                       },
                     ],
                   },
@@ -176,15 +176,12 @@ export default defineConfig({
                       },
                       {
                         text: "Using with an Android",
+                        link: "/en/software/with-android/",
                         collapsed: true,
                         items: [
                           {
-                            text: "Installing the Software",
-                            link: "/en/software/with-android/",
-                          },
-                          {
-                            text: "Measurement flow",
-                            link: "/en/software/with-android/measuring",
+                            text: "Old version",
+                            link: "/en/software/with-android/old_app",
                           },
                         ],
                       },

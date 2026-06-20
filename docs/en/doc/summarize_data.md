@@ -42,7 +42,7 @@ Assume a data frame (data_df) with 60-second interval data and individual IDs fo
 
 Since we are comparing data on a weekly basis, we assign a week number.
 
-```
+```python
 import pandas as pd
 import numpy as np
 
@@ -53,14 +53,14 @@ data_df["user_id_short"] = data_df["user_id"].str[:5] #Simplify for display
 
 Apply a filter that leaves only the following correctly worn conditions (wearing time is appropriate and glasses are oriented at the correct angle).
 
-```
+```python
 data_filtered_df = data_df.query("wea_s >= 20 & tl_yav >= -45 & tl_yav <= 90 & tl_xav >= -45 & tl_xav <= 45")
 ```
 ### Make a histogram (1)
 
 Since this is an exponential distribution, we compare the week-by-week distribution with a log plot.
 
-```
+```python
 import seaborn as sns
 
 #log
@@ -83,7 +83,7 @@ The differences are roughly shown, but it is difficult to compare them, so let's
 
 The cumulative probability can be obtained by (1) ranking each partition, (2) finding the number of partitions, and (3) dividing 1 by 2, respectively.
 
-```
+```python
 #Rank each partition in descending order
 idx = "hm_yo"
 part = "week"
@@ -129,7 +129,7 @@ A detailed analysis of taking the cumulative probability distribution of activit
 
 Extract typical values at 90% Quantile and 99% Quantile and plot the transition.
 
-```
+```python
 ### Take a Percentile for each partition
 idx = "hm_yo"
 part = "week"
@@ -174,7 +174,7 @@ Assume a data frame (data_df) with 60-second interval data with an individual ID
 
 Since we will be comparing data on a weekly basis, we will assign a week number. In addition, the counts of eye movement are divided into small and large ones, so we add them.
 
-``` import pandas as pd
+```python
 import pandas as pd
 import numpy as np
 
@@ -187,7 +187,7 @@ data_df["em_rl"] = data_df["ems_rl"] + data_df["eml_rl"]
 
 Apply a filter that leaves only the following correctly fitted conditions (wearing time is appropriate and glasses are oriented at the correct angle). You can add a filter of nis_s <= 10 to make the comparison with only less noisy data.
 
-```
+```python
 data_filtered_df = data_df.query("wea_s >= 20 & tl_yav >= -45 & tl_yav <= 90 & tl_xav >= -45 & tl_xav <= 45" & "nis_s <= 10")
 ```
 
@@ -195,7 +195,7 @@ data_filtered_df = data_df.query("wea_s >= 20 & tl_yav >= -45 & tl_yav <= 90 & t
 
 Plot and compare week by week.
 
-```
+```python
 import seaborn as sns
 tmp_df = data_filtered_df
 
@@ -220,7 +220,7 @@ You can see that it shows a shape similar to a gamma distribution.
 
 The distribution function is calculated by a nonparametric method (kde: kernel estimation), the peak positions are extracted and converted to week dependence.
 
-```
+```python
 import scipy.stats as stats
 
 #Take a percentile for each partition

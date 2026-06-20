@@ -6,8 +6,58 @@
 <img src="/images/image50.png" width="600px" alt="img">
 
 
-<table><tr><th align="center">図内番号</th><th align="center">名称</th><th colspan="4" align="center">説明</th></tr><tr><td width="10%">1</td><td width="20%">Settings(S)</td><td colspan="4" width="70%">設定画面(後述参照)を表示します。(※ドングル通信中は操作不可。)</td></tr><tr><td>2</td><td>Version(V)</td><td colspan="4">バージョン情報画面を表示します。</td></tr><tr><td>3</td><td>切り替えタブ</td><td colspan="4">データ取得タブ「Acquire sensor data」、データ再生タブ「Review sensor data」の切り替えを行います。</td></tr><tr><td rowspan="5">4</td><td rowspan="5">ステータスバー</td><td>Battery Level</td><td colspan="3">計測動作中に計測機器の電池レベルを５段階表示します。</td></tr><tr><td>MEME Version</td><td colspan="3">接続中のJINS MEME ES_Rのバージョン情報を表示します。</td></tr><tr><td>Dongle Version</td><td colspan="3">接続中のドングルのバージョン情報を表示します。</td></tr><tr><td>Success rate</td><td colspan="3">計測開始からのデータ取得率を表示します。</td></tr><tr><td>Communication</td><td colspan="3">計測中の直近200m秒のデータ取得率を表示します。</td></tr><tr><td rowspan="5">5</td><td rowspan="5">グラフ表示種別設定</td><td colspan="4">対象グラフに表示する種別を設定します。コンボBOXにて下記の種別を選択し、「Apply」ボタンをクリックすることでグラフに反映されます。</td></tr><tr><td>Hide</td><td colspan="3">グラフを非表示にします。</td></tr><tr><td>Accelerometer</td><td colspan="3">加速度センサーの値を表示します。</td></tr><tr><td>Gyroscope</td><td colspan="3">ジャイロセンサーの値を表示します。</td></tr><tr><td>Electrooculography</td><td colspan="3">眼電位センサーの値を表示します。</td></tr><tr><td rowspan="3">6-1</td><td rowspan="3">グラフ</td><td colspan="4">グラフを表示します。計測停止時は、マウス操作によりズームやスクロールを行うことができます。</td></tr><tr><td>ズーム</td><td colspan="3">グラフ上でマウスの左クリック後、ホイール操作で拡大縮小ができます。</td></tr><tr><td>スクロール</td><td colspan="3">グラフ上でマウスの左クリック後、ドラッグ操作で移動ができます。</td></tr><tr><td rowspan="3">6-2</td><td rowspan="3">グラフ<br>凡例データ選択</td><td colspan="4">凡例データグラフの表示/非表示を切り替えます。</td></tr><tr><td>マークがある時</td><td colspan="3">グラフを表示します。</td></tr><tr><td>マークがない時</td><td colspan="3">グラフを非表示にします。</td></tr><tr><td rowspan="4">7</td><td rowspan="4">ドングル接続部</td><td colspan="4">ドングルとの接続操作を行います。</td></tr><tr><td>Scan Port</td><td colspan="3">ドングル用ポートの検索を行います。</td></tr><tr><td>コンボBOX</td><td colspan="3">ドングル用ポートのリスト表示と選択を行います。</td></tr><tr><td>Connect/Close</td><td colspan="3">ドングルとの接続/切断を行います。</td></tr><tr><td rowspan="4">8</td><td rowspan="4">JINS MEME ES_R 接続部</td><td colspan="4">JINS MEME ES_Rとの接続操作を行います。</td></tr><tr><td>Scan Device</td><td colspan="3">JINS MEME ES_Rの検索を行います。</td></tr><tr><td>コンボBOX</td><td colspan="3">JINS MEME ES_Rのリスト表示と選択を行います。</td></tr><tr><td>Connect/Disconnect</td><td colspan="3">JINS MEME ES_Rとの接続/切断を行います。<br>「Status」で接続状態を表示します。</td></tr><tr><td rowspan="14">9</td><td rowspan="14">データ取得制御部</td><td colspan="4">計測機器の設定及び計測操作を行います。<br>※Quaternionを選択した場合、計測モードの選択はできますがグラフは描画されません。</td></tr><tr><td>Initialize</td><td colspan="3">計測レンジ及び通信速度設定値の初期化を行います。</td></tr><tr><td rowspan="7">Select Mode</td><td colspan="3">計測モードの選択ができます。各モードにおける稼動センサーとサンプリング周波数は以下のようになります。</td></tr><tr><td rowspan="3">Full mode</td><td>眼電位センサー</td><td>100Hz</td></tr><tr><td>加速度センサー</td><td>100Hz</td></tr><tr><td>ジャイロセンサー</td><td>100Hz</td></tr><tr><td rowspan="2">Standardmode</td><td>眼電位センサー</td><td>200Hz</td></tr><tr><td>加速度センサー</td><td>100Hz</td></tr><tr><td colspan="2">Quaternion</td><td>100Hz</td></tr><tr><td>Transmission Speed</td><td colspan="3">JINS MEME ES_Rとドングル間のBluetooth通信速度が選択できます。100Hzと50Hzから選択でき、50Hzではより安定したデータ取得が可能です。</td></tr><tr><td>Measurement range of Accelerometer</td><td colspan="3">加速度センサーの計測レンジを±2 ±4 ±8 ±16gから選択できます。</td></tr><tr><td>Measurement range of Gyroscope</td><td colspan="3">ジャイロセンサーの計測レンジを±250 ±500 ±1000 ±2000から選択できます。</td></tr><tr><td>Start Measurement <br>/ Stop Measurement</td><td colspan="3">JINS MEME ES_Rに対し、計測の開始/停止の指示を行います。取得データは以下に保存されます。<br>"\Documents\JINS\MEMEacademic\SensorData"<br>記録データの内容については、「TCPソケット通信の受信フォーマットに関して」を参照してください。</td></tr><tr><td>Free Marking</td><td colspan="3">計測データにアーチファクトを追加します。計測データを保存したcsvファイルのA列に「x」が記載されます。</td></tr><tr><td rowspan="4">10</td><td rowspan="4">TCPソケット通信</td><td colspan="4">TCPソケット通信の状態が表示されます。</td></tr><tr><td>IP address</td><td colspan="3">TCPソケット通信を行うIPアドレスです。</td></tr><tr><td>Port</td><td colspan="3">TCPソケット通信を行うPort番号です。</td></tr><tr><td>Status</td><td colspan="3">TCPソケット通信の状態が表示されます。</td></tr></table>
+| 図内番号 | 名称 | 項目 | 説明 |
+| :---: | --- | --- | --- |
+| 1 | Settings(S) | | 設定画面(後述参照)を表示します。(※ドングル通信中は操作不可。) |
+| 2 | Version(V) | | バージョン情報画面を表示します。 |
+| 3 | 切り替えタブ | | データ取得タブ「Acquire sensor data」、データ再生タブ「Review sensor data」の切り替えを行います。 |
+| 4 | ステータスバー | Battery Level | 計測動作中に計測機器の電池レベルを５段階表示します。 |
+| | | MEME Version | 接続中のJINS MEME ES_Rのバージョン情報を表示します。 |
+| | | Dongle Version | 接続中のドングルのバージョン情報を表示します。 |
+| | | Success rate | 計測開始からのデータ取得率を表示します。 |
+| | | Communication | 計測中の直近200m秒のデータ取得率を表示します。 |
+| 5 | グラフ表示種別設定 | | 対象グラフに表示する種別を設定します。コンボBOXにて下記の種別を選択し、「Apply」ボタンをクリックすることでグラフに反映されます。 |
+| | | Hide | グラフを非表示にします。 |
+| | | Accelerometer | 加速度センサーの値を表示します。 |
+| | | Gyroscope | ジャイロセンサーの値を表示します。 |
+| | | Electrooculography | 眼電位センサーの値を表示します。 |
+| 6-1 | グラフ | | グラフを表示します。計測停止時は、マウス操作によりズームやスクロールを行うことができます。 |
+| | | ズーム | グラフ上でマウスの左クリック後、ホイール操作で拡大縮小ができます。 |
+| | | スクロール | グラフ上でマウスの左クリック後、ドラッグ操作で移動ができます。 |
+| 6-2 | グラフ凡例データ選択 | | 凡例データグラフの表示/非表示を切り替えます。 |
+| | | マークがある時 | グラフを表示します。 |
+| | | マークがない時 | グラフを非表示にします。 |
+| 7 | ドングル接続部 | | ドングルとの接続操作を行います。 |
+| | | Scan Port | ドングル用ポートの検索を行います。 |
+| | | コンボBOX | ドングル用ポートのリスト表示と選択を行います。 |
+| | | Connect/Close | ドングルとの接続/切断を行います。 |
+| 8 | JINS MEME ES_R 接続部 | | JINS MEME ES_Rとの接続操作を行います。 |
+| | | Scan Device | JINS MEME ES_Rの検索を行います。 |
+| | | コンボBOX | JINS MEME ES_Rのリスト表示と選択を行います。 |
+| | | Connect/Disconnect | JINS MEME ES_Rとの接続/切断を行います。<br>「Status」で接続状態を表示します。 |
+| 9 | データ取得制御部 | | 計測機器の設定及び計測操作を行います。<br>※Quaternionを選択した場合、計測モードの選択はできますがグラフは描画されません。 |
+| | | Initialize | 計測レンジ及び通信速度設定値の初期化を行います。 |
+| | | Select Mode | 計測モードの選択ができます。各モードにおける稼動センサーとサンプリング周波数は下表のとおりです。 |
+| | | Transmission Speed | JINS MEME ES_Rとドングル間のBluetooth通信速度が選択できます。100Hzと50Hzから選択でき、50Hzではより安定したデータ取得が可能です。 |
+| | | Measurement range of Accelerometer | 加速度センサーの計測レンジを±2 ±4 ±8 ±16gから選択できます。 |
+| | | Measurement range of Gyroscope | ジャイロセンサーの計測レンジを±250 ±500 ±1000 ±2000から選択できます。 |
+| | | Start Measurement / Stop Measurement | JINS MEME ES_Rに対し、計測の開始/停止の指示を行います。取得データは以下に保存されます。<br>`\Documents\JINS\MEMEacademic\SensorData`<br>記録データの内容については、「TCPソケット通信の受信フォーマットに関して」を参照してください。 |
+| | | Free Marking | 計測データにアーチファクトを追加します。計測データを保存したcsvファイルのA列に「x」が記載されます。 |
+| 10 | TCPソケット通信 | | TCPソケット通信の状態が表示されます。 |
+| | | IP address | TCPソケット通信を行うIPアドレスです。 |
+| | | Port | TCPソケット通信を行うPort番号です。 |
+| | | Status | TCPソケット通信の状態が表示されます。 |
 
+**Select Mode：計測モード別の稼動センサーとサンプリング周波数**
+
+| 計測モード | 稼動センサー | サンプリング周波数 |
+| --- | --- | --- |
+| Full mode | 眼電位センサー | 100Hz |
+| | 加速度センサー | 100Hz |
+| | ジャイロセンサー | 100Hz |
+| Standardmode | 眼電位センサー | 200Hz |
+| | 加速度センサー | 100Hz |
+| Quaternion | — | 100Hz |
 
 
 ## データ再生画面 (この機能はWindowsのみです)
@@ -16,16 +66,60 @@
 <img src="/images/image51.png" width="600px" alt="img">
 
 
-<table><tr><th align="center">図内番号</th><th align="center">名称</th><th colspan="4" align="center">説明</th></tr><tr><td>1</td><td>Settings(S)</td><td colspan="4">設定画面(後述参照)を表示します。(※ドングル通信中は操作不可。)</td></tr><tr><td>2</td><td>Version(V)</td><td colspan="4">バージョン情報画面を表示します。</td></tr><tr><td>3</td><td>切り替えタブ</td><td colspan="4">データ取得タブ「Acquire sensor data」、データ再生タブ「Review sensor data」の切り替えを行います。</td></tr><tr><td rowspan="3">4</td><td rowspan="3">ステータスバー</td><td>Battery Level</td><td colspan="3">計測動作中に計測機器の電池レベルを５段階表示します。</td></tr><tr><td>MEME Version</td><td colspan="3">接続中のJINS MEME ES_Rのバージョン情報を表示します。</td></tr><tr><td>Dongle Version</td><td colspan="3">接続中のドングルのバージョン情報を表示します。</td></tr><tr><td rowspan="5">5</td><td rowspan="5">グラフ表示種別設定</td><td colspan="4">対象グラフに表示する種別を設定します。コンボBOXにて夏期の種別を選択し、「Apply」ボタンをクリックすることでグラフに反映されます。</td></tr><tr><td>Hide</td><td colspan="3">グラフを非表示にします。</td></tr><tr><td>Accelerometer</td><td colspan="3">加速度センサーの値を表示します。</td></tr><tr><td>Gyroscope</td><td colspan="3">ジャイロセンサーの値を表示します。</td></tr><tr><td>Electrooculography</td><td colspan="3">眼電位センサーの値を表示します。</td></tr><tr><td rowspan="3">6-1</td><td rowspan="3">グラフ</td><td colspan="4">グラフを表示します。計測停止時は、マウス操作によりズームやスクロールを行うことができます。</td></tr><tr><td>ズーム</td><td colspan="3">グラフ上でマウスの左クリック後、ホイール操作で拡大縮小ができます。</td></tr><tr><td>スクロール</td><td colspan="3">グラフ上でマウスの左クリック後、ドラッグ操作で移動ができます。</td></tr><tr><td rowspan="3">6-2</td><td rowspan="3">グラフ<br>凡例データ選択</td><td colspan="4">凡例データグラフの表示/非表示を切り替えます。</td></tr><tr><td>マークがある時</td><td colspan="3">グラフを表示します。</td></tr><tr><td>マークがない時</td><td colspan="3">グラフを非表示にします。</td></tr><tr><td rowspan="3">7</td><td rowspan="3">ファイル取得・選択</td><td colspan="4">計測データを保存したファイル一覧を取得し表示します。<br>（※ドングル通信中は操作不可。）</td></tr><tr><td>Previous files with measurement data</td><td colspan="3">取得したファイル名の一覧を表示します。</td></tr><tr><td>Set data folder</td><td colspan="3">ファイル取得先フォルダを指定するダイアログを表示します。</td></tr><tr><td rowspan="7">8</td><td rowspan="7">選択中ファイル情報</td><td colspan="4">ファイル一覧にて選択した任意のファイルの情報を表示します。</td></tr><tr><td>Data mode</td><td colspan="3">計測モードを表示します。</td></tr><tr><td>Transmission Speed</td><td colspan="3">JINS MEME ES_Rとドングル間のBluetooth通信速度を表示します。</td></tr><tr><td>Accelerometer sensor's range</td><td colspan="3">加速度センサーの計測レンジを表示します。</td></tr><tr><td>Gyroscope sensor's range</td><td colspan="3">ジャイロセンサーの計測レンジを表示します。</td></tr><tr><td>From</td><td colspan="3">計測を開始した日時（GMT)を表示します。</td></tr><tr><td>To</td><td colspan="3">計測を停止した日時（GMT)を表示します。</td></tr><tr><td rowspan="6">9</td><td rowspan="6">ファイルレビュー</td><td colspan="4">選択した任意のファイルのレビュー操作をします。</td></tr><tr><td>Replay Speed</td><td colspan="3">動的なレビュー時の再生速度を設定します。</td></tr><tr><td>Start</td><td colspan="3">動的なレビューを開始します。</td></tr><tr><td>Pause/Resume</td><td colspan="3">動的なレビューの停止をします。</td></tr><tr><td>Stop</td><td colspan="3">動的なレビューの停止をします。</td></tr><tr><td>Plot the Data</td><td colspan="3">「Start」ボタンをクリックした後に「Plot the Data」ボタンをクリックすると、ファイルのデータを一括に読み込み、静的に表示します。</td></tr>
-</table>
-
+| 図内番号 | 名称 | 項目 | 説明 |
+| :---: | --- | --- | --- |
+| 1 | Settings(S) | | 設定画面(後述参照)を表示します。(※ドングル通信中は操作不可。) |
+| 2 | Version(V) | | バージョン情報画面を表示します。 |
+| 3 | 切り替えタブ | | データ取得タブ「Acquire sensor data」、データ再生タブ「Review sensor data」の切り替えを行います。 |
+| 4 | ステータスバー | Battery Level | 計測動作中に計測機器の電池レベルを５段階表示します。 |
+| | | MEME Version | 接続中のJINS MEME ES_Rのバージョン情報を表示します。 |
+| | | Dongle Version | 接続中のドングルのバージョン情報を表示します。 |
+| 5 | グラフ表示種別設定 | | 対象グラフに表示する種別を設定します。コンボBOXにて夏期の種別を選択し、「Apply」ボタンをクリックすることでグラフに反映されます。 |
+| | | Hide | グラフを非表示にします。 |
+| | | Accelerometer | 加速度センサーの値を表示します。 |
+| | | Gyroscope | ジャイロセンサーの値を表示します。 |
+| | | Electrooculography | 眼電位センサーの値を表示します。 |
+| 6-1 | グラフ | | グラフを表示します。計測停止時は、マウス操作によりズームやスクロールを行うことができます。 |
+| | | ズーム | グラフ上でマウスの左クリック後、ホイール操作で拡大縮小ができます。 |
+| | | スクロール | グラフ上でマウスの左クリック後、ドラッグ操作で移動ができます。 |
+| 6-2 | グラフ凡例データ選択 | | 凡例データグラフの表示/非表示を切り替えます。 |
+| | | マークがある時 | グラフを表示します。 |
+| | | マークがない時 | グラフを非表示にします。 |
+| 7 | ファイル取得・選択 | | 計測データを保存したファイル一覧を取得し表示します。<br>（※ドングル通信中は操作不可。） |
+| | | Previous files with measurement data | 取得したファイル名の一覧を表示します。 |
+| | | Set data folder | ファイル取得先フォルダを指定するダイアログを表示します。 |
+| 8 | 選択中ファイル情報 | | ファイル一覧にて選択した任意のファイルの情報を表示します。 |
+| | | Data mode | 計測モードを表示します。 |
+| | | Transmission Speed | JINS MEME ES_Rとドングル間のBluetooth通信速度を表示します。 |
+| | | Accelerometer sensor's range | 加速度センサーの計測レンジを表示します。 |
+| | | Gyroscope sensor's range | ジャイロセンサーの計測レンジを表示します。 |
+| | | From | 計測を開始した日時（GMT)を表示します。 |
+| | | To | 計測を停止した日時（GMT)を表示します。 |
+| 9 | ファイルレビュー | | 選択した任意のファイルのレビュー操作をします。 |
+| | | Replay Speed | 動的なレビュー時の再生速度を設定します。 |
+| | | Start | 動的なレビューを開始します。 |
+| | | Pause/Resume | 動的なレビューの停止をします。 |
+| | | Stop | 動的なレビューの停止をします。 |
+| | | Plot the Data | 「Start」ボタンをクリックした後に「Plot the Data」ボタンをクリックすると、ファイルのデータを一括に読み込み、静的に表示します。 |
 
 
 ## 設定画面
 
 <img src="/images/image52.png" width="600px" alt="img">
 
-<table><tr><th align="center">図内番号</th><th align="center">名称</th><th colspan="4" align="center">説明</th></tr><tr><td rowspan="3">1</td><td rowspan="3">センサーデータ<br>保存フォルダ</td><td colspan="3">センサーデータの保存先フォルダを指定します。</td></tr><tr><td>Browse</td><td colspan="3">フォルダ選択ダイアログが表示され、保存先を指定することができます。</td></tr><tr><td>Open Folder</td><td colspan="3">保存先フォルダをエクスプローラーで開きます。</td></tr><tr><td rowspan="4">2</td><td rowspan="4">加速度DCオフセット値</td><td colspan="3">加速度センサーデータをグラフ表示する場合のオフセット値を指定します。ファイル保存されたデータは、センサー生値になります。（オフセット値は含みません）</td></tr><tr><td>X-Axis</td><td colspan="3">X軸のオフセット値を指定します。</td></tr><tr><td>Y-Axis</td><td colspan="3">Y軸のオフセット値を指定します。</td></tr><tr><td>Z-Axis</td><td colspan="3">Z軸のオフセット値を指定します。</td></tr><tr><td rowspan="3">3</td><td rowspan="3">保存ファイル名変更ダイアログ表示</td><td colspan="3">計測動作終了時、保存ファイル名変更ダイアログの表示／非表示を指定します。</td></tr><tr><td>チェックあり</td><td colspan="3">ファイル名変更ダイアログを表示します。</td></tr><tr><td>チェックなし</td><td colspan="3">ファイル名変更ダイアログは表示されません。<br>デフォルト名が使用されます。（BLT アドレス_記録開始日時.csv）</td></tr><tr><td rowspan="3">4</td><td rowspan="3">TCPソケット通信</td><td colspan="3">TCPソケット通信の有効／無効を指定します。<br>記録データの内容については、後述する「TCPソケット通信の受信フォーマットに関して」を参照してください。</td></tr><tr><td>チェックあり</td><td colspan="3">TCPソケット通信を有効にし、IPアドレス、Port番号が設定できます。</td></tr><tr><td>チェックなし</td><td colspan="3">TCPソケット通信を無効にします。</td></tr><tr><td>5</td><td>適用／キャンセル</td><td colspan="3">本画面で指定したパラメータの保存、キャンセルを行います。</td></tr></table>
-
-
-
+| 図内番号 | 名称 | 項目 | 説明 |
+| :---: | --- | --- | --- |
+| 1 | センサーデータ保存フォルダ | | センサーデータの保存先フォルダを指定します。 |
+| | | Browse | フォルダ選択ダイアログが表示され、保存先を指定することができます。 |
+| | | Open Folder | 保存先フォルダをエクスプローラーで開きます。 |
+| 2 | 加速度DCオフセット値 | | 加速度センサーデータをグラフ表示する場合のオフセット値を指定します。ファイル保存されたデータは、センサー生値になります。（オフセット値は含みません） |
+| | | X-Axis | X軸のオフセット値を指定します。 |
+| | | Y-Axis | Y軸のオフセット値を指定します。 |
+| | | Z-Axis | Z軸のオフセット値を指定します。 |
+| 3 | 保存ファイル名変更ダイアログ表示 | | 計測動作終了時、保存ファイル名変更ダイアログの表示／非表示を指定します。 |
+| | | チェックあり | ファイル名変更ダイアログを表示します。 |
+| | | チェックなし | ファイル名変更ダイアログは表示されません。<br>デフォルト名が使用されます。（BLT アドレス_記録開始日時.csv） |
+| 4 | TCPソケット通信 | | TCPソケット通信の有効／無効を指定します。<br>記録データの内容については、後述する「TCPソケット通信の受信フォーマットに関して」を参照してください。 |
+| | | チェックあり | TCPソケット通信を有効にし、IPアドレス、Port番号が設定できます。 |
+| | | チェックなし | TCPソケット通信を無効にします。 |
+| 5 | 適用／キャンセル | | 本画面で指定したパラメータの保存、キャンセルを行います。 |

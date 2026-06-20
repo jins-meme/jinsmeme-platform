@@ -5,8 +5,58 @@
 <img src="/images/image50.png" width="600px" alt="img">
 
 
-<table><tr><th align="center">No</th><th align="center">Name</th><th colspan="4" align="center">Description</th></tr><tr><td width="10%">1</td><td width="20%">Settings(S)</td><td colspan="4" width="70%">Displays the Settings window (described later).<br>(* Disabled during dongle communication.)</td></tr><tr><td>2</td><td>Version(V)</td><td colspan="4">Displays the Version Information window.</td></tr><tr><td>3</td><td>Switch tab</td><td colspan="4">Switches between the Acquire Sensor Data tab and the Review Sensor Data tab.</td></tr><tr><td rowspan="5">4</td><td rowspan="5">Status bar</td><td>Battery Level</td><td colspan="3">Displays the five step battery level of the measuring instrument during measurement.</td></tr><tr><td>MEME Version</td><td colspan="3">Displays the version information of the connected JINS MEME ES_R.</td></tr><tr><td>Dongle Version</td><td colspan="3">Displays the version information of the connected dongle.</td></tr><tr><td>Success rate</td><td colspan="3">Displays the data acquisition rate from the start of the measurement.</td></tr><tr><td>Communication</td><td colspan="3">Displays the data acquisition rate for the last 200m seconds.</td></tr><tr><td rowspan="5">5</td><td rowspan="5">Graph type setting</td><td colspan="4">Sets the type of graph to display. Select one of the following types from the combo box and click the [Apply] button to apply to the graph.</td></tr><tr><td>Hide</td><td colspan="3">Hide the graph.</td></tr><tr><td>Accelerometer</td><td colspan="3">Display the accelerometer sensor values.</td></tr><tr><td>Gyroscope</td><td colspan="3">Display the gyroscope sensor values.</td></tr><tr><td>Electrooculography</td><td colspan="3">Display the electrooculography sensor values.</td></tr><tr><td rowspan="3">6-1</td><td rowspan="3">Graphs</td><td colspan="4">Displays the graphs. Use the mouse to zoom or scroll while the measurement is stopped.</td></tr><tr><td>Zoom</td><td colspan="3">Left click the mouse on the graph and use the mouse wheel to zoom in/out.</td></tr><tr><td>Scroll</td><td colspan="3">Left click the mouse on the graph and drag the mouse to scroll.</td></tr><tr><td rowspan="3">6-2</td><td rowspan="3">Graph<br>Legend data selection</td><td colspan="4">Displays/hides legend data graph.</td></tr><tr><td>Checked</td><td colspan="3">Display the graph.</td></tr><tr><td>Unchecked</td><td colspan="3">Hide the graph.</td></tr><tr><td rowspan="4">7</td><td rowspan="4">Dongle connection</td><td colspan="4">Connects the dongle.</td></tr><tr><td>Scan Port</td><td colspan="3">Scan for the dongle port.</td></tr><tr><td>COmbo box</td><td colspan="3">Display and select from the dongle port list.</td></tr><tr><td>Connect/Close</td><td colspan="3">Connect/disconnect the dongle.</td></tr><tr><td rowspan="4">8</td><td rowspan="4">JINS MEME ES_R connection</td><td colspan="4">Connect the JINS MEME ES_R.</td></tr><tr><td>Scan Device</td><td colspan="3">Scan for the JINS MEME ES_R.</td></tr><tr><td>Combo box</td><td colspan="3">Display and select the JINS MEME ES_R list.</td></tr><tr><td>Connect/Disconnect</td><td colspan="3">Connect/disconnect the JINS MEME ES_R.<br>The connection status appears in [Status]</td></tr><tr><td rowspan="14">9</td><td rowspan="14">Data Acquisition Control</td><td colspan="4">Sets and controls the measuring instrument.<br>※No graph is drawn when Quaternion is selected.The measurement mode can be selected.</td></tr><tr><td>Initialize</td><td colspan="3">Initialize the measuring range and communication speed setting.</td></tr><tr><td rowspan="7">Select Mode</td><td colspan="3">Select the measurement mode.<br>The operating sensor and sampling frequency in each mode are as follows:</td></tr><tr><td rowspan="3">Full mode</td><td>Electrooculography sensor</td><td>100Hz</td></tr><tr><td>Accelerometer sensor</td><td>100Hz</td></tr><tr><td>Gyroscope sensor</td><td>100Hz</td></tr><tr><td rowspan="2">Standardmode</td><td>Electrooculography sensor</td><td>200Hz</td></tr><tr><td>Accelerometer sensor</td><td>100Hz</td></tr><tr><td colspan="2">Quaternion</td><td>100Hz</td></tr><tr><td>Transmission Speed</td><td colspan="3">Select the Bluetooth communication speed between the JINS MEME ES_R and the dongle. Select 100Hz or 50Hz. 50Hz enables more stable data acquisition.</td></tr><tr><td>Measurement range of Accelerometer</td><td colspan="3">Select the accelerometer sensor measurement range: ±2, ±4, ±8, or ±16g.</td></tr><tr><td>Measurement range of Gyroscope</td><td colspan="3">Select the gyroscope sensor range: ±250, ±500, ±1000, or ±2000.</td></tr><tr><td>Start Measurement <br>/ Stop Measurement</td><td colspan="3">Instruct the JINS MEME ES_R to start/stop measurement. The acquired data is stored in the following location: "\ Documents\JINS\MEMEacademic\SensorData" Refer to section [TCP Socket Communication Receive Format] for the content of the recorded data.</td></tr><tr><td>Free Marking</td><td colspan="3">Add artifacts to the measurement data. “x” will be entered in the Column A of the csv file containing the measurement data.</td></tr><tr><td rowspan="4">10</td><td rowspan="4">TCP Socket communication</td><td colspan="4">Displays the TCP socket communication status.</td></tr><tr><td>IP address</td><td colspan="3">IP address for the TCP socket communication.</td></tr><tr><td>Port</td><td colspan="3">Port number for the TCP socket communication.</td></tr><tr><td>Status</td><td colspan="3">Displays the status of the TCP sockect communication.</td></tr></table>
+| No | Name | Item | Description |
+| :---: | --- | --- | --- |
+| 1 | Settings(S) | | Displays the Settings window (described later).<br>(* Disabled during dongle communication.) |
+| 2 | Version(V) | | Displays the Version Information window. |
+| 3 | Switch tab | | Switches between the Acquire Sensor Data tab and the Review Sensor Data tab. |
+| 4 | Status bar | Battery Level | Displays the five step battery level of the measuring instrument during measurement. |
+| | | MEME Version | Displays the version information of the connected JINS MEME ES_R. |
+| | | Dongle Version | Displays the version information of the connected dongle. |
+| | | Success rate | Displays the data acquisition rate from the start of the measurement. |
+| | | Communication | Displays the data acquisition rate for the last 200m seconds. |
+| 5 | Graph type setting | | Sets the type of graph to display. Select one of the following types from the combo box and click the [Apply] button to apply to the graph. |
+| | | Hide | Hide the graph. |
+| | | Accelerometer | Display the accelerometer sensor values. |
+| | | Gyroscope | Display the gyroscope sensor values. |
+| | | Electrooculography | Display the electrooculography sensor values. |
+| 6-1 | Graphs | | Displays the graphs. Use the mouse to zoom or scroll while the measurement is stopped. |
+| | | Zoom | Left click the mouse on the graph and use the mouse wheel to zoom in/out. |
+| | | Scroll | Left click the mouse on the graph and drag the mouse to scroll. |
+| 6-2 | Graph Legend data selection | | Displays/hides legend data graph. |
+| | | Checked | Display the graph. |
+| | | Unchecked | Hide the graph. |
+| 7 | Dongle connection | | Connects the dongle. |
+| | | Scan Port | Scan for the dongle port. |
+| | | Combo box | Display and select from the dongle port list. |
+| | | Connect/Close | Connect/disconnect the dongle. |
+| 8 | JINS MEME ES_R connection | | Connect the JINS MEME ES_R. |
+| | | Scan Device | Scan for the JINS MEME ES_R. |
+| | | Combo box | Display and select the JINS MEME ES_R list. |
+| | | Connect/Disconnect | Connect/disconnect the JINS MEME ES_R.<br>The connection status appears in [Status]. |
+| 9 | Data Acquisition Control | | Sets and controls the measuring instrument.<br>※No graph is drawn when Quaternion is selected. The measurement mode can still be selected. |
+| | | Initialize | Initialize the measuring range and communication speed setting. |
+| | | Select Mode | Select the measurement mode. The operating sensor and sampling frequency in each mode are shown in the table below. |
+| | | Transmission Speed | Select the Bluetooth communication speed between the JINS MEME ES_R and the dongle. Select 100Hz or 50Hz. 50Hz enables more stable data acquisition. |
+| | | Measurement range of Accelerometer | Select the accelerometer sensor measurement range: ±2, ±4, ±8, or ±16g. |
+| | | Measurement range of Gyroscope | Select the gyroscope sensor range: ±250, ±500, ±1000, or ±2000. |
+| | | Start Measurement / Stop Measurement | Instruct the JINS MEME ES_R to start/stop measurement. The acquired data is stored in the following location:<br>`\Documents\JINS\MEMEacademic\SensorData`<br>Refer to section [TCP Socket Communication Receive Format] for the content of the recorded data. |
+| | | Free Marking | Add artifacts to the measurement data. "x" will be entered in the Column A of the csv file containing the measurement data. |
+| 10 | TCP Socket communication | | Displays the TCP socket communication status. |
+| | | IP address | IP address for the TCP socket communication. |
+| | | Port | Port number for the TCP socket communication. |
+| | | Status | Displays the status of the TCP socket communication. |
 
+**Select Mode: operating sensor and sampling frequency for each mode**
+
+| Mode | Operating sensor | Sampling frequency |
+| --- | --- | --- |
+| Full mode | Electrooculography sensor | 100Hz |
+| | Accelerometer sensor | 100Hz |
+| | Gyroscope sensor | 100Hz |
+| Standardmode | Electrooculography sensor | 200Hz |
+| | Accelerometer sensor | 100Hz |
+| Quaternion | — | 100Hz |
 
 
 ## Review Data window (Only for Windows App)
@@ -15,12 +65,60 @@
 <img src="/images/image51.png" width="600px" alt="img">
 
 
-<table><tr><th align="center">No.</th><th align="center">Name</th><th colspan="4" align="center">Description</th></tr><tr><td>1</td><td>Settings(S)</td><td colspan="4">Displays the Settings windows(described later).<br>(※Disabled during dongle communication.)</td></tr><tr><td>2</td><td>Version(V)</td><td colspan="4">Displays the Version Information windows.</td></tr><tr><td>3</td><td>Switch tab</td><td colspan="4">Switches between the Acquire Sensor Data tab and the Review Sensor Data tab.</td></tr><tr><td rowspan="3">4</td><td rowspan="3">Status bar</td><td>Battery Level</td><td colspan="3">Displays the five step battery level of the measuring  instrument during measurement.</td></tr><tr><td>MEME Version</td><td colspan="3">Displays the version information of the connected JINS MEME ES_R.</td></tr><tr><td>Dongle Version</td><td colspan="3">Displays the version information of the connected dongle.</td></tr><tr><td rowspan="5">5</td><td rowspan="5">Graph type setting</td><td colspan="4">Sets the type of graph to be displayed.Select one of the following types from the combo box and click the [Apply] button to apply to the graph.</td></tr><tr><td>Hide</td><td colspan="3">Hide the graph.</td></tr><tr><td>Accelerometer</td><td colspan="3">Display the accelerometer sensor values.</td></tr><tr><td>Gyroscope</td><td colspan="3">Display the gyroscope sensor values.</td></tr><tr><td>Electrooculography</td><td colspan="3">Display the electrooculography sensor values.</td></tr><tr><td rowspan="3">6-1</td><td rowspan="3">Graphs</td><td colspan="4">Displays the graphs.Use the mouse to zoom or scroll while measurement is stopped.</td></tr><tr><td>Zoom</td><td colspan="3">Left click the mouse on the graph and use the mouse wheel to zoom in/out.</td></tr><tr><td>Scroll</td><td colspan="3">Left click the mouse on the graph and drag the mouse to scroll.</td></tr><tr><td rowspan="3">6-2</td><td rowspan="3">Graph<br>Legend data selection</td><td colspan="4">Displays/hides the legend data graph.</td></tr><tr><td>Checked</td><td colspan="3">Display the graph.</td></tr><tr><td>Unchecked</td><td colspan="3">Hide the graph.</td></tr><tr><td rowspan="3">7</td><td rowspan="3">Acquire/Select File</td><td colspan="4">Acquires and displays a list of files containing measurement data.(※Disabled during dongle communication.)</td></tr><tr><td>Previous files with measurement data</td><td colspan="3">Displays a list of acquired file names.</td></tr><tr><td>Set data folder</td><td colspan="3">Displays a dialog box to specify the file acquisition destination folder.</td></tr><tr><td rowspan="7">8</td><td rowspan="7">Selected file information</td><td colspan="4">Displays information of the file selected from the file list.</td></tr><tr><td>Data mode</td><td colspan="3">Displays the measurement mode.</td></tr><tr><td>Transmission Speed</td><td colspan="3">Displays the Bluetooth communication speed between the JINS MEME ES_R and the dongle.</td></tr><tr><td>Accelerometer sensor's range</td><td colspan="3">Displays the accelerometer sensor measurement range.</td></tr><tr><td>Gyroscope sensor's range</td><td colspan="3">Displays the gyroscope sensor measurement range.</td></tr><tr><td>From</td><td colspan="3">Displays the date and time (GMT) the measurement is started.</td></tr><tr><td>To</td><td colspan="3">Displays the date and time (GMT) the measurement is stopped.</td></tr><tr><td rowspan="6">9</td><td rowspan="6">File review</td><td colspan="4">Reviews the selected file.</td></tr><tr><td>Replay Speed</td><td colspan="3">Set the dynamic review replay speed.</td></tr><tr><td>Start</td><td colspan="3">Start the dynamic review.</td></tr><tr><td>Pause/Resume</td><td colspan="3">Pause or resume the dynamic review.</td></tr><tr><td>Stop</td><td colspan="3">Stop the dynamic review.</td></tr><tr><td>Plot the Data</td><td colspan="3">Click the [Start] button and then the [Plot the Data] button to batch load the file data anad display statically.</td></tr></table>
-
+| No. | Name | Item | Description |
+| :---: | --- | --- | --- |
+| 1 | Settings(S) | | Displays the Settings window (described later).<br>(※Disabled during dongle communication.) |
+| 2 | Version(V) | | Displays the Version Information window. |
+| 3 | Switch tab | | Switches between the Acquire Sensor Data tab and the Review Sensor Data tab. |
+| 4 | Status bar | Battery Level | Displays the five step battery level of the measuring instrument during measurement. |
+| | | MEME Version | Displays the version information of the connected JINS MEME ES_R. |
+| | | Dongle Version | Displays the version information of the connected dongle. |
+| 5 | Graph type setting | | Sets the type of graph to be displayed. Select one of the following types from the combo box and click the [Apply] button to apply to the graph. |
+| | | Hide | Hide the graph. |
+| | | Accelerometer | Display the accelerometer sensor values. |
+| | | Gyroscope | Display the gyroscope sensor values. |
+| | | Electrooculography | Display the electrooculography sensor values. |
+| 6-1 | Graphs | | Displays the graphs. Use the mouse to zoom or scroll while measurement is stopped. |
+| | | Zoom | Left click the mouse on the graph and use the mouse wheel to zoom in/out. |
+| | | Scroll | Left click the mouse on the graph and drag the mouse to scroll. |
+| 6-2 | Graph Legend data selection | | Displays/hides the legend data graph. |
+| | | Checked | Display the graph. |
+| | | Unchecked | Hide the graph. |
+| 7 | Acquire/Select File | | Acquires and displays a list of files containing measurement data. (※Disabled during dongle communication.) |
+| | | Previous files with measurement data | Displays a list of acquired file names. |
+| | | Set data folder | Displays a dialog box to specify the file acquisition destination folder. |
+| 8 | Selected file information | | Displays information of the file selected from the file list. |
+| | | Data mode | Displays the measurement mode. |
+| | | Transmission Speed | Displays the Bluetooth communication speed between the JINS MEME ES_R and the dongle. |
+| | | Accelerometer sensor's range | Displays the accelerometer sensor measurement range. |
+| | | Gyroscope sensor's range | Displays the gyroscope sensor measurement range. |
+| | | From | Displays the date and time (GMT) the measurement is started. |
+| | | To | Displays the date and time (GMT) the measurement is stopped. |
+| 9 | File review | | Reviews the selected file. |
+| | | Replay Speed | Set the dynamic review replay speed. |
+| | | Start | Start the dynamic review. |
+| | | Pause/Resume | Pause or resume the dynamic review. |
+| | | Stop | Stop the dynamic review. |
+| | | Plot the Data | Click the [Start] button and then the [Plot the Data] button to batch load the file data and display statically. |
 
 
 ## Settings window
 
 <img src="/images/image52.png" width="600px" alt="img">
 
-<table><tr><th align="center">No.</th><th align="center">Name</th><th colspan="4" align="center">Description</th></tr><tr><td rowspan="3">1</td><td rowspan="3">Sensor Data<br>Save folder</td><td colspan="3">Specifies the folder in which to save the sensor data.</td></tr><tr><td>Browse</td><td colspan="3">Display the folder selection dialog and specify the save destination.</td></tr><tr><td>Open Folder</td><td colspan="3">Open the save destination folder in Explorer.</td></tr><tr><td rowspan="4">2</td><td rowspan="4">Acceleration<br>DC offset</td><td colspan="3">Specifies the offset to display the acceleration sensor data as graph.<br>The sensor raw data will be saved as a file.(offset is excluded)</td></tr><tr><td>X-Axis</td><td colspan="3">Specify the X-axis offset.</td></tr><tr><td>Y-Axis</td><td colspan="3">Specify the Y-axis offset.</td></tr><tr><td>Z-Axis</td><td colspan="3">Specify the Z-axis offset.</td></tr><tr><td rowspan="3">3</td><td rowspan="3">Show save fiel dialog</td><td colspan="3">Displays/hides Change Save FIle Name dialog when the measurement is complete.</td></tr><tr><td>Checked</td><td colspan="3">Display the Change Save File Name dialog.</td></tr><tr><td>Unchecked</td><td colspan="3">Hide the Change Save File Name dialog.<br>The default name is used.([BLT-address]_[record start datetime].csv)</td></tr><tr><td rowspan="3">4</td><td rowspan="3">TCP socket communication</td><td colspan="3">Enable/disable TCP socket communication.<br>Refer to section [TCP Socket communication Receive Format] for the content of the recorded data.</td></tr><tr><td>Checked</td><td colspan="3">Enable TCP socket communication and setting of IP address and Port number.</td></tr><tr><td>Unchecked</td><td colspan="3">Disable TCP socket communication.</td></tr><tr><td>5</td><td>Apply/Cancel</td><td colspan="3">Saves or cancels the parameters specified in this window.</td></tr></table>
+| No. | Name | Item | Description |
+| :---: | --- | --- | --- |
+| 1 | Sensor Data Save folder | | Specifies the folder in which to save the sensor data. |
+| | | Browse | Display the folder selection dialog and specify the save destination. |
+| | | Open Folder | Open the save destination folder in Explorer. |
+| 2 | Acceleration DC offset | | Specifies the offset to display the acceleration sensor data as graph.<br>The sensor raw data will be saved as a file. (offset is excluded) |
+| | | X-Axis | Specify the X-axis offset. |
+| | | Y-Axis | Specify the Y-axis offset. |
+| | | Z-Axis | Specify the Z-axis offset. |
+| 3 | Show save file dialog | | Displays/hides the Change Save File Name dialog when the measurement is complete. |
+| | | Checked | Display the Change Save File Name dialog. |
+| | | Unchecked | Hide the Change Save File Name dialog.<br>The default name is used. ([BLT-address]_[record start datetime].csv) |
+| 4 | TCP socket communication | | Enable/disable TCP socket communication.<br>Refer to section [TCP Socket communication Receive Format] for the content of the recorded data. |
+| | | Checked | Enable TCP socket communication and setting of IP address and Port number. |
+| | | Unchecked | Disable TCP socket communication. |
+| 5 | Apply/Cancel | | Saves or cancels the parameters specified in this window. |

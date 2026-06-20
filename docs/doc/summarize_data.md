@@ -41,7 +41,7 @@
 
 週単位でデータを比較するので、週番号をアサインします。
 
-```
+```python
 import pandas as pd
 import numpy as np
 
@@ -52,14 +52,14 @@ data_df["user_id_short"] = data_df["user_id"].str[:5] #表示用に簡素化
 
 以下のような正しく装着している状態（装着時間がある程度あり、メガネが変な角度を向いていない）のみを残すフィルタをかけます。
 
-```
+```python
 data_filtered_df = data_df.query("wea_s >= 20 & tl_yav >= -45 & tl_yav <= 90 & tl_xav >= -45 & tl_xav <= 45")
 ```
 ### ヒストグラム化(1)
 
 指数分布なので、対数プロットで週毎の分布を比較します。
 
-```
+```python
 import seaborn as sns
 
 #log
@@ -82,7 +82,7 @@ for axes in g.axes:
 
 累積度数は(1)パーテション毎に順位をつけ、(2)パーテションの件数を求め、(3)1を2でそれぞれ割る、ことで求めることができます。
 
-```
+```python
 #パーテション毎に降順で順位をつける
 idx = "hm_yo"
 part = "week"
@@ -128,7 +128,7 @@ for axes in g.axes:
 
 90% Quantile、99% Quantileで代表値を抽出し、推移をプロットします。
 
-```
+```python
 #パーテション毎にPercentileを取る
 idx = "hm_yo"
 part = "week"
@@ -173,7 +173,7 @@ for axes in grid.axes:
 
 週単位でデータを比較するので、週番号をアサインします。また、視線移動は移動量に応じて視線移動小回数(左右)と視線移動大回数(左右)にカウントが分かれているので足しておきます。
 
-```
+```python
 import pandas as pd
 import numpy as np
 
@@ -186,7 +186,7 @@ data_df["em_rl"] = data_df["ems_rl"] + data_df["eml_rl"]
 
 以下のような正しく装着している状態（装着時間がある程度あり、メガネが変な角度を向いていない）のみを残すフィルタをかけます。眼電位系の場合は、nis_s <= 10 のフィルタを追加するとよりノイズの少ないデータのみで比較ができます。
 
-```
+```python
 data_filtered_df = data_df.query("wea_s >= 20 & tl_yav >= -45 & tl_yav <= 90 & tl_xav >= -45 & tl_xav <= 45" & "nis_s <= 10")
 ```
 
@@ -195,7 +195,7 @@ data_filtered_df = data_df.query("wea_s >= 20 & tl_yav >= -45 & tl_yav <= 90 & t
 
 週毎にプロットし比較してみます。
 
-```
+```python
 import seaborn as sns
 tmp_df = data_filtered_df
 
@@ -220,7 +220,7 @@ for axes in g.axes:
 
 ノンパラメトリックな手法（kde: カーネル推定）により分布関数を算出し、ピーク位置を抽出し、週依存に変換します。
 
-```
+```python
 import scipy.stats as stats
 
 #パーテション毎にPercentileを取る
