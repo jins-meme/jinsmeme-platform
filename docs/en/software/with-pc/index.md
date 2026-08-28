@@ -8,8 +8,8 @@ Please download from [here](https://github.com/jins-meme/ES_R-DataLogger/release
 
 |OS| Operating environment|
 |:---:|:---:|
-| Supported OS (Windows) | Microsoft Windows 10 or later 64bit<br>Processor: Intel Core i5 2.30GHz or above (Intel Core i7 recommended)<br>Memory: 2GB or more (4GB recommended)<br>Recommended screen resolution: 1024x768 or greater |
-| Supported OS (MacOS) | MacOS 13 or later 64bit<br>Memory: 2GB or more (4GB recommended)<br>Recommended screen resolution: 1024x768 or greater |
+| Supported OS (Windows) | Microsoft Windows 11 or later 64bit<br>Memory: 4GB or more (8GB recommended)|
+| Supported OS (MacOS) | MacOS 14 or later 64bit<br>Memory: 4GB or more (8GB recommended)|
 
 ## Windows
 
