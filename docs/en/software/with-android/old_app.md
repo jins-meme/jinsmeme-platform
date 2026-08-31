@@ -67,7 +67,7 @@ To use Bluetooth on the device, tap `USE BLE` to complete the process.
 #### Start measurement
 
 1. Specify the select mode, Transmission speed, Measurement range of Accelerometer, and Measurement range of Gyroscope, and tap **START MEASUREMENT**. The Confirm Start of Measurement screen appears.
-    - `Tip` Refer to [Using from a PC > Windows > Acquire Data window](../with-pc/windows.html) for the details of each item.
+    - `Tip` Refer to [Using with a PC (Old version) > User Interface > Acquire Data window](../with-pc/old_app.html) for the details of each item.
 2. Tap **OK**, then measurement data is sent from the JINS MEME ES_R and saved.
 3. Tap each `(TYPE) GRAPH DISABLED` to see the data in a graph, then the display changes to `(TYPE) GRAPH ENABLED`. The graphs that can be displayed depend on the mode.
     - Standard: EOG, ACC

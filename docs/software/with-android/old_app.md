@@ -67,7 +67,7 @@ JINS MEME ES_Rとの通信は以下の2種類を選択できます。BLEで安�
 #### 計測開始
 
 1. 計測するデータモード「Select mode」、通信速度「Transmission speed」、センサーレンジ「Measurement range of Accelerometer」および「Measurement range of Gyroscope」を指定し、**START MEASUREMENT** をタップすると、計測開始の確認画面が表示されます。
-    - `参考` 各項目の詳細については、[パソコンで使用する > 画面 > データ再生画面](../with-pc/windows.html)を参照してください。
+    - `参考` 各項目の詳細については、[パソコンでの使用（旧バージョン） > 画面 > データ再生画面](../with-pc/old_app.html)を参照してください。
 1. **OK** をタップすると、JINS MEME ES_Rから計測値が送信され、データ保存を開始します。
 1. グラフでデータを確認したい場合は `(TYPE) GRAPH DISABLED` のところをそれぞれタップすると `(TYPE) GRAPH ENABLED` と表示が変わります。モードに応じて表示できるグラフは以下のように異なります。
     - Standard: EOG, ACC

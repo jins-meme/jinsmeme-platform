@@ -37,17 +37,12 @@ export default defineConfig({
                 items: [
                   {
                     text: "パソコンでの使用",
+                    link: "/software/with-pc/",
                     collapsed: true,
                     items: [
-                      { text: "インストール", link: "/software/with-pc/" },
                       {
-                        text: "測定のながれ",
-                        link: "/software/with-pc/measuring",
-                      },
-                      { text: "画面の説明", link: "/software/with-pc/windows" },
-                      {
-                        text: "TCPソケット通信",
-                        link: "/software/with-pc/tcp",
+                        text: "旧バージョン",
+                        link: "/software/with-pc/old_app",
                       },
                     ],
                   },
@@ -154,23 +149,12 @@ export default defineConfig({
                     items: [
                       {
                         text: "Using with a PC",
+                        link: "/en/software/with-pc/",
                         collapsed: true,
                         items: [
                           {
-                            text: "Installing the Software",
-                            link: "/en/software/with-pc/",
-                          },
-                          {
-                            text: "Measurement flow",
-                            link: "/en/software/with-pc/measuring",
-                          },
-                          {
-                            text: "User Interface",
-                            link: "/en/software/with-pc/windows",
-                          },
-                          {
-                            text: "TCP-Socket",
-                            link: "/en/software/with-pc/tcp",
+                            text: "Old version",
+                            link: "/en/software/with-pc/old_app",
                           },
                         ],
                       },

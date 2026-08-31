@@ -1,10 +1,108 @@
-# 画面<Badge type="danger" text="アカデミック版" />
+# パソコン用 Academic(ES-R)版ロガー（旧バージョン）<Badge type="danger" text="アカデミック版" />
 
-## データ取得画面
+JINS MEME ES_Rで取得したデータを、パソコンに保存することができます。
 
+> **注意:** こちらは **USBドングルを使う旧アプリ** 向けの説明です。ドングル不要でパソコン本体のBluetoothを使う新しいアプリをご利用の場合は[新しいアプリのマニュアル](./index.html)を参照してください。
+
+## ソフトウェアをダウンロードする
+
+[こちら](https://github.com/jins-meme/ES_R-DataLogger/releases) からファイルをダウンロードしてください。
+
+## ソフトウェア動作環境
+
+|OS| 環境|
+|:---:|:---:|
+| 対応OS（Windows） | Microsoft Windows 11以降 64bit<br>メモリー：4GB以上 （推奨 8GB）|
+| 対応OS（MacOS） | MacOS 14以降<br>メモリー：4GB以上 （推奨 8GB）|
+
+## インストールする
+
+### Windows
+
+1. ファイルをダブルクリックで実行するとアプリが起動するので、ソフトウェアのバージョンを確認し、 Next >  ボタンをクリックします。
+    - `重要` 管理者以外のアカウントでログインしている場合は、「ユーザアカウント制御」画面が表示されます。インストールを続行する場合は、管理者に依頼してインストールを行ってください。
+1. ユーザー名、組織名、シリアル番号を入力し、 Next >  ボタンをクリックします。  
+1. ソフトウェアのインストール先を指定し、 Next >  ボタンをクリックします。  
+1. スタートメニューに登録するフォルダ名を指定し、 Next >  ボタンをクリックします。
+1. デスクトップアイコンの作成を指定し、 Next >  ボタンをクリックします。  
+1. 入力情報を確認し、間違いなければ、 Install  ボタンをクリックします。  
+1. インストール完了画面が表示されたら、 Finish  ボタンをクリックし、画面を閉じます。  
+
+![手順](/images/windows_install.png)
+
+アンインストールは、アプリケーション一覧からアプリを選択して削除します。
+
+### MacOS
+
+1. ファイルを展開します。
+1. 実行ファイルをアプリケーションフォルダに移動します。
+1. 実行します。
+
+アンインストールは、アプリケーションフォルダから削除します。
+
+---
+
+## 測定のながれ
+
+JINS MEME ES_Rの機能を使用するには、最初に接続をする必要があります。
+
+### 接続
+
+#### ドングルとPCの接続 (Windowsのみ)
+
+- ドングルをパソコンの任意のUSBポートに挿入し、JINS MEME ES_Rとドングルとの通信を確立させます。
+    - `重要` ドングルのドライバが認識されない場合は、Silicon labsが公開しているCP210x USB - UART ブリッジ VCPドライバをお試しください。
+
+#### ①アプリの起動
+
+1. JINS MEME ACADEMIC  のアイコンをクリックして、ソフトウェアを起動します。
+    - 「データ取得」画面が表示されます。
+
+#### ②ドングルとポートの設定 (Windowsのみ)
+
+1. `Scan port` ボタンをクリックし、ドングルを検索します。
+    - コンボボックスにUSBのポート番号が表示されます。
+1.  一覧から通信先のポート番号を選択し、 Open ボタンをクリックします。
+
+#### ③JINS MEME ES_Rの接続
+
+1. 接続可能な状態のJINS MEME ES_Rが近くにあるときに、 `Scan device` ボタンをクリックすると、接続可能なJINS MEME ES_Rの検索されます。
+1. コンボボックスに接続可能なJINS MEME ES_RのID番号が表示されます。  
+1. 接続対象のJINS MEME ES_Rを選択し、 `Connect' ボタンをクリックします。  
+1. ステータス表示が `Connected` に切り替わり、通信が確立されます。  
+    - PCとの相性により接続が失敗することがあります。接続が失敗した場合は再度接続をお試しください。
+
+![接続](/images/pc_setting1.png)
+
+### 計測
+
+1. 計測開始
+    - 計測するデータモード「Select mode」、通信速度「Transmission speed」、センサーレンジ「Measurement range of Accelerometer」および「Measurement range of Gyroscope」を指定し、 `Start Measurement` ボタンをクリックすることでJINS MEME ES_Rから計測値が送信され、グラフ描画を開始します。
+    - `参考` 各項目の詳細については、「画面 ⇒ データ再生画面」を参照してください。  
+    - `重要` 「Select mode」で「Quaternion」を選択した場合、グラフは描画されません。
+1. 計測停止
+    - 計測中に `Stop Measurement` ボタンをクリックすることで、計測を停止します。
+
+![計測](/images/pc_setting2.png)
+
+### 切断
+
+1. JINS MEME ES_Rの切断
+    1. JINS MEME ES_Rの計測を停止した状態で、 `Disconnect` ボタンをクリックします。
+    1. Disconnect の表示が Connect  ボタンに切り替わり、通信が切断されます。
+1. ドングルとPCの切断 (Windowsのみ)
+    1. 任意のUSBポートでのドングル通信中に、 `Close` ボタンをクリックします。
+    1. Close  ボタンの表示が  Open  ボタンに切り替わり、ドングル通信が切断されます。
+
+![切断](/images/pc_setting3.png)
+
+---
+
+## 画面
+
+### データ取得画面
 
 <img src="/images/image50.png" width="600px" alt="img">
-
 
 | 図内番号 | 名称 | 項目 | 説明 |
 | :---: | --- | --- | --- |
@@ -59,12 +157,9 @@
 | | 加速度センサー | 100Hz |
 | Quaternion | — | 100Hz |
 
-
-## データ再生画面 (この機能はWindowsのみです)
-
+### データ再生画面 (この機能はWindowsのみです)
 
 <img src="/images/image51.png" width="600px" alt="img">
-
 
 | 図内番号 | 名称 | 項目 | 説明 |
 | :---: | --- | --- | --- |
@@ -102,8 +197,7 @@
 | | | Stop | 動的なレビューの停止をします。 |
 | | | Plot the Data | 「Start」ボタンをクリックした後に「Plot the Data」ボタンをクリックすると、ファイルのデータを一括に読み込み、静的に表示します。 |
 
-
-## 設定画面
+### 設定画面
 
 <img src="/images/image52.png" width="600px" alt="img">
 
@@ -123,3 +217,119 @@
 | | | チェックあり | TCPソケット通信を有効にし、IPアドレス、Port番号が設定できます。 |
 | | | チェックなし | TCPソケット通信を無効にします。 |
 | 5 | 適用／キャンセル | | 本画面で指定したパラメータの保存、キャンセルを行います。 |
+
+---
+
+## TCP ソケット通信
+
+ソケット通信によるログファイルは「計測情報を記載したヘッダ部」と「センシングデータを記載したボディ部」の2段構成となっています。ヘッダ部には「Data mode、Transmission speed、Accelerometer sensor's range、Gyroscope sensor's range、データ序列」の順に計測情報が記載されています。
+
+**Select mode「Full」、Transmission speed「100Hz」、Measurement range of Accelerometer「±4g」、Measurement range of Gyroscope「1000dps」の場合**
+
+```
+//Data mode  : Full
+//Transmission speed  : 100Hz
+//Acceleration sensor's range  : 4g
+//Gyroscope sensor's range  : 1000dps
+//ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,GYRO_X,GYRO_Y,GYRO_Z,EOG_L,EOG_R,EOG_H,EOG_V
+```
+
+### ■各計測モードのデータ序列について
+
+#### 1. 計測モードが「Standard」の場合
+
+```
+//ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,EOG_L1,EOG_R1,EOG_L2,EOG_R2,EOG_H1,EOG_H2,EOG_V1,EOG_V2
+```
+
+【説明】  
+アーチファクト、総カウント、計測日時、加速度センサー値（X軸）、加速度センサー値（Y軸）、加速度センサー値（Z軸）、EOGセンサー値1（左）、EOGセンサー値1（右）、EOGセンサー値2（左）、EOGセンサー値2（右）、EOGセンサー値1（水平差分）、EOGセンサー値2（水平差分）、EOGセンサー値1（垂直差分）、EOGセンサー値2（垂直差分）
+
+```
+// Data mode  : Standard
+// Transmission speed  : 50Hz
+// Acceleration sensor's range  : 2g
+// Gyroscope sensor's range  : 250dps
+//
+//ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,EOG_L1,EOG_R1,EOG_L2,EOG_R2,EOG_H1,EOG_H2,EOG_V1,EOG_V2
+,1,2016/03/15 01:25:10.85,790,329,16523,-59,-189,-21,-165,130,144,124,93
+,2,2016/03/15 01:25:10.87,746,369,16503,-42,-158,-7,-153,116,146,100,80
+,3,2016/03/15 01:25:10.89,801,302,16553,-48,-161,-16,-152,113,136,104,84
+```
+
+#### 2. 計測モードが「Full」の場合
+
+```
+//ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,GYRO_X,GYRO_Y,GYRO_Z,EOG_L,EOG_R,EOG_H,EOG_V
+```
+
+【説明】
+アーチファクト、総カウント、計測日時、加速度センサー値（X軸）、加速度センサー値（Y軸）、加速度センサー値（Z軸）、角速度センサー値（X軸）、角速度センサー値（Y軸）、角速度センサー値（Z軸）、EOGセンサー値（左）、EOGセンサー値（右）、EOGセンサー値（水平差分）、EOGセンサー値（垂直差分）
+
+```
+// Data mode  : Full
+// Transmission speed  : 100Hz
+// Acceleration sensor's range  : 2g
+// Gyroscope sensor's range  : 250dps
+//
+//ARTIFACT,NUM,DATE,ACC_X,ACC_Y,ACC_Z,GYRO_X,GYRO_Y,GYRO_Z,EOG_L,EOG_R,EOG_H,EOG_V
+,1,2016/03/15 01:26:07.23,780,254,16542,0,33,-66,4,-171,175,83
+,2,2016/03/15 01:26:07.24,737,293,16559,-7,11,-79,12,-150,162,69
+,3,2016/03/15 01:26:07.25,896,249,16539,15,34,-58,-9,-196,187,102
+```
+
+#### 3. 計測モードが「Quaternion」の場合
+
+```
+// Data mode  : Quaternion
+// Transmission speed  : Standard
+// Acceleration sensor's range  : 2g
+// Gyroscope sensor's range  : 2000dps
+//
+//ARTIFACT,NUM,DATE,QUATERNION_W,QUATERNION_X,QUATERNION_Y,QUATERNION_Z
+```
+
+【説明】
+アーチファクト、総カウント、計測日時、クォータニオン(W)、クォータニオン(X)、クォータニオン(Y)、クォータニオン(Z)
+
+```
+// Data mode  : Quaternion
+// Transmission speed  : 50Hz
+// Acceleration sensor's range  : 2g
+// Gyroscope sensor's range  : 2000dps
+//
+//ARTIFACT,NUM,DATE,QUATERNION_W,QUATERNION_X,QUATERNION_Y,QUATERNION_Z
+,1,2016/3/21 15:51:53.32,13931501,1065299619,133555066,-5213924
+,2,2016/3/21 15:51:53.34,13930073,1065376001,132938877,-5356280
+,3,2016/3/21 15:51:53.36,13922096,1065454235,132305442,-549757
+```
+
+### Socket クライアントサンプル
+
+以下がPythonでのデータ受信サンプルです。
+
+```python [tcp_client.py]
+import socket
+target_ip = "127.0.0.1" #Change here
+target_port = 60000 #Change here
+buffer_size = 4096
+
+# 1.ソケットオブジェクトの作成
+tcp_client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+print("tcp_client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)")
+
+# 2.サーバに接続
+tcp_client.connect((target_ip,target_port))
+print("tcp_client.connect((target_ip,target_port))")
+
+is_end = False
+while not is_end:
+    # 3.サーバからのレスポンスを受信
+    response = tcp_client.recv(buffer_size)
+    if response == b"":
+        is_end = True
+    print("[*]Received a response : {}".format(response))
+
+# 4.接続を終了させる
+tcp_client.close()
+```
