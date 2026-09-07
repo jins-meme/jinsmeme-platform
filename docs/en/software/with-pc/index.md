@@ -167,13 +167,31 @@ There are three charts, and each one can show something different. Waveforms are
 | Windows | `Documents\JINS\MEME_Academic` |
 | macOS | `~/Documents/JINS/MEME_Academic` |
 
-The location can be changed with `Save File Path` in `Setting`. On both platforms the file name is `<MAC address>_<UTC datetime>.csv`.
+The location can be changed with `Save File Path` in `Setting`. On both platforms the file name is `<MAC address>_<UTC datetime>.csv.gz`.
 
 If you enable `Save Dialog` in `Setting`, a dialog to choose the save location again appears after the measurement ends.
 
+### Compressed format (`.csv.gz`)
+
+Measurement data is saved as a **gzip-compressed CSV (`.csv.gz`)** — `Save Format` in `Setting` is enabled by default. The contents are exactly the same as the previous CSV format; compression simply makes the file smaller.
+
+To save uncompressed `.csv` files as before, clear `Save Format` in `Setting`. The file name then becomes `<MAC address>_<UTC datetime>.csv`.
+
+`.csv.gz` is a standard gzip file, so no special tool is required.
+
+| Purpose | How |
+|---|---|
+| Extract | Archivers such as 7-Zip or The Unarchiver. On macOS, double-clicking also works |
+| Command line | `gzip -d <FileName>.csv.gz` |
+| Python (pandas) | `pd.read_csv("data.csv.gz")` — decompressed automatically based on the extension |
+
+::: tip Files stay readable even if a measurement is cut short
+Compression is completed for each flush and then appended, so the file remains readable up to that point even if the app is force-quit or the BLE link drops.
+:::
+
 ### Columns
 
-The format is shared with the Mac and Android versions. The columns depend on the mode.
+The format is shared with the Mac and Android versions (the following shows the contents after decompression). The columns depend on the mode.
 
 | Mode | Columns |
 |---|---|
@@ -196,7 +214,7 @@ A header describing the measurement conditions is written at the top of the file
 - `DATE` is recorded in **UTC**. To show local time on the charts only, use `Time Display` in `Setting` (the recorded values always stay in UTC).
 - `NUM` is a monotonically increasing value accumulated from the difference of the device-side counter. Numbers are skipped when packets are dropped.
 - `ARTIFACT` holds the marks added with `Free Marking` or by clicking a chart.
-- Rows are flushed every 100 rows at 100Hz, or every 50 rows at 50Hz, because opening and closing the file for each row would drop data. The remainder is flushed when the measurement stops.
+- Rows are flushed every 100 rows at 100Hz, or every 50 rows at 50Hz, because opening and closing the file for each row would drop data. The remainder is flushed when the measurement stops. For `.csv.gz`, each of these flushes is one unit of compression.
 
 ## File Replay
 
@@ -205,11 +223,13 @@ You can load a recorded CSV and review it on the same screen you use while measu
 ### Starting a replay
 
 1. Click `File Replay`.
-1. Choose a CSV in the file dialog.
+1. Choose a file in the file dialog. Either `.csv.gz` (compressed) or `.csv` (uncompressed) works — **there is no need to extract it first.**
 1. **Playback starts as soon as you choose the file** (there is no Start button).
     - `Select Mode` and the other fields switch to the conditions recorded in the file, and `State :` shows the file name.
 
 Only CSVs in this app's format (shared with the Mac and Android versions) can be loaded. CSVs written by the old Windows app — with the `// Accelerometer sensor's range` wording or a `BattLv` column — can also be read.
+
+Whether a file is compressed is determined by its contents rather than its extension, so a `.csv.gz` file renamed to `.csv` still opens.
 
 ### Controls during replay
 
@@ -236,6 +256,7 @@ You can also click a chart during replay to add an artifact (see [Adding an arti
 Dragging horizontally across a chart during replay highlights the selected range. When you release the mouse, a file name dialog appears and you can write just that range to a CSV in the same folder as the source file.
 
 - The header is copied as is, so the extracted CSV can be opened with `File Replay` too.
+- The extension matches the source file: cutting from a `.csv.gz` produces a `.csv.gz`, and cutting from a `.csv` produces a `.csv`.
 - If a file with the same name already exists, an error is shown and the dialog stays open.
 
 ## Setting
@@ -248,6 +269,7 @@ Open it from `Setting (S)` on the menu bar.
 |---|---|
 | `Save File Path` | Where CSVs are saved. `Documents\JINS\MEME_Academic` by default |
 | `Acc Offset X / Y / Z` | An offset added to the chart display only. **The values recorded in the CSV do not change** |
+| `Save Format` | Saves measurement data gzip-compressed as `.csv.gz` (**enabled by default**). Clear it to save `.csv`. Loading supports both regardless of this setting |
 | `Save Dialog` | Shows a dialog to choose the save location again after the measurement ends |
 | `Time Display` | Shows the horizontal axis in local time (recording is always in UTC) |
 | `TCP Output` | Streams the measurement data to an external client over TCP |
@@ -261,6 +283,7 @@ When `TCP Output` is enabled, the app starts listening on the specified port (`S
 
 - If the client connected before the measurement started, the header is sent when the measurement starts.
 - Only **one client** is accepted at a time.
+- The streamed data is **always uncompressed text**. The `Save Format` setting applies only to saved files and has no effect on the TCP output.
 
 ```
 $ ncat 127.0.0.1 88

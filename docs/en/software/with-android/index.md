@@ -46,6 +46,7 @@ Tap the **gear icon (Settings)** in the upper right to configure detailed measur
 - **Accelerometer range**: Sets the measurement range of the accelerometer.
 - **Gyroscope range**: Sets the measurement range of the gyroscope.
 - **Reconnect and restart...**: Enables automatic reconnection when the BLE connection is lost.
+- **Compress saved data (.csv.gz)**: Saves measurement data compressed with gzip (**enabled by default**).
 
 ---
 
@@ -68,7 +69,7 @@ Each graph can also be minimized by tapping the "−" button in its upper right 
 
 ## 4. Data Storage
 
-When measurement is stopped, the data is saved in CSV format.
+When measurement is stopped, the data is saved as a **gzip-compressed CSV (`.csv.gz`)**. The contents are exactly the same as the previous CSV format; compression simply makes the file smaller (about 1/3 in our measurements).
 
 ### Storage Location
 
@@ -76,7 +77,21 @@ Inside the **Download / ESR Logger** folder of the device's internal storage.
 
 ### File Name Format
 
-`[DeviceAddress]_[DateTime].csv`
+`[DeviceAddress]_[DateTime].csv.gz`
+
+To save uncompressed `.csv` files as before, clear the **Compress saved data (.csv.gz)** checkbox in the settings. The file name then becomes `[DeviceAddress]_[DateTime].csv`.
+
+### Opening Compressed Files
+
+`.csv.gz` is a standard gzip file, so no special tool is required.
+
+| Purpose | How |
+|---|---|
+| Extract on a computer | Archivers such as 7-Zip or The Unarchiver. On macOS, double-clicking also works |
+| Command line | `gzip -d [FileName].csv.gz` |
+| Python (pandas) | `pd.read_csv("data.csv.gz")` — decompressed automatically based on the extension |
+
+The app's [playback mode](#_5-playback-mode) reads both `.csv.gz` and `.csv` as-is.
 
 ---
 
@@ -87,7 +102,7 @@ A mode for selecting previously saved CSV data and reproducing (replaying) the m
 ### Steps
 
 1. Tap the **playback icon (▶︎)** in the upper right of the screen.
-2. The file selection screen opens; select the CSV file you want to play back.
+2. The file selection screen opens; select the file you want to play back. Either `.csv.gz` (compressed) or `.csv` (uncompressed) works.
 3. The connection status becomes "Connected(ver.CAFE-...)", simulating a connected state.
 4. **Start Measurement**: **Long-press** the button (until the bar reaches the right edge) to start playback.
 
