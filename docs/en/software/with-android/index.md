@@ -6,7 +6,7 @@ This manual explains how to use "ES_R DevKit 2," an application for acquiring, v
 
 ## Downloading the Software
 
-- Please download from [here](https://github.com/jins-meme/ES_R-DataLogger/releases).
+- Please download from [here](https://github.com/jins-meme/ES_R-Development-Kit/releases).
   - Android 12 or later, devices with BLE4.2 or later
   - Be sure to download **version 3 or later**.
 

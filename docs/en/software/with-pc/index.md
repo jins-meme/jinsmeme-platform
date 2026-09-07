@@ -17,7 +17,7 @@ This page explains how to use the PC logger, which acquires data from the JINS M
 
 ## Download
 
-Please download from [here](https://github.com/jins-meme/ES_R-DataLogger/releases).
+Please download from [here](https://github.com/jins-meme/ES_R-Development-Kit/releases).
 
 | OS | File |
 |---|---|

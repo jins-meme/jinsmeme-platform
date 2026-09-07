@@ -6,7 +6,7 @@ JINS MEME ES_R デバイスからデータを取得し、可視化および記�
 
 ## ソフトウェアをダウンロードする
 
-- [ここ](https://github.com/jins-meme/ES_R-DataLogger/releases) からファイルをダウンロードしてください。
+- [ここ](https://github.com/jins-meme/ES_R-Development-Kit/releases) からファイルをダウンロードしてください。
   - Android12以降, BLE4.2以降搭載端末
   - **バージョン3以降** をダウンロードしてください。
 

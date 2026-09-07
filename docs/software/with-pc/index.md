@@ -17,7 +17,7 @@ JINS MEME ES_R からデータを取得し、リアルタイムに可視化し�
 
 ## ダウンロード
 
-[こちら](https://github.com/jins-meme/ES_R-DataLogger/releases) からファイルをダウンロードしてください。
+[こちら](https://github.com/jins-meme/ES_R-Development-Kit/releases) からファイルをダウンロードしてください。
 
 | OS | ファイル |
 |---|---|
