@@ -198,32 +198,6 @@ export default defineConfig({
                       { text: "Academic Logger", link: "/en/doc/data_esr" },
                     ],
                   },
-                  {
-                    text: "Analysis",
-                    collapsed: false,
-                    items: [
-                      {
-                        text: "Data processing details",
-                        link: "/en/doc/principles/feature",
-                      },
-                      {
-                        text: "Notes specific to vital data",
-                        link: "/en/doc/principles/vital_data",
-                      },
-                      {
-                        text: "Short-term scene",
-                        link: "/en/doc/principles/analysis_sample",
-                      },
-                      {
-                        text: "Long-term time series",
-                        link: "/en/doc/principles/summarize_data",
-                      },
-                      {
-                        text: "Motion tracking",
-                        link: "/en/doc/principles/motion-tracking-howto",
-                      },
-                    ],
-                  },
                 ],
               },
               { text: "Precautions", link: "/en/notice" },

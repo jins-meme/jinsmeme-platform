@@ -19,7 +19,7 @@ features:
       src: /images/icon_app.svg
     title: Documents
     details: Explanation of the unique processing of biological data, such as artifact removal methods, aggregation methods, etc.
-    link: /en/doc/principles/feature
+    link: /en/doc/data_es
   - icon: 
       src: /images/icon_folder.svg
     title: Papers & Presentations
