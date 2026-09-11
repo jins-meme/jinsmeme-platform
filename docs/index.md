@@ -19,7 +19,7 @@ features:
       src: /images/icon_app.svg
     title: ドキュメント
     details: アーティファクト除去の方法、集計方法など生体データ特有の処理を解説
-    link: /doc/feature
+    link: /doc/principles/feature
   - icon: 
       src: /images/icon_folder.svg
     title: 論文＆発表

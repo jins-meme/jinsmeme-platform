@@ -6,6 +6,31 @@ export default defineConfig({
   //cleanUrls: true,
   title: "JINS MEME Platform",
   description: "生体データ活用の一歩先へ",
+  // docs/doc/principles は python-processing-core の submodule(sparse-checkout で
+  // docs/principles/ のみ checkout。セットアップ手順は README.md 参照)。
+  // checkout パスが `doc/principles/docs/principles/...` とネストするので、
+  // サイト上の URL は `/doc/principles/...` (EN は `/en/doc/principles/...`) に平らにする。
+  rewrites: {
+    "doc/principles/docs/principles/feature.md": "doc/principles/feature.md",
+    "doc/principles/docs/principles/vital_data.md":
+      "doc/principles/vital_data.md",
+    "doc/principles/docs/principles/analysis_sample.md":
+      "doc/principles/analysis_sample.md",
+    "doc/principles/docs/principles/summarize_data.md":
+      "doc/principles/summarize_data.md",
+    "doc/principles/docs/principles/motion-tracking-howto.md":
+      "doc/principles/motion-tracking-howto.md",
+    "doc/principles/docs/principles/en/feature.md":
+      "en/doc/principles/feature.md",
+    "doc/principles/docs/principles/en/vital_data.md":
+      "en/doc/principles/vital_data.md",
+    "doc/principles/docs/principles/en/analysis_sample.md":
+      "en/doc/principles/analysis_sample.md",
+    "doc/principles/docs/principles/en/summarize_data.md":
+      "en/doc/principles/summarize_data.md",
+    "doc/principles/docs/principles/en/motion-tracking-howto.md":
+      "en/doc/principles/motion-tracking-howto.md",
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "JINS サイト", link: "https://www.jins.com" }],
@@ -78,13 +103,25 @@ export default defineConfig({
                 text: "分析",
                 collapsed: false,
                 items: [
-                  { text: "通常版の演算処理", link: "/doc/feature" },
-                  { text: "バイタルデータの注意点", link: "/doc/vital_data" },
-                  { text: "短期のシーン分析例", link: "/doc/analysis_sample" },
-                  { text: "長期の時系列分析例", link: "/doc/summarize_data" },
+                  {
+                    text: "通常版の演算処理",
+                    link: "/doc/principles/feature",
+                  },
+                  {
+                    text: "バイタルデータの注意点",
+                    link: "/doc/principles/vital_data",
+                  },
+                  {
+                    text: "短期のシーン分析例",
+                    link: "/doc/principles/analysis_sample",
+                  },
+                  {
+                    text: "長期の時系列分析例",
+                    link: "/doc/principles/summarize_data",
+                  },
                   {
                     text: "モーショントラッキング",
-                    link: "/doc/motion-tracking-howto",
+                    link: "/doc/principles/motion-tracking-howto",
                   },
                 ],
               },
@@ -192,23 +229,23 @@ export default defineConfig({
                     items: [
                       {
                         text: "Data processing details",
-                        link: "/en/doc/feature",
+                        link: "/en/doc/principles/feature",
                       },
                       {
                         text: "Notes specific to vital data",
-                        link: "/en/doc/vital_data",
+                        link: "/en/doc/principles/vital_data",
                       },
                       {
                         text: "Short-term scene",
-                        link: "/en/doc/analysis_sample",
+                        link: "/en/doc/principles/analysis_sample",
                       },
                       {
                         text: "Long-term time series",
-                        link: "/en/doc/summarize_data",
+                        link: "/en/doc/principles/summarize_data",
                       },
                       {
                         text: "Motion tracking",
-                        link: "/en/doc/motion-tracking-howto",
+                        link: "/en/doc/principles/motion-tracking-howto",
                       },
                     ],
                   },

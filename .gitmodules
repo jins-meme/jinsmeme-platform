@@ -1,0 +1,4 @@
+[submodule "docs/doc/principles"]
+	path = docs/doc/principles
+	url = git@github.com:jins-meme/python-processing-core.git
+	branch = develop
