@@ -6,31 +6,6 @@ export default defineConfig({
   //cleanUrls: true,
   title: "JINS MEME Platform",
   description: "生体データ活用の一歩先へ",
-  // docs/doc/principles は python-processing-core の submodule(sparse-checkout で
-  // docs/principles/ のみ checkout。セットアップ手順は README.md 参照)。
-  // checkout パスが `doc/principles/docs/principles/...` とネストするので、
-  // サイト上の URL は `/doc/principles/...` (EN は `/en/doc/principles/...`) に平らにする。
-  rewrites: {
-    "doc/principles/docs/principles/feature.md": "doc/principles/feature.md",
-    "doc/principles/docs/principles/vital_data.md":
-      "doc/principles/vital_data.md",
-    "doc/principles/docs/principles/analysis_sample.md":
-      "doc/principles/analysis_sample.md",
-    "doc/principles/docs/principles/summarize_data.md":
-      "doc/principles/summarize_data.md",
-    "doc/principles/docs/principles/motion-tracking-howto.md":
-      "doc/principles/motion-tracking-howto.md",
-    "doc/principles/docs/principles/en/feature.md":
-      "en/doc/principles/feature.md",
-    "doc/principles/docs/principles/en/vital_data.md":
-      "en/doc/principles/vital_data.md",
-    "doc/principles/docs/principles/en/analysis_sample.md":
-      "en/doc/principles/analysis_sample.md",
-    "doc/principles/docs/principles/en/summarize_data.md":
-      "en/doc/principles/summarize_data.md",
-    "doc/principles/docs/principles/en/motion-tracking-howto.md":
-      "en/doc/principles/motion-tracking-howto.md",
-  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: "JINS サイト", link: "https://www.jins.com" }],

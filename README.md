@@ -9,28 +9,14 @@ npm run docs:dev
 npm run docs:build (たまにdevでエラー出ずに、デプロイしてエラーになることがあるので、その時はこれを試す)
 ページ設定はdocs/.vitepress/config.mjs で実施する
 
-### 初回セットアップ(submodule)
+### `docs/doc/principles` / `docs/en/doc/principles` について
 
-`docs/doc/principles` は [python-processing-core](https://github.com/jins-meme/python-processing-core)
-の `docs/principles/` を submodule として取り込んでいる。
-git の submodule はリポジトリ丸ごとしか登録できないため、sparse-checkout で
-`docs/principles/` 以外(python コードなど)を checkout しないようにしている。
-この sparse-checkout 設定は clone ごとにローカルな状態(`.gitmodules` には残らない)なので、
-clone 後は毎回このスクリプトを実行すること。
-
-```
-./scripts/init-submodules.sh
-```
-
-`docs/doc/principles` の中身(通常版の演算処理・バイタルデータの注意点など)を更新したいときは
-python-processing-core 側の `docs/principles/` を直接編集して commit/push し、こちらでは
-
-```
-cd docs/doc/principles && git fetch && git checkout origin/develop
-cd ../../.. && git add docs/doc/principles && git commit -m "..."
-```
-
-で追随先のコミットを更新する。
+分析ノウハウ系のページ(通常版の演算処理・バイタルデータの注意点・シーン分析例・
+時系列分析例・モーショントラッキング)。**正本はこのリポジトリのこれらのファイル。**
+[python-processing-core](https://github.com/jins-meme/python-processing-core) 側の
+`docs/principles/`(submodule・sparse-checkout)から参照専用で見えるようにしているが、
+編集はこちらで行うこと(python-processing-core は PRIVATE リポジトリで GitHub Pages の
+ビルドからは認証なしに参照できないため、submodule の向きはこちらへは持たせていない)。
 
 ## 備忘録
 
