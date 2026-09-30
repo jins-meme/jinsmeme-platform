@@ -53,22 +53,31 @@ To uninstall, delete the app from the [Applications] folder.
 
 ## Screen layout
 
-![Main window](/images/pc_logger_main.png)
+![Main window (macOS, measuring)](/images/pc_logger_webview_main.png)
 
-The left column holds the connection and measurement controls, and three real-time charts are stacked on the right.
+The left column holds the connection and measurement controls, and the graph view is on the right. The Windows and macOS versions share the same layout (the image above is the macOS version).
 
 | Location | Description |
 |---|---|
-| Menu bar `Setting (S)` | Opens the settings window (save location, TCP output, and so on) |
-| Menu bar `Version (V)` | Shows the application version |
+| `Setting (S)` (menu bar on Windows) / `Settings` (button at the top left on macOS) | Opens the settings window (save location, TCP output, and so on) |
+| `Version (V)` (menu bar on Windows) | Shows the application version |
 | Top of the left column | The application version and the firmware version of the connected ES_R |
-| `Scan` / `File Replay` / `Connect` | Scan for and connect to a device, or replay a recorded CSV |
+| `Scan` (`Start Scan` on macOS) / `File Replay` / `Connect` | Scan for and connect to a device, or replay a recorded CSV |
 | `State :` | Connection state (`Disconnected` / `Connected`, or the file name while replaying) |
 | `Select Mode` and below | Measurement settings |
 | `Start Measurement` / `Free Marking` | Start and stop measurement, add an artifact |
+| `Save Artifacts` | Shown only during replay. Writes the artifacts you added on the graphs back to the CSV being replayed |
 | `Success rate` / `Communication` | Data acquisition rate, cumulative and recent |
 | `IP address` / `Port` / `Status` | TCP output status |
-| Chart 1 to 3 | Real-time waveforms |
+| Graph view | Display width, replay controls, and the waveform graphs (see [Working with the graphs](#working-with-the-graphs)) |
+
+The graph view shows only the graphs for which the current mode has data.
+
+| Mode | Graphs shown |
+|---|---|
+| `Full` | EOG, Accelerometer, Gyroscope |
+| `Standard` | EOG, Accelerometer |
+| `Quaternion` | None ("No charts for this mode" is shown) |
 
 ## Connecting
 
@@ -79,6 +88,10 @@ The left column holds the connection and measurement controls, and three real-ti
 1. Once connected, `State :` changes to `Connected` and the firmware version of the ES_R is shown.
 
 Click `Disconnect` when you are finished.
+
+::: details Putting the ES_R into Shelf mode
+While connected and not measuring, **hold `Disconnect` down for 5 seconds**. A confirmation dialog appears, and choosing `Yes` puts the ES_R into Shelf mode. Shelf mode stops pairing to save power and is used before shipping or long-term storage. **The ES_R only leaves Shelf mode when it is charged; the app cannot bring it back.**
+:::
 
 ::: warning The ES_R can only be connected to one host at a time
 If a smartphone app or similar is connected, disconnect it first.
@@ -99,11 +112,11 @@ When you connect, the current values are read from the ES_R and reflected in eac
 
 **Operating sensors per mode**
 
-| Mode | Operating sensors | Charts |
+| Mode | Operating sensors | Graphs |
 |---|---|---|
-| `Standard` | Electrooculography sensor, accelerometer | Yes (the first EOG pair is drawn) |
+| `Standard` | Electrooculography sensor, accelerometer | Yes (both EOG samples in each packet are drawn) |
 | `Full` | Electrooculography sensor, accelerometer, gyroscope | Yes |
-| `Quaternion` | Quaternion output | **No** (there is no waveform to plot, so the charts stay empty) |
+| `Quaternion` | Quaternion output | **No** (there is no waveform to plot, so "No charts for this mode" is shown) |
 
 ### Starting and stopping measurement
 
@@ -115,21 +128,23 @@ When you connect, the current values are read from the ES_R and reflected in eac
 
 You can mark positions in the data — a movement by the subject, an external event — so that you can find them later. There are two ways to do it.
 
-**The `Free Marking` button** — clicking it puts `x` in the `ARTIFACT` column of the next row. It works **only during measurement** (on Windows the button is disabled outside measurement; on macOS it only appears while measuring).
+**The `Free Marking` button** — clicking it puts `X` in the `ARTIFACT` column of the next row, and the mark also appears on the graphs. It works **only during measurement** (on Windows the button is disabled outside measurement; on macOS it only appears while measuring).
 
-**Clicking a chart** — lets you put any text on the row you clicked. An input dialog opens; leave it empty and click OK to enter `X`. This works **both during measurement and during replay**.
+**Clicking a graph** — clicking without dragging opens an input field below the graph view, where you can put any text on the row you clicked. Leave it empty and press `Add` to enter `X`. This works **both during measurement and during replay**.
 
-![Artifact input dialog](/images/pc_logger_artifact.png)
+![Artifact input field](/images/pc_logger_webview_artifact.png)
 
-Marks appear on the chart immediately as a vertical line with a label, and are written back to the CSV together at the following times.
+Marks appear on the graph immediately as a vertical line with a label, and are written back to the CSV together at the following times.
 
 | Situation | Written back when | Written back to |
 |---|---|---|
 | Measuring | `Stop Measurement` or disconnection | The CSV saved for that measurement |
-| Replaying | `Record` or `Disconnect` | The CSV being replayed |
+| Replaying | `Save Artifacts` or `Disconnect` | The CSV being replayed |
 
-- Commas and line breaks are replaced with spaces so that the columns do not break.
-- Clicking the same row repeatedly overwrites it with the last value you entered.
+- Up to 64 characters can be entered. Commas and line breaks are replaced with spaces so that the columns do not break.
+- Text starting with `=` `+` `-` `@` cannot be entered (so that a spreadsheet does not read it as a formula).
+- Marking the same row repeatedly overwrites it with the last value you entered.
+- The `X` from `Free Marking` is written to the CSV as soon as the data arrives, so it is not part of the write-back.
 - The write-back goes to a temporary file which then replaces the original, so the CSV is not corrupted if it fails partway.
 
 ### Checking the communication status
@@ -141,22 +156,26 @@ Marks appear on the chart immediately as a vertical line with a label, and are w
 
 If the numbers drop significantly, try moving the PC closer to the ES_R or lowering `Trans Speed` to 50Hz.
 
-## Working with the charts
+## Working with the graphs
 
-![Replay in progress](/images/pc_logger_replay.png)
+![Replay in progress (macOS)](/images/pc_logger_webview_replay.png)
 
-There are three charts, and each one can show something different. Waveforms are drawn from **every sample, with no thinning**.
+The graphs share one time axis, and horizontal (time) operations apply to all of them at once. Waveforms are drawn from **every sample, with no thinning** (so that the mains hum stays visible and you can judge the electrode contact by eye).
 
 | Control | Description |
 |---|---|
-| Category combo box + `Apply` | Switches the sensor type shown on that chart (`Electrooculography` / `Gyroscope` / `Accelerometer`) |
-| Check boxes on the left | Show or hide each series |
-| `↕＋` / `↕－` | Zoom the vertical (amplitude) axis in and out |
-| `＋` / `－` (left column) | Switches the horizontal (time) range between **3 / 7 / 15 / 30 seconds**. This applies to all three charts at once |
+| `60s` / `30s` / `15s` / `10s` next to `Window` | Switches the horizontal (time) display width (30 seconds by default) |
+| Ctrl (⌘ on macOS) + wheel, trackpad pinch | Zooms the horizontal (time) axis in and out |
+| Dragging on a graph, Shift + wheel, `◀◀` / `▶▶` | Moves earlier or later in time (`◀◀` / `▶▶` move by half the display width) |
+| `LIVE` / `Back to LIVE` | During measurement you can scroll back up to the last 30 minutes. While you are looking at the past the button reads `Back to LIVE`; press it to return to the latest data |
+| `−` / `+` on each graph | Zooms the vertical (amplitude) axis out and in. Using the wheel over the vertical axis also zooms |
+| Dragging the vertical axis | Moves the graph vertically |
+| `Auto` | Keeps fitting the vertical axis to the visible waveform (press again to turn it off) |
+| `↺` | Resets the vertical axis of that graph. `Reset view` on the control bar resets both time and all vertical axes |
+| `∧` / `∨` to the left of the title | Collapses or expands the graph |
+| Clicking a graph (without dragging) | Adds an artifact (see [Adding an artifact](#adding-an-artifact)) |
 
-::: tip Default EOG chart series
-`Left` and `Right` are raw potentials and swing widely, which makes `ΔH` / `ΔV` hard to read, so they are hidden by default. Tick them if you need them.
-:::
+The EOG graph shows the vertical (`Vv`) and horizontal (`Vh`) eye potentials in µV; the accelerometer is shown in G and the gyroscope in dps.
 
 ## The recorded CSV
 
@@ -211,9 +230,9 @@ A header describing the measurement conditions is written at the top of the file
 ,1,2026/08/27 04:27:10.21,-200,-3415,-2284,178,-343,763,2007,2001,6,-2004
 ```
 
-- `DATE` is recorded in **UTC**. To show local time on the charts only, use `Time Display` in `Setting` (the recorded values always stay in UTC).
+- `DATE` is recorded in **UTC**. To show local time on the graphs only, use `Time Display` in `Setting` (the recorded values always stay in UTC).
 - `NUM` is a monotonically increasing value accumulated from the difference of the device-side counter. Numbers are skipped when packets are dropped.
-- `ARTIFACT` holds the marks added with `Free Marking` or by clicking a chart.
+- `ARTIFACT` holds the marks added with `Free Marking` or by clicking a graph.
 - Rows are flushed every 100 rows at 100Hz, or every 50 rows at 50Hz, because opening and closing the file for each row would drop data. The remainder is flushed when the measurement stops. For `.csv.gz`, each of these flushes is one unit of compression.
 
 ## File Replay
@@ -231,44 +250,41 @@ Only CSVs in this app's format (shared with the Mac and Android versions) can be
 
 Whether a file is compressed is determined by its contents rather than its extension, so a `.csv.gz` file renamed to `.csv` still opens.
 
+On Windows you can also start a replay by right-clicking a `.csv` / `.csv.gz` file in File Explorer and choosing [Open with].
+
 ### Controls during replay
+
+The replay controls are on the control bar at the top of the graph view.
 
 | Control | Description |
 |---|---|
-| Slider | Changes the playback position. It seeks when you release it |
-| `<<` / `>>` | Moves back or forward by the horizontal range minus 2 seconds, so consecutive windows overlap by 2 seconds |
-| `x1` | Cycles the playback speed x1 → x2 → x4 → x8 → x16 → x32 → x1 |
-| `Pause` / `Resume` | Pauses and resumes |
-| `Record` | Stops the playback. The graphs stay as they are |
-| `Disconnect` | Ends the replay session and discards the loaded data |
+| Position slider | Changes the playback position. The current time and the time at the end of the file are shown on the right |
+| `▶` / `⏸` | Plays and pauses |
+| `◀◀` / `▶▶` | Moves back or forward by half the display width |
+| `x1` | Chooses the playback speed from x1 / x2 / x4 / x8 / x16 / x32 |
+| `Save Artifacts` (left column) | Writes the artifacts added during replay back to the CSV being replayed |
+| `Disconnect` (left column) | Ends the replay. The artifacts you added are also written back at this point |
 
-- The horizontal axis is drawn from the `DATE` column (UTC) of the CSV, so the recorded times are shown as they are.
-- After a seek or a range change, playback resumes with a full window pre-filled rather than refilling gradually from the right edge.
-- Rows with a value in the `ARTIFACT` column are overlaid on the chart as a vertical line with a label.
-- **Raising the playback speed does not thin the data.** It only increases how many rows are pushed per second, so fine detail in the waveform survives even at x32.
+- The horizontal axis is drawn from the `DATE` column (UTC) of the CSV, so the recorded times are shown as they are (enable `Time Display` to show local time).
+- Rows with a value in the `ARTIFACT` column are overlaid on the graph as a vertical line with a label.
+- **Raising the playback speed does not thin the data.** Fine detail in the waveform (such as the mains hum) survives even at x32.
 
-You can also click a chart during replay to add an artifact (see [Adding an artifact](#adding-an-artifact)).
+You can also click a graph during replay to add an artifact (see [Adding an artifact](#adding-an-artifact)).
 
-### Cutting out a range by dragging
-
-![Range cut-out dialog](/images/pc_logger_cut.png)
-
-Dragging horizontally across a chart during replay highlights the selected range. When you release the mouse, a file name dialog appears and you can write just that range to a CSV in the same folder as the source file.
-
-- The header is copied as is, so the extracted CSV can be opened with `File Replay` too.
-- The extension matches the source file: cutting from a `.csv.gz` produces a `.csv.gz`, and cutting from a `.csv` produces a `.csv`.
-- If a file with the same name already exists, an error is shown and the dialog stays open.
+::: tip About cutting out a range
+The "drag to cut out a range" feature of earlier versions has been removed. Add artifacts at the start and end of the range and cut it out in your analysis instead.
+:::
 
 ## Setting
 
-Open it from `Setting (S)` on the menu bar.
+Open it from `Setting (S)` on the menu bar on Windows, or from the `Settings` button at the top left on macOS.
 
-![Settings window](/images/pc_logger_setting.png)
+![Settings window (macOS)](/images/pc_logger_webview_setting.png)
 
 | Item | Description |
 |---|---|
-| `Save File Path` | Where CSVs are saved. `Documents\JINS\MEME_Academic` by default |
-| `Acc Offset X / Y / Z` | An offset added to the chart display only. **The values recorded in the CSV do not change** |
+| `Save File Path` | Where CSVs are saved. `Documents\JINS\MEME_Academic` on Windows and `~/Documents/JINS/MEME_Academic` on macOS by default. On macOS, `Select` chooses a different folder and `Open Folder` opens the save location in Finder |
+| `Acc Offset X / Y / Z` | An offset added to the graph display only. **The values recorded in the CSV do not change** |
 | `Save Format` | Saves measurement data gzip-compressed as `.csv.gz` (**enabled by default**). Clear it to save `.csv`. Loading supports both regardless of this setting |
 | `Save Dialog` | Shows a dialog to choose the save location again after the measurement ends |
 | `Time Display` | Shows the horizontal axis in local time (recording is always in UTC) |
@@ -320,9 +336,7 @@ tcp_client.close()
 
 ## Checking the version
 
-Open `Version (V)` on the menu bar. Please include this version when you contact us.
-
-![Version information](/images/pc_logger_version.png)
+The application version and the firmware version of the connected ES_R (`MEME Version`) are shown at the top of the left column. On Windows you can also check it from `Version (V)` on the menu bar. Please include this version when you contact us.
 
 ## Troubleshooting
 
@@ -332,4 +346,5 @@ Open `Version (V)` on the menu bar. Please include this version when you contact
 | Another app has the device | The ES_R can only be connected to one host at a time. Disconnect any smartphone app that is connected |
 | It connects but no data arrives | Remove the ES_R once from [Settings > Bluetooth & devices] on Windows and scan again. This can clear a stale GATT cache |
 | The acquisition rate stays low | Move the PC closer to the ES_R, lower `Trans Speed` to 50Hz, or avoid congestion in the 2.4GHz band |
+| No graphs are shown (Windows) | The graph view uses the Microsoft Edge WebView2 Runtime. It comes with Windows 11, but if it has been removed, follow the instructions shown where the graphs would be to install it, then restart the app |
 | Runtime installation fails during setup | The automatic install cannot run without an internet connection. Install the [.NET 10 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/10.0) manually and run the installer again |
