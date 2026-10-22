@@ -75,6 +75,15 @@ JINS MEME Academic Pack outputs the acquired values of the sensor directly via B
 
 ![](/images/structure.png)
 
+## Notes on measuring with macOS, Windows, and iOS
+
+When measuring with macOS, Windows, or iOS, very small noise originating from the Bluetooth connection interval is mixed into the gyroscope (angular velocity) and EOG data. It appears at about 33 Hz and its side lines when measuring at 100 Hz, and at about 17 Hz and its side lines when measuring at 50 Hz. Acceleration data is not affected. In addition, on macOS and iOS, some data may be lost.
+
+This has no effect on detecting ordinary movements, but if you work with fine signals, such as frequency analysis during rest, we recommend measuring with Android.
+
+![](/images/gyro_ble_interval_noise.webp)
+<small>The same device placed on a desk and measured at 100 Hz, received by each OS: raw gyroscope X axis (left) and power spectral density (right). Dotted lines: 33.3 Hz and its side lines (19.4 / 26.4 / 40.3 / 47.2 Hz).</small>
+
 ## A sample of the EOG signal
 
 The following is a sample of the EOG signal(blue:Vv, red:Vh) at 100 Hz during blinking and eye movement. Due to the effect of contact resistance, the eye movement shows a gently converging waveform as if a band pass filter is applied.
