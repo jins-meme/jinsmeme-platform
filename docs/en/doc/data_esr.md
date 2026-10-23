@@ -8,7 +8,7 @@
 | Mode type | Frequency | EOG | Acc | Gyro | Quaternion |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | Full Mode | 50/100Hz | o | o | o | - |
-| Standard Mode | 50/100hz | o | o | - | - |
+| Standard Mode | 50/100Hz | o | o | - | - |
 | Quaternion | 50/100Hz | - | - | - | o |
 
 ![](/images/axisdef_esr.png)
@@ -20,15 +20,15 @@ Full is the mode with the most data types and is the most versatile and easy to 
 
 | Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
-| ARTIFACT | int |  Markers entered in software | 0/1 |
+| ARTIFACT | string |  Markers entered in software | X or the entered string |
 | NUM | int | Sequential number | 0... |
 | DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
 | ACC_X | int |  Analog value of acceleration X (maximum value is set range) | -32768...32767 |
 | ACC_Y | int |  Analog value of acceleration Y (maximum value is set range) | -32768...32767 |
 | ACC_Z | int |  Analog value of acceleration Z (maximum value is set range) | -32768...32767 |
 | GYRO_X | int |  Analog value of angular velocity X (maximum value is set range) | -32768...32767 |
-| GYRO_Y | int |  Analog value of angular velocity X (maximum value is set range) | -32768...32767 |
-| GYRO_Z | int |  Analog value of angular velocity X (maximum value is set range) | -32768...32767 |
+| GYRO_Y | int |  Analog value of angular velocity Y (maximum value is set range) | -32768...32767 |
+| GYRO_Z | int |  Analog value of angular velocity Z (maximum value is set range) | -32768...32767 |
 | EOG_L | int | Value of left electrode | -32768...32767 |
 | EOG_R | int | Value of right electrode | -32768...32767 |
 | EOG_H | int | Value of horizontal potential | -65535...65535 |
@@ -40,7 +40,7 @@ Standard mode is useful when you want to acquire detailed EOG data at twice the 
 
 | Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
-| ARTIFACT | int | Markers entered in software | 0/1 |
+| ARTIFACT | string | Markers entered in software | X or the entered string |
 | NUM | int | Sequential number | 0... |
 | DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
 | ACC_X | int |  Analog value of acceleration X (maximum value is set range) | -32768...32767 |
@@ -48,12 +48,12 @@ Standard mode is useful when you want to acquire detailed EOG data at twice the 
 | ACC_Z | int |  Analog value of acceleration Z (maximum value is set range) | -32768...32767 |
 | EOG_L1 | int | Value of left electrode 1 | -32768...32767 |
 | EOG_R1 | int | Value of right electrode 1 | -32768...32767 |
-| EOG_L2 | int | Value1 of left electrode after 1/(freqency * 2) sec | -32768...32767 |
-| EOG_R2 | int | Value1 of right electrode after 1/(freqency * 2) sec | -32768...32767 |
+| EOG_L2 | int | Value of left electrode 1 after 1/(frequency * 2) sec | -32768...32767 |
+| EOG_R2 | int | Value of right electrode 1 after 1/(frequency * 2) sec | -32768...32767 |
 | EOG_H1 | int | Value of horizontal potential 1 | -65535...65535 |
 | EOG_V1 | int | Value of vertical potential 1 | -32768...32767 |
-| EOG_H2 | int | Value1 of horizontal potential after 1/(freqency * 2) sec | -65535...65535 |
-| EOG_V2 | int | Value1 of vertical potential after 1/(freqency * 2) sec | -32768...32767 |
+| EOG_H2 | int | Value of horizontal potential 1 after 1/(frequency * 2) sec | -65535...65535 |
+| EOG_V2 | int | Value of vertical potential 1 after 1/(frequency * 2) sec | -32768...32767 |
 
 ## Quaternion Mode
 
@@ -61,13 +61,13 @@ Quaternion is a special mode for acquiring data used for attitude control, etc. 
 
 | Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
-| ARTIFACT | int | Markers entered in software | 0/1 |
+| ARTIFACT | string | Markers entered in software | X or the entered string |
 | NUM | int | Sequential number | 0... |
 | DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
-| QUATERNION_W | int | QUATERNION_W(maximum value is set range)） | -32768...32767 |
-| QUATERNION_X | int | QUATERNION_X(maximum value is set range)） | -32768...32767 |
-| QUATERNION_Y | int | QUATERNION_Y(maximum value is set range)） | -32768...32767 |
-| QUATERNION_Z | int | QUATERNION_Z(maximum value is set range)） | -32768...32767 |
+| QUATERNION_W | int | QUATERNION_W(maximum value is set range) | -32768...32767 |
+| QUATERNION_X | int | QUATERNION_X(maximum value is set range) | -32768...32767 |
+| QUATERNION_Y | int | QUATERNION_Y(maximum value is set range) | -32768...32767 |
+| QUATERNION_Z | int | QUATERNION_Z(maximum value is set range) | -32768...32767 |
 
 ## Signal processing
 
@@ -77,7 +77,7 @@ JINS MEME Academic Pack outputs the acquired values of the sensor directly via B
 
 ## Notes on measuring with macOS, Windows, and iOS
 
-When measuring with macOS, Windows, or iOS, very small noise originating from the Bluetooth connection interval is mixed into the gyroscope (angular velocity) and EOG data. It appears at about 33 Hz and its side lines when measuring at 100 Hz, and at about 17 Hz and its side lines when measuring at 50 Hz. Acceleration data is not affected. In addition, on macOS and iOS, some data may be lost.
+When measuring with macOS, Windows, or iOS, very small noise originating from the Bluetooth connection interval is mixed into the gyroscope (angular velocity) and EOG data. It appears at about 33 Hz and its side lines when measuring at 100 Hz, and at about 17 Hz and its side lines when measuring at 50 Hz. Acceleration data is not affected. In Quaternion mode, a line at the same frequency also appears in the orientation data, but its amplitude is only about 0.0003°, which is negligible. In addition, on macOS and iOS, some data may be lost.
 
 This has no effect on detecting ordinary movements, but if you work with fine signals, such as frequency analysis during rest, we recommend measuring with Android.
 
@@ -86,8 +86,12 @@ This has no effect on detecting ordinary movements, but if you work with fine si
 
 ## A sample of the EOG signal
 
-The following is a sample of the EOG signal(blue:Vv, red:Vh) at 100 Hz during blinking and eye movement. Due to the effect of contact resistance, the eye movement shows a gently converging waveform as if a band pass filter is applied.
+The following is a sample of the EOG signal at 100 Hz (Full mode) during blinks and horizontal eye movements. The upper panel is vertical (EOG_V) and the lower panel is horizontal (EOG_H). Green bands mark blinks, and orange bands mark horizontal gaze shifts.
 
-![](/images/vvvh_signal.png)
+- **Blink**: a sharp upward spike in EOG_V. It barely appears in EOG_H.
+- **Horizontal gaze shift**: a large hump (or dip) in EOG_H, with the opposite sign on the way back. It also leaks slightly into EOG_V (crosstalk).
+- Due to the effect of contact resistance, gaze shifts look as if a band pass filter is applied: a hump followed by a gradual return to 0.
 
-[CSV file (excerpts)](/data/eog_std_signal2.csv)
+![](/images/eog_sample_annotated.webp)
+
+[CSV file](/data/eog_sample_annotated.csv) (the `label` column holds `blink` / `gaze_right` / `gaze_left`, matching the bands in the figure)
