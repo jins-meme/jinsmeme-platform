@@ -86,8 +86,12 @@ macOS・Windows・iOS で計測すると、ジャイロ(角速度)と眼電位(E
 
 ## EOGデータのサンプル
 
-まばたきや視線移動を行っている時の100Hzの眼電位シグナルのサンプル(青:Vv, 赤:Vh)を以下に示します。接触抵抗の影響により、視線移動はband pass filter がかかったようななだらかに収束する波形を示します。
+まばたきと視線移動(左右)を行っている時の100Hz(Full モード)の眼電位シグナルのサンプルを以下に示します。上段が縦方向(EOG_V)、下段が横方向(EOG_H)で、緑の帯がまばたき、橙の帯が視線の左右移動です。
 
-![](/images/vvvh_signal.png)
+- **まばたき**: EOG_V に上向きの鋭いスパイクが出ます。EOG_H にはほとんど現れません。
+- **視線の左右移動**: EOG_H に大きな山(または谷)が出ます。戻す動きでは逆符号になります。EOG_V にも小さく漏れて現れます(クロストーク)。
+- 接触抵抗の影響により、視線移動は band pass filter がかかったような、なだらかに0へ収束する波形を示します。
 
-[CSVファイル（抜粋）](/data/eog_std_signal2.csv)
+![](/images/eog_sample_annotated.webp)
+
+[CSVファイル](/data/eog_sample_annotated.csv)(`label` 列に `blink` / `gaze_right` / `gaze_left` を記録しています。図中の帯と対応します)

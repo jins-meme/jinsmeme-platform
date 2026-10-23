@@ -86,8 +86,12 @@ This has no effect on detecting ordinary movements, but if you work with fine si
 
 ## A sample of the EOG signal
 
-The following is a sample of the EOG signal(blue:Vv, red:Vh) at 100 Hz during blinking and eye movement. Due to the effect of contact resistance, the eye movement shows a gently converging waveform as if a band pass filter is applied.
+The following is a sample of the EOG signal at 100 Hz (Full mode) during blinks and horizontal eye movements. The upper panel is vertical (EOG_V) and the lower panel is horizontal (EOG_H). Green bands mark blinks, and orange bands mark horizontal gaze shifts.
 
-![](/images/vvvh_signal.png)
+- **Blink**: a sharp upward spike in EOG_V. It barely appears in EOG_H.
+- **Horizontal gaze shift**: a large hump (or dip) in EOG_H, with the opposite sign on the way back. It also leaks slightly into EOG_V (crosstalk).
+- Due to the effect of contact resistance, gaze shifts look as if a band pass filter is applied: a hump followed by a gradual return to 0.
 
-[CSV file (excerpts)](/data/eog_std_signal2.csv)
+![](/images/eog_sample_annotated.webp)
+
+[CSV file](/data/eog_sample_annotated.csv) (the `label` column holds `blink` / `gaze_right` / `gaze_left`, matching the bands in the figure)
