@@ -8,7 +8,7 @@
 | Mode type | Frequency | EOG | Acc | Gyro | Quaternion |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | Full Mode | 50/100Hz | o | o | o | - |
-| Standard Mode | 50/100hz | o | o | - | - |
+| Standard Mode | 50/100Hz | o | o | - | - |
 | Quaternion | 50/100Hz | - | - | - | o |
 
 ![](/images/axisdef_esr.png)
@@ -27,8 +27,8 @@ Full is the mode with the most data types and is the most versatile and easy to 
 | ACC_Y | int |  Analog value of acceleration Y (maximum value is set range) | -32768...32767 |
 | ACC_Z | int |  Analog value of acceleration Z (maximum value is set range) | -32768...32767 |
 | GYRO_X | int |  Analog value of angular velocity X (maximum value is set range) | -32768...32767 |
-| GYRO_Y | int |  Analog value of angular velocity X (maximum value is set range) | -32768...32767 |
-| GYRO_Z | int |  Analog value of angular velocity X (maximum value is set range) | -32768...32767 |
+| GYRO_Y | int |  Analog value of angular velocity Y (maximum value is set range) | -32768...32767 |
+| GYRO_Z | int |  Analog value of angular velocity Z (maximum value is set range) | -32768...32767 |
 | EOG_L | int | Value of left electrode | -32768...32767 |
 | EOG_R | int | Value of right electrode | -32768...32767 |
 | EOG_H | int | Value of horizontal potential | -65535...65535 |
@@ -48,12 +48,12 @@ Standard mode is useful when you want to acquire detailed EOG data at twice the 
 | ACC_Z | int |  Analog value of acceleration Z (maximum value is set range) | -32768...32767 |
 | EOG_L1 | int | Value of left electrode 1 | -32768...32767 |
 | EOG_R1 | int | Value of right electrode 1 | -32768...32767 |
-| EOG_L2 | int | Value1 of left electrode after 1/(freqency * 2) sec | -32768...32767 |
-| EOG_R2 | int | Value1 of right electrode after 1/(freqency * 2) sec | -32768...32767 |
+| EOG_L2 | int | Value of left electrode 1 after 1/(frequency * 2) sec | -32768...32767 |
+| EOG_R2 | int | Value of right electrode 1 after 1/(frequency * 2) sec | -32768...32767 |
 | EOG_H1 | int | Value of horizontal potential 1 | -65535...65535 |
 | EOG_V1 | int | Value of vertical potential 1 | -32768...32767 |
-| EOG_H2 | int | Value1 of horizontal potential after 1/(freqency * 2) sec | -65535...65535 |
-| EOG_V2 | int | Value1 of vertical potential after 1/(freqency * 2) sec | -32768...32767 |
+| EOG_H2 | int | Value of horizontal potential 1 after 1/(frequency * 2) sec | -65535...65535 |
+| EOG_V2 | int | Value of vertical potential 1 after 1/(frequency * 2) sec | -32768...32767 |
 
 ## Quaternion Mode
 
@@ -64,10 +64,10 @@ Quaternion is a special mode for acquiring data used for attitude control, etc. 
 | ARTIFACT | int | Markers entered in software | 0/1 |
 | NUM | int | Sequential number | 0... |
 | DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
-| QUATERNION_W | int | QUATERNION_W(maximum value is set range)） | -32768...32767 |
-| QUATERNION_X | int | QUATERNION_X(maximum value is set range)） | -32768...32767 |
-| QUATERNION_Y | int | QUATERNION_Y(maximum value is set range)） | -32768...32767 |
-| QUATERNION_Z | int | QUATERNION_Z(maximum value is set range)） | -32768...32767 |
+| QUATERNION_W | int | QUATERNION_W(maximum value is set range) | -32768...32767 |
+| QUATERNION_X | int | QUATERNION_X(maximum value is set range) | -32768...32767 |
+| QUATERNION_Y | int | QUATERNION_Y(maximum value is set range) | -32768...32767 |
+| QUATERNION_Z | int | QUATERNION_Z(maximum value is set range) | -32768...32767 |
 
 ## Signal processing
 
