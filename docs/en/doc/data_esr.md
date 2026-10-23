@@ -20,7 +20,7 @@ Full is the mode with the most data types and is the most versatile and easy to 
 
 | Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
-| ARTIFACT | int |  Markers entered in software | 0/1 |
+| ARTIFACT | string |  Markers entered in software | X or the entered string |
 | NUM | int | Sequential number | 0... |
 | DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
 | ACC_X | int |  Analog value of acceleration X (maximum value is set range) | -32768...32767 |
@@ -40,7 +40,7 @@ Standard mode is useful when you want to acquire detailed EOG data at twice the 
 
 | Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
-| ARTIFACT | int | Markers entered in software | 0/1 |
+| ARTIFACT | string | Markers entered in software | X or the entered string |
 | NUM | int | Sequential number | 0... |
 | DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
 | ACC_X | int |  Analog value of acceleration X (maximum value is set range) | -32768...32767 |
@@ -61,7 +61,7 @@ Quaternion is a special mode for acquiring data used for attitude control, etc. 
 
 | Name | Type | Description | Range |
 |:---:|:---:|:---:|:---:|
-| ARTIFACT | int | Markers entered in software | 0/1 |
+| ARTIFACT | string | Markers entered in software | X or the entered string |
 | NUM | int | Sequential number | 0... |
 | DATE | string | Received Date | (ex) 2016/08/09 05:22:35.88 |
 | QUATERNION_W | int | QUATERNION_W(maximum value is set range) | -32768...32767 |
