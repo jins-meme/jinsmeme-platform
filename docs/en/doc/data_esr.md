@@ -77,7 +77,7 @@ JINS MEME Academic Pack outputs the acquired values of the sensor directly via B
 
 ## Notes on measuring with macOS, Windows, and iOS
 
-When measuring with macOS, Windows, or iOS, very small noise originating from the Bluetooth connection interval is mixed into the gyroscope (angular velocity) and EOG data. It appears at about 33 Hz and its side lines when measuring at 100 Hz, and at about 17 Hz and its side lines when measuring at 50 Hz. Acceleration data is not affected. In addition, on macOS and iOS, some data may be lost.
+When measuring with macOS, Windows, or iOS, very small noise originating from the Bluetooth connection interval is mixed into the gyroscope (angular velocity) and EOG data. It appears at about 33 Hz and its side lines when measuring at 100 Hz, and at about 17 Hz and its side lines when measuring at 50 Hz. Acceleration data is not affected. In Quaternion mode, a line at the same frequency also appears in the orientation data, but its amplitude is only about 0.0003°, which is negligible. In addition, on macOS and iOS, some data may be lost.
 
 This has no effect on detecting ordinary movements, but if you work with fine signals, such as frequency analysis during rest, we recommend measuring with Android.
 
