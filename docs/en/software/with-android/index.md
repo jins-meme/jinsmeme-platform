@@ -58,6 +58,7 @@ Tap the **gear icon (Settings)** in the upper right to configure detailed measur
 - **Open sharing when measurement is complete**: Opens the share sheet for the saved file after the measurement stops.
 - **Compress saved data (.csv.gz)**: Saves measurement data compressed with gzip (**enabled by default**).
 - **Record approximate location when moved 50m or more**: During measurement, records your approximate location each time you move 50m or more (see [4. Data Storage](#_4-data-storage)).
+- **Record VAS**: During measurement, asks for VAS (Visual Analogue Scale) ratings at a fixed interval and records them. Set the interval and items with the settings icon on the right (see [Recording VAS](#recording-vas)). It is disabled by default.
 
 The app version and **OSS Licenses** (licenses of the open-source software used in the app) are at the bottom of the dialog.
 
@@ -98,6 +99,31 @@ Tap a graph to open the "Add artifact" input field at the bottom of the screen, 
 - Marks added during measurement are written to the `ARTIFACT` column of the saved CSV when the measurement stops.
 - Marks added during playback are written back to the CSV being played when you end the playback (**Disconnect**).
 - Up to 64 characters can be entered. Commas and line breaks are replaced with spaces, and text starting with `=` `+` `-` `@` cannot be entered (so that a spreadsheet does not read it as a formula).
+
+### Recording VAS
+
+If **Record VAS** is enabled in the settings, the app asks for VAS (Visual Analogue Scale) ratings at a fixed interval during measurement and keeps the values in the CSV. Use it to record subjective ratings of the user's state on the same timeline as the measurement data.
+
+#### Settings
+
+Checking **Record VAS** opens the "VAS settings" screen (choosing **Cancel** leaves it disabled). To change the settings later, tap the settings icon to the right of **Record VAS**. The settings dialog cannot be opened during measurement, so set this up before you start.
+
+| Item | Description |
+|---|---|
+| **Interval (minutes)** | How often to ask for ratings, in minutes. A whole number from 1 to 1440; 30 minutes by default. Shared by all items |
+| **Item 1, 2, …** | The VAS items. Add one with **Add item** and remove one with the trash icon (at least one item is required) |
+| **Memo (optional)** | A memo for each item (such as "Sleepiness"). It is only shown next to the item on the input screen and is not written to the CSV |
+
+#### Entering Ratings During Measurement
+
+1. Right after the measurement starts, and then at each interval, a notification and a popup in the app ask for ratings.
+2. For each item, choose a value from 0 to 100 with the slider (50 by default) and tap **OK**. The popup closes only with **OK** (tapping outside it or pressing Back does not close it).
+
+- The values are written to the `ARTIFACT` column of the row at the time the ratings were requested, as `vas1:50;vas2:30` (item number and value, separated by `;`), when the measurement stops. A mark also appears on the graphs.
+- If other records such as your location fall on the same row, they are also separated by `;` (for example `lc:35.6802_139.7521;vas1:50;vas2:30`).
+- If the next request comes before you answer, the earlier one is not recorded and the popup is replaced with the new one. When the measurement stops, any unanswered popup and notification are dismissed.
+- While a popup is shown, **Stop Measurement** cannot be used. Answer the popup first, then stop.
+- If the measurement resumes after an automatic reconnection following a BLE disconnection, the interval carries on from before.
 
 ---
 
